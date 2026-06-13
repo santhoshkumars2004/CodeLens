@@ -1,0 +1,54 @@
+# ============================================
+# StackSense .gitignore
+# ============================================
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.venv/
+venv/
+env/
+
+# Node.js
+node_modules/
+.next/
+out/
+.vercel
+
+# Data
+data/
+/tmp/repos/
+
+# Docker
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ChromaDB
+chroma_data/
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Kubernetes secrets
+kubernetes/secrets/

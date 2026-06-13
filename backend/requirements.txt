@@ -1,0 +1,51 @@
+# ============================================
+# StackSense Backend Dependencies
+# ============================================
+
+# Web Framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+
+# RAG Framework
+langchain==0.3.14
+langchain-community==0.3.14
+langchain-groq==0.2.4
+
+# Vector Database
+chromadb==0.6.3
+
+# Embeddings & Reranking
+sentence-transformers>=3.0.0
+
+# GitHub operations
+gitpython==3.1.43
+
+# LLM Provider
+groq==0.13.1
+
+# AWS (optional)
+boto3>=1.35.0
+
+# Monitoring
+prometheus-client==0.21.1
+prometheus-fastapi-instrumentator==7.0.2
+
+# Configuration
+python-dotenv==1.0.1
+pydantic>=2.10.0
+pydantic-settings>=2.7.0
+
+# Logging
+structlog>=24.4.0
+
+# HTTP
+httpx>=0.28.0
+
+# Testing
+pytest>=8.3.0
+pytest-asyncio>=0.25.0
+pytest-cov>=6.0.0
+
+# Linting
+ruff>=0.8.0

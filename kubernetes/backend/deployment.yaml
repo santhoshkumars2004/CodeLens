@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: stacksense
+  labels:
+    app: stacksense
+    component: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: stacksense
+      component: backend
+  template:
+    metadata:
+      labels:
+        app: stacksense
+        component: backend
+    spec:
+      containers:
+        - name: backend
+          image: stacksense/backend:latest
+          ports:
+            - containerPort: 8000
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          envFrom:
+            - configMapRef:
+                name: backend-config
+            - secretRef:
+                name: backend-secrets

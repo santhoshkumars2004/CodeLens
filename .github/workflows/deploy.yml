@@ -1,0 +1,48 @@
+name: Deploy to AWS EKS
+
+on:
+  workflow_run:
+    workflows: ["Build & Push Docker Images"]
+    types: [completed]
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Update kubeconfig
+        run: aws eks update-kubeconfig --name stacksense-cluster --region us-east-1
+
+      - name: Deploy to EKS
+        run: |
+          # Update backend image
+          kubectl set image deployment/backend \
+            backend=${{ secrets.DOCKERHUB_USERNAME }}/stacksense-backend:${{ github.sha }} \
+            -n stacksense
+
+          # Update frontend image
+          kubectl set image deployment/frontend \
+            frontend=${{ secrets.DOCKERHUB_USERNAME }}/stacksense-frontend:${{ github.sha }} \
+            -n stacksense
+
+          # Wait for rollout
+          kubectl rollout status deployment/backend -n stacksense --timeout=300s
+          kubectl rollout status deployment/frontend -n stacksense --timeout=300s
+
+      - name: Post deployment status
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const status = '${{ job.status }}' === 'success' ? '✅' : '❌';
+            console.log(`Deployment ${status}: ${{ github.sha }}`);
