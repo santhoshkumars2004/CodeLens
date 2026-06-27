@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "StackSense — AI Codebase Q&A",
+  title: "CodeLens — AI Codebase Q&A",
   description:
     "Ask questions about any GitHub repository and get precise, cited answers with exact file and line references.",
   keywords: ["AI", "codebase", "Q&A", "RAG", "GitHub", "code analysis"],

@@ -1,5 +1,5 @@
 """
-StackSense — Retriever (app/retrieval/retriever.py)
+CodeLens — Retriever (app/retrieval/retriever.py)
 
 Embeds a query and performs similarity search against ChromaDB.
 Replaces: app/core/retriever.py

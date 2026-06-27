@@ -1,5 +1,5 @@
 """
-StackSense Ingestion Pipeline.
+CodeLens Ingestion Pipeline.
 
 Orchestrates the full ingestion flow:
 Clone repo → Discover files → Parse & chunk → Embed → Store in ChromaDB.

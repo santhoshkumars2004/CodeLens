@@ -1,5 +1,5 @@
 """
-StackSense Generator.
+CodeLens Generator.
 
 Wraps the LLM service with prompt building and response parsing
 for code Q&A generation.

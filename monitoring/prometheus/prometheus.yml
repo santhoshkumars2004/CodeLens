@@ -1,11 +1,11 @@
-# Prometheus Configuration for StackSense
+# Prometheus Configuration for CodeLens
 
 global:
   scrape_interval: 15s
   evaluation_interval: 15s
 
 scrape_configs:
-  - job_name: 'stacksense-backend'
+  - job_name: 'codelens-backend'
     static_configs:
       - targets: ['backend:8000']
     metrics_path: /metrics

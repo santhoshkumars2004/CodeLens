@@ -1,1 +1,1 @@
-"""API route handlers for StackSense."""
+"""API route handlers for CodeLens."""

@@ -1,5 +1,5 @@
 """
-StackSense Query Endpoint.
+CodeLens Query Endpoint.
 
 POST /api/query — ask a question about an indexed repository.
 """

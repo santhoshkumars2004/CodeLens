@@ -1,1 +1,1 @@
-"""StackSense VectorDB Package — Store and search vectors in ChromaDB."""
+"""CodeLens VectorDB Package — Store and search vectors in ChromaDB."""

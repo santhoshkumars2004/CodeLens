@@ -1,5 +1,5 @@
 # ============================================
-# StackSense Backend Dependencies
+# CodeLens Backend Dependencies
 # ============================================
 
 # Web Framework

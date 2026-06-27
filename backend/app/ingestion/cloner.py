@@ -1,5 +1,5 @@
 """
-StackSense — Cloner (app/ingestion/cloner.py)
+CodeLens — Cloner (app/ingestion/cloner.py)
 
 Clones GitHub repositories to local disk for indexing.
 Replaces: app/services/github_service.py

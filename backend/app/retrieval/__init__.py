@@ -1,1 +1,1 @@
-"""StackSense Retrieval Package — Search vectors and rerank results."""
+"""CodeLens Retrieval Package — Search vectors and rerank results."""

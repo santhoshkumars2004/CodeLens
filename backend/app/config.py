@@ -1,5 +1,5 @@
 """
-StackSense Configuration Module.
+CodeLens Configuration Module.
 
 Centralizes all environment variables and application settings
 using Pydantic Settings for validation and type safety.
@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     """Application settings loaded from environment variables."""
 
     # ── Application ──────────────────────────────────────────────
-    app_name: str = "StackSense"
+    app_name: str = "CodeLens"
     app_version: str = "1.0.0"
     debug: bool = False
     log_level: str = "INFO"
@@ -47,13 +47,13 @@ class Settings(BaseSettings):
 
     # ── GitHub ──────────────────────────────────────────────────
     github_token: Optional[str] = None
-    repos_dir: str = "/tmp/stacksense_repos"
+    repos_dir: str = "/tmp/codelens_repos"
 
     # ── AWS S3 (Free Tier) ──────────────────────────────────────
     aws_access_key_id: Optional[str] = None
     aws_secret_access_key: Optional[str] = None
     aws_region: str = "us-east-1"
-    s3_bucket_name: str = "stacksense-metadata"
+    s3_bucket_name: str = "codelens-metadata"
 
     # ── LangFuse (LLM Tracing) ──────────────────────────────────
     langfuse_public_key: Optional[str] = None

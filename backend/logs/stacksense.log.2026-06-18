@@ -1,10 +1,10 @@
 {'persist_dir': './data/chromadb', 'event': 'store_connecting', 'level': 'info'}
 {'persist_dir': './data/chromadb', 'event': 'store_connected', 'level': 'info'}
 {'event': 'chromadb_already_empty', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'event': 'clone_start', 'level': 'info'}
-{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_removing_old_dir', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'target': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_started', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_successful', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'branch': 'default', 'event': 'clone_start', 'level': 'info'}
+{'path': '\\tmp\\codelens_repos\\santhoshkumars2004\\CodeLens', 'event': 'clone_removing_old_dir', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'branch': 'default', 'target': '\\tmp\\codelens_repos\\santhoshkumars2004\\CodeLens', 'event': 'clone_started', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'path': '\\tmp\\codelens_repos\\santhoshkumars2004\\CodeLens', 'event': 'clone_successful', 'level': 'info'}
 {'total_seen': 77, 'to_index': 42, 'skipped': 35, 'event': 'discover_complete', 'level': 'info'}
 {'total_chunks': 122, 'errors': 0, 'event': 'chunk_complete', 'level': 'info'}
 {'model': './local_model', 'event': 'embed_model_loading', 'level': 'info'}
@@ -14,20 +14,20 @@ No modules.json found for ./local_model, initializing a new SentenceTransformer 
 {'model': './local_model', 'dimensions': 384, 'load_time_seconds': 0.3, 'event': 'embed_model_ready', 'level': 'info'}
 {'total_chunks': 122, 'batch_size': 32, 'total_batches': 4, 'event': 'embed_start', 'level': 'info'}
 {'total_embeddings': 122, 'dimensions': 384, 'duration_seconds': 6.14, 'chunks_per_second': 19.9, 'event': 'embed_complete', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 0, 'event': 'store_collection_ready', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'total_chunks': 122, 'batch_size': 500, 'total_batches': 1, 'event': 'store_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'collection': 'santhoshkumars2004_codelens', 'existing_vectors': 0, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'total_chunks': 122, 'batch_size': 500, 'total_batches': 1, 'event': 'store_start', 'level': 'info'}
 {'batch': '1/1', 'chunks': '1-122', 'event': 'store_batch', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'stored': 122, 'total_in_collection': 122, 'event': 'store_complete', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'stored': 122, 'event': 'store_complete', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'error': 'An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.', 'event': 's3_save_failed', 'level': 'warning'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'files_indexed': 42, 'chunks_stored': 122, 'files_skipped': 39, 'duration_seconds': 86.4, 'event': 'reindex_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'stored': 122, 'total_in_collection': 122, 'event': 'store_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'stored': 122, 'event': 'store_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'error': 'An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.', 'event': 's3_save_failed', 'level': 'warning'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'files_indexed': 42, 'chunks_stored': 122, 'files_skipped': 39, 'duration_seconds': 86.4, 'event': 'reindex_complete', 'level': 'info'}
 {'persist_dir': './data/chromadb', 'event': 'store_connecting', 'level': 'info'}
 {'persist_dir': './data/chromadb', 'event': 'store_connected', 'level': 'info'}
 {'event': 'chromadb_already_empty', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'event': 'clone_start', 'level': 'info'}
-{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_removing_old_dir', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'target': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_started', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_successful', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'branch': 'default', 'event': 'clone_start', 'level': 'info'}
+{'path': '\\tmp\\codelens_repos\\santhoshkumars2004\\CodeLens', 'event': 'clone_removing_old_dir', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'branch': 'default', 'target': '\\tmp\\codelens_repos\\santhoshkumars2004\\CodeLens', 'event': 'clone_started', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'path': '\\tmp\\codelens_repos\\santhoshkumars2004\\CodeLens', 'event': 'clone_successful', 'level': 'info'}
 {'total_seen': 77, 'to_index': 42, 'skipped': 35, 'event': 'discover_complete', 'level': 'info'}
 {'total_chunks': 122, 'errors': 0, 'event': 'chunk_complete', 'level': 'info'}
 {'model': 'jinaai/jina-embeddings-v2-base-code', 'event': 'embed_model_loading', 'level': 'info'}
@@ -64,23 +64,23 @@ HTTP Request: GET https://huggingface.co/api/resolve-cache/models/jinaai/jina-be
 {'persist_dir': './data/chromadb', 'event': 'store_connecting', 'level': 'info'}
 {'persist_dir': './data/chromadb', 'event': 'store_connected', 'level': 'info'}
 {'event': 'chromadb_already_empty', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'event': 'clone_start', 'level': 'info'}
-{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_removing_old_dir', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'target': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_started', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'branch': 'default', 'event': 'clone_start', 'level': 'info'}
+{'path': '\\tmp\\codelens_repos\\santhoshkumars2004\\CodeLens', 'event': 'clone_removing_old_dir', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'branch': 'default', 'target': '\\tmp\\codelens_repos\\santhoshkumars2004\\CodeLens', 'event': 'clone_started', 'level': 'info'}
 {'persist_dir': './data/chromadb', 'event': 'store_connecting', 'level': 'info'}
 {'persist_dir': './data/chromadb', 'event': 'store_connected', 'level': 'info'}
-{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'filter_walking_repo', 'level': 'info'}
+{'path': '\\tmp\\codelens_repos\\santhoshkumars2004\\CodeLens', 'event': 'filter_walking_repo', 'level': 'info'}
 {'total_indexed': 0, 'total_skipped': 0, 'languages': 'none', 'event': 'filter_complete', 'level': 'info'}
-{'version': '1.0.0', 'debug': False, 'event': 'stacksense_starting', 'level': 'info'}
+{'version': '1.0.0', 'debug': False, 'event': 'codelens_starting', 'level': 'info'}
 {'persist_dir': './data/chromadb', 'event': 'store_connecting', 'level': 'info'}
 {'persist_dir': './data/chromadb', 'event': 'store_connected', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'ingest_request', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'event': 'ingestion_started', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'log_file': 'C:\\Users\\Prem\\Downloads\\Stacksense\\Stacksense\\backend\\logs\\runs\\ingestion_santhoshkumars2004_Stacksense_2026-06-18T06-20-19.log', 'event': 'ingestion_run_log', 'level': 'info'}
-{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_removing_old_dir', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'target': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_started', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_successful', 'level': 'info'}
-{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'filter_walking_repo', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'event': 'ingest_request', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'branch': 'default', 'event': 'ingestion_started', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'log_file': 'C:\\Users\\Prem\\Downloads\\CodeLens\\CodeLens\\backend\\logs\\runs\\ingestion_santhoshkumars2004_CodeLens_2026-06-18T06-20-19.log', 'event': 'ingestion_run_log', 'level': 'info'}
+{'path': '\\tmp\\codelens_repos\\santhoshkumars2004\\CodeLens', 'event': 'clone_removing_old_dir', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'branch': 'default', 'target': '\\tmp\\codelens_repos\\santhoshkumars2004\\CodeLens', 'event': 'clone_started', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'path': '\\tmp\\codelens_repos\\santhoshkumars2004\\CodeLens', 'event': 'clone_successful', 'level': 'info'}
+{'path': '\\tmp\\codelens_repos\\santhoshkumars2004\\CodeLens', 'event': 'filter_walking_repo', 'level': 'info'}
 {'total_indexed': 42, 'total_skipped': 35, 'languages': 'python:23  typescript:12  shell:3  dockerfile:2  makefile:1  css:1', 'event': 'filter_complete', 'level': 'info'}
 {'total_files': 42, 'event': 'chunk_phase_start', 'level': 'info'}
 {'file': 'Makefile', 'chunks': 1, 'types': 'block:1', 'language': 'makefile', 'event': 'chunk_file_done', 'level': 'info'}
@@ -166,25 +166,25 @@ HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-base-en-v1.5 "HTTP/
 {'model': 'BAAI/bge-base-en-v1.5', 'dimensions': 768, 'load_time_seconds': 9.0, 'event': 'embed_model_ready', 'level': 'info'}
 {'total_chunks': 122, 'batch_size': 32, 'total_batches': 4, 'event': 'embed_start', 'level': 'info'}
 {'total_embeddings': 122, 'dimensions': 768, 'duration_seconds': 33.85, 'chunks_per_second': 3.6, 'event': 'embed_complete', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'error': 'Collection [santhoshkumars2004_stacksense] does not exist', 'event': 'store_collection_delete_failed', 'level': 'warning'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 0, 'event': 'store_collection_ready', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'total_chunks': 122, 'batch_size': 500, 'total_batches': 1, 'event': 'store_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'error': 'Collection [santhoshkumars2004_codelens] does not exist', 'event': 'store_collection_delete_failed', 'level': 'warning'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'collection': 'santhoshkumars2004_codelens', 'existing_vectors': 0, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'total_chunks': 122, 'batch_size': 500, 'total_batches': 1, 'event': 'store_start', 'level': 'info'}
 {'batch': '1/1', 'chunks': '1-122', 'event': 'store_batch', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'stored': 122, 'total_in_collection': 122, 'event': 'store_complete', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'error': 'An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.', 'event': 's3_save_failed', 'level': 'warning'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'status': 'completed', 'files_indexed': 42, 'chunks_created': 122, 'languages': ['css', 'dockerfile', 'makefile', 'python', 'shell', 'typescript'], 'duration_seconds': 249.91, 'message': 'Successfully indexed 42 files into 122 chunks', 'event': 'ingestion_complete', 'level': 'info'}
-{'summary': '{\n  "type": "ingestion_summary",\n  "timestamp": "2026-06-18T06:24:30.972188+00:00",\n  "repo_id": "santhoshkumars2004/Stacksense",\n  "status": "completed",\n  "files_indexed": 42,\n  "chunks_created": 122,\n  "languages": [\n    "css",\n    "dockerfile",\n    "makefile",\n    "python",\n    "shell",\n    "typescript"\n  ],\n  "duration_seconds": 249.91,\n  "message": "Successfully indexed 42 files into 122 chunks"\n}', 'event': 'ingestion_summary_json', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'stored': 122, 'total_in_collection': 122, 'event': 'store_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'error': 'An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.', 'event': 's3_save_failed', 'level': 'warning'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'status': 'completed', 'files_indexed': 42, 'chunks_created': 122, 'languages': ['css', 'dockerfile', 'makefile', 'python', 'shell', 'typescript'], 'duration_seconds': 249.91, 'message': 'Successfully indexed 42 files into 122 chunks', 'event': 'ingestion_complete', 'level': 'info'}
+{'summary': '{\n  "type": "ingestion_summary",\n  "timestamp": "2026-06-18T06:24:30.972188+00:00",\n  "repo_id": "santhoshkumars2004/CodeLens",\n  "status": "completed",\n  "files_indexed": 42,\n  "chunks_created": 122,\n  "languages": [\n    "css",\n    "dockerfile",\n    "makefile",\n    "python",\n    "shell",\n    "typescript"\n  ],\n  "duration_seconds": 249.91,\n  "message": "Successfully indexed 42 files into 122 chunks"\n}', 'event': 'ingestion_summary_json', 'level': 'info'}
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-{'version': '1.0.0', 'debug': False, 'event': 'stacksense_starting', 'level': 'info'}
+{'version': '1.0.0', 'debug': False, 'event': 'codelens_starting', 'level': 'info'}
 {'persist_dir': './data/chromadb', 'event': 'store_connecting', 'level': 'info'}
 {'persist_dir': './data/chromadb', 'event': 'store_connected', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'ingest_request', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'event': 'ingestion_started', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'log_file': 'C:\\Users\\Prem\\Downloads\\Stacksense\\Stacksense\\backend\\logs\\runs\\ingestion_santhoshkumars2004_Stacksense_2026-06-18T06-31-17.log', 'event': 'ingestion_run_log', 'level': 'info'}
-{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_removing_old_dir', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'target': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_started', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_successful', 'level': 'info'}
-{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'filter_walking_repo', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'event': 'ingest_request', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'branch': 'default', 'event': 'ingestion_started', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'log_file': 'C:\\Users\\Prem\\Downloads\\CodeLens\\CodeLens\\backend\\logs\\runs\\ingestion_santhoshkumars2004_CodeLens_2026-06-18T06-31-17.log', 'event': 'ingestion_run_log', 'level': 'info'}
+{'path': '\\tmp\\codelens_repos\\santhoshkumars2004\\CodeLens', 'event': 'clone_removing_old_dir', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'branch': 'default', 'target': '\\tmp\\codelens_repos\\santhoshkumars2004\\CodeLens', 'event': 'clone_started', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'path': '\\tmp\\codelens_repos\\santhoshkumars2004\\CodeLens', 'event': 'clone_successful', 'level': 'info'}
+{'path': '\\tmp\\codelens_repos\\santhoshkumars2004\\CodeLens', 'event': 'filter_walking_repo', 'level': 'info'}
 {'total_indexed': 42, 'total_skipped': 35, 'languages': 'python:23  typescript:12  shell:3  dockerfile:2  makefile:1  css:1', 'event': 'filter_complete', 'level': 'info'}
 {'total_files': 42, 'event': 'chunk_phase_start', 'level': 'info'}
 {'file': 'Makefile', 'chunks': 1, 'types': 'block:1', 'language': 'makefile', 'event': 'chunk_file_done', 'level': 'info'}
@@ -270,28 +270,28 @@ HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-base-en-v1.5 "HTTP/
 {'model': 'BAAI/bge-base-en-v1.5', 'dimensions': 768, 'load_time_seconds': 5.7, 'event': 'embed_model_ready', 'level': 'info'}
 {'total_chunks': 122, 'batch_size': 32, 'total_batches': 4, 'event': 'embed_start', 'level': 'info'}
 {'total_embeddings': 122, 'dimensions': 768, 'duration_seconds': 34.1, 'chunks_per_second': 3.6, 'event': 'embed_complete', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'store_collection_deleted', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 0, 'event': 'store_collection_ready', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'total_chunks': 122, 'batch_size': 500, 'total_batches': 1, 'event': 'store_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'event': 'store_collection_deleted', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'collection': 'santhoshkumars2004_codelens', 'existing_vectors': 0, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'total_chunks': 122, 'batch_size': 500, 'total_batches': 1, 'event': 'store_start', 'level': 'info'}
 {'batch': '1/1', 'chunks': '1-122', 'event': 'store_batch', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'stored': 122, 'total_in_collection': 122, 'event': 'store_complete', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'error': 'An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.', 'event': 's3_save_failed', 'level': 'warning'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'status': 'completed', 'files_indexed': 42, 'chunks_created': 122, 'languages': ['css', 'dockerfile', 'makefile', 'python', 'shell', 'typescript'], 'duration_seconds': 549.87, 'message': 'Successfully indexed 42 files into 122 chunks', 'event': 'ingestion_complete', 'level': 'info'}
-{'summary': '{\n  "type": "ingestion_summary",\n  "timestamp": "2026-06-18T06:40:28.928148+00:00",\n  "repo_id": "santhoshkumars2004/Stacksense",\n  "status": "completed",\n  "files_indexed": 42,\n  "chunks_created": 122,\n  "languages": [\n    "css",\n    "dockerfile",\n    "makefile",\n    "python",\n    "shell",\n    "typescript"\n  ],\n  "duration_seconds": 549.87,\n  "message": "Successfully indexed 42 files into 122 chunks"\n}', 'event': 'ingestion_summary_json', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'which file contains the embedding service?', 'event': 'query_request', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'which file contains the embedding service?', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'which file contains the embedding service?', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'stored': 122, 'total_in_collection': 122, 'event': 'store_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'error': 'An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.', 'event': 's3_save_failed', 'level': 'warning'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'status': 'completed', 'files_indexed': 42, 'chunks_created': 122, 'languages': ['css', 'dockerfile', 'makefile', 'python', 'shell', 'typescript'], 'duration_seconds': 549.87, 'message': 'Successfully indexed 42 files into 122 chunks', 'event': 'ingestion_complete', 'level': 'info'}
+{'summary': '{\n  "type": "ingestion_summary",\n  "timestamp": "2026-06-18T06:40:28.928148+00:00",\n  "repo_id": "santhoshkumars2004/CodeLens",\n  "status": "completed",\n  "files_indexed": 42,\n  "chunks_created": 122,\n  "languages": [\n    "css",\n    "dockerfile",\n    "makefile",\n    "python",\n    "shell",\n    "typescript"\n  ],\n  "duration_seconds": 549.87,\n  "message": "Successfully indexed 42 files into 122 chunks"\n}', 'event': 'ingestion_summary_json', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'which file contains the embedding service?', 'event': 'query_request', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'which file contains the embedding service?', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'which file contains the embedding service?', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
 {'query_preview': 'which file contains the embedding service?', 'event': 'embed_query', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 122, 'event': 'store_collection_ready', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'top_k': 20, 'collection_size': 122, 'event': 'store_search', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'collection': 'santhoshkumars2004_codelens', 'existing_vectors': 122, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'top_k': 20, 'collection_size': 122, 'event': 'store_search', 'level': 'info'}
 {'rank': 1, 'file': 'backend\\app\\services\\embedding_service.py', 'name': 'get_embedding_model', 'relevance': 0.7534, 'event': 'store_search_hit', 'level': 'info'}
 {'rank': 2, 'file': 'backend\\app\\services\\embedding_service.py', 'name': 'module-level', 'relevance': 0.7457, 'event': 'store_search_hit', 'level': 'info'}
 {'rank': 3, 'file': 'backend\\app\\services\\embedding_service.py', 'name': 'embed_query', 'relevance': 0.726, 'event': 'store_search_hit', 'level': 'info'}
 {'chunks_found': 20, 'top_file': 'backend\\app\\services\\embedding_service.py', 'top_relevance': 0.7534, 'duration_seconds': 0.124, 'event': 'retrieve_complete', 'level': 'info'}
 {'input_chunks': 20, 'top_k': 5, 'question': 'which file contains the embedding service?', 'event': 'rerank_start', 'level': 'info'}
-{'source': 'local', 'path': 'C:\\Users\\Prem\\Downloads\\Stacksense\\Stacksense\\backend\\local_model', 'event': 'rerank_model_loading', 'level': 'info'}
+{'source': 'local', 'path': 'C:\\Users\\Prem\\Downloads\\CodeLens\\CodeLens\\backend\\local_model', 'event': 'rerank_model_loading', 'level': 'info'}
 No device provided, using cpu
-No modules.json found for C:\Users\Prem\Downloads\Stacksense\Stacksense\backend\local_model, initializing a new CrossEncoder model.
+No modules.json found for C:\Users\Prem\Downloads\CodeLens\CodeLens\backend\local_model, initializing a new CrossEncoder model.
 {'event': 'rerank_model_ready', 'level': 'info'}
 {'total_scored': 20, 'kept': 5, 'event': 'rerank_scores', 'level': 'info'}
 {'rank': 1, 'score': 0.9985, 'file': 'backend\\app\\services\\embedding_service.py', 'name': 'module-level', 'lines': '1-59', 'event': 'rerank_result', 'level': 'info'}
@@ -299,19 +299,19 @@ No modules.json found for C:\Users\Prem\Downloads\Stacksense\Stacksense\backend\
 {'rank': 3, 'score': 0.9983, 'file': 'backend\\app\\services\\embedding_service.py', 'name': 'get_embedding_model', 'lines': '22-32', 'event': 'rerank_result', 'level': 'info'}
 {'rank': 4, 'score': 0.9971, 'file': 'backend\\app\\services\\embedding_service.py', 'name': 'embed_texts', 'lines': '35-57', 'event': 'rerank_result', 'level': 'info'}
 {'rank': 5, 'score': 0.971, 'file': 'backend\\app\\core\\retriever.py', 'name': 'module-level', 'lines': '1-18', 'event': 'rerank_result', 'level': 'info'}
-{'chunks': 5, 'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'llm_build_context', 'level': 'info'}
+{'chunks': 5, 'repo_id': 'santhoshkumars2004/CodeLens', 'event': 'llm_build_context', 'level': 'info'}
 {'model': 'llama-3.1-8b-instant', 'event': 'llm_client_ready', 'level': 'info'}
 {'model': 'llama-3.1-8b-instant', 'context_chunks': 5, 'approx_prompt_tokens': 417, 'event': 'llm_generate_start', 'level': 'info'}
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 {'model': 'llama-3.1-8b-instant', 'prompt_tokens': 1016, 'completion_tokens': 111, 'duration_seconds': 0.89, 'event': 'llm_generate_complete', 'level': 'info'}
 {'citations': 5, 'answer_length': 436, 'event': 'llm_answer_ready', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'latency_ms': 3897.99, 'citations': 5, 'confidence': 0.9927, 'event': 'query_pipeline_complete', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'Where is the user authentication logic handled in this codebase?', 'event': 'query_request', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'Where is the user authentication logic handled in this codebase?', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'Where is the user authentication logic handled in this codebase?', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'latency_ms': 3897.99, 'citations': 5, 'confidence': 0.9927, 'event': 'query_pipeline_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'Where is the user authentication logic handled in this codebase?', 'event': 'query_request', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'Where is the user authentication logic handled in this codebase?', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'Where is the user authentication logic handled in this codebase?', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
 {'query_preview': 'Where is the user authentication logic handled in this codebase?', 'event': 'embed_query', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 122, 'event': 'store_collection_ready', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'top_k': 20, 'collection_size': 122, 'event': 'store_search', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'collection': 'santhoshkumars2004_codelens', 'existing_vectors': 122, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'top_k': 20, 'collection_size': 122, 'event': 'store_search', 'level': 'info'}
 {'rank': 1, 'file': 'backend\\main.py', 'name': 'module-level', 'relevance': 0.5999, 'event': 'store_search_hit', 'level': 'info'}
 {'rank': 2, 'file': 'backend\\app\\models\\request_models.py', 'name': 'QueryRequest', 'relevance': 0.5855, 'event': 'store_search_hit', 'level': 'info'}
 {'rank': 3, 'file': 'backend\\app\\api\\ingest.py', 'name': 'check_ingestion_status', 'relevance': 0.5852, 'event': 'store_search_hit', 'level': 'info'}
@@ -323,41 +323,41 @@ HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200
 {'rank': 3, 'score': 0.0005, 'file': 'backend\\app\\services\\llm_service.py', 'name': 'generate_answer', 'lines': '36-127', 'event': 'rerank_result', 'level': 'info'}
 {'rank': 4, 'score': 0.0004, 'file': 'backend\\main.py', 'name': 'module-level', 'lines': '1-90', 'event': 'rerank_result', 'level': 'info'}
 {'rank': 5, 'score': 0.0001, 'file': 'backend\\app\\models\\response_models.py', 'name': 'QueryResponse', 'lines': '22-31', 'event': 'rerank_result', 'level': 'info'}
-{'chunks': 5, 'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'llm_build_context', 'level': 'info'}
+{'chunks': 5, 'repo_id': 'santhoshkumars2004/CodeLens', 'event': 'llm_build_context', 'level': 'info'}
 {'model': 'llama-3.1-8b-instant', 'context_chunks': 5, 'approx_prompt_tokens': 850, 'event': 'llm_generate_start', 'level': 'info'}
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 {'model': 'llama-3.1-8b-instant', 'prompt_tokens': 2167, 'completion_tokens': 235, 'duration_seconds': 0.98, 'event': 'llm_generate_complete', 'level': 'info'}
 {'citations': 5, 'answer_length': 1180, 'event': 'llm_answer_ready', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'latency_ms': 3741.33, 'citations': 5, 'confidence': 0.0086, 'event': 'query_pipeline_complete', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'What database does StackSense use to store user sessions?', 'event': 'query_request', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'What database does StackSense use to store user sessions?', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'What database does StackSense use to store user sessions?', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
-{'query_preview': 'What database does StackSense use to store user sessions?', 'event': 'embed_query', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 122, 'event': 'store_collection_ready', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'top_k': 20, 'collection_size': 122, 'event': 'store_search', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'latency_ms': 3741.33, 'citations': 5, 'confidence': 0.0086, 'event': 'query_pipeline_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'What database does CodeLens use to store user sessions?', 'event': 'query_request', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'What database does CodeLens use to store user sessions?', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'What database does CodeLens use to store user sessions?', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
+{'query_preview': 'What database does CodeLens use to store user sessions?', 'event': 'embed_query', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'collection': 'santhoshkumars2004_codelens', 'existing_vectors': 122, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'top_k': 20, 'collection_size': 122, 'event': 'store_search', 'level': 'info'}
 {'rank': 1, 'file': 'backend\\app\\config.py', 'name': 'module-level', 'relevance': 0.6591, 'event': 'store_search_hit', 'level': 'info'}
 {'rank': 2, 'file': 'backend\\app\\services\\s3_service.py', 'name': 'module-level', 'relevance': 0.6396, 'event': 'store_search_hit', 'level': 'info'}
 {'rank': 3, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'module-level', 'relevance': 0.6221, 'event': 'store_search_hit', 'level': 'info'}
 {'chunks_found': 20, 'top_file': 'backend\\app\\config.py', 'top_relevance': 0.6591, 'duration_seconds': 0.206, 'event': 'retrieve_complete', 'level': 'info'}
-{'input_chunks': 20, 'top_k': 5, 'question': 'What database does StackSense use to store user sessions?', 'event': 'rerank_start', 'level': 'info'}
+{'input_chunks': 20, 'top_k': 5, 'question': 'What database does CodeLens use to store user sessions?', 'event': 'rerank_start', 'level': 'info'}
 {'total_scored': 20, 'kept': 5, 'event': 'rerank_scores', 'level': 'info'}
 {'rank': 1, 'score': 0.6556, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'module-level', 'lines': '1-198', 'event': 'rerank_result', 'level': 'info'}
 {'rank': 2, 'score': 0.3687, 'file': 'backend\\app\\services\\s3_service.py', 'name': 'module-level', 'lines': '1-64', 'event': 'rerank_result', 'level': 'info'}
 {'rank': 3, 'score': 0.2388, 'file': 'backend\\app\\utils\\metrics.py', 'name': 'module-level', 'lines': '1-70', 'event': 'rerank_result', 'level': 'info'}
 {'rank': 4, 'score': 0.0254, 'file': 'backend\\main.py', 'name': 'module-level', 'lines': '1-90', 'event': 'rerank_result', 'level': 'info'}
 {'rank': 5, 'score': 0.0227, 'file': 'backend\\app\\config.py', 'name': 'module-level', 'lines': '1-87', 'event': 'rerank_result', 'level': 'info'}
-{'chunks': 5, 'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'llm_build_context', 'level': 'info'}
+{'chunks': 5, 'repo_id': 'santhoshkumars2004/CodeLens', 'event': 'llm_build_context', 'level': 'info'}
 {'model': 'llama-3.1-8b-instant', 'context_chunks': 5, 'approx_prompt_tokens': 710, 'event': 'llm_generate_start', 'level': 'info'}
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 {'model': 'llama-3.1-8b-instant', 'prompt_tokens': 1736, 'completion_tokens': 77, 'duration_seconds': 0.41, 'event': 'llm_generate_complete', 'level': 'info'}
 {'citations': 5, 'answer_length': 430, 'event': 'llm_answer_ready', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'latency_ms': 3143.73, 'citations': 5, 'confidence': 0.2622, 'event': 'query_pipeline_complete', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'Which file contains the ChromaDB service? List its main functions.', 'event': 'query_request', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'Which file contains the ChromaDB service? List its main functions.', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'Which file contains the ChromaDB service? List its main functions.', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'latency_ms': 3143.73, 'citations': 5, 'confidence': 0.2622, 'event': 'query_pipeline_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'Which file contains the ChromaDB service? List its main functions.', 'event': 'query_request', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'Which file contains the ChromaDB service? List its main functions.', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'Which file contains the ChromaDB service? List its main functions.', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
 {'query_preview': 'Which file contains the ChromaDB service? List its main functions.', 'event': 'embed_query', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 122, 'event': 'store_collection_ready', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'top_k': 20, 'collection_size': 122, 'event': 'store_search', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'collection': 'santhoshkumars2004_codelens', 'existing_vectors': 122, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'top_k': 20, 'collection_size': 122, 'event': 'store_search', 'level': 'info'}
 {'rank': 1, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'get_chroma_client', 'relevance': 0.788, 'event': 'store_search_hit', 'level': 'info'}
 {'rank': 2, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'is_connected', 'relevance': 0.7671, 'event': 'store_search_hit', 'level': 'info'}
 {'rank': 3, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'module-level', 'relevance': 0.7449, 'event': 'store_search_hit', 'level': 'info'}
@@ -369,18 +369,18 @@ HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200
 {'rank': 3, 'score': 0.9965, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'list_collections', 'lines': '181-196', 'event': 'rerank_result', 'level': 'info'}
 {'rank': 4, 'score': 0.9926, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'get_chroma_client', 'lines': '22-35', 'event': 'rerank_result', 'level': 'info'}
 {'rank': 5, 'score': 0.9882, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'search_chunks', 'lines': '122-160', 'event': 'rerank_result', 'level': 'info'}
-{'chunks': 5, 'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'llm_build_context', 'level': 'info'}
+{'chunks': 5, 'repo_id': 'santhoshkumars2004/CodeLens', 'event': 'llm_build_context', 'level': 'info'}
 {'model': 'llama-3.1-8b-instant', 'context_chunks': 5, 'approx_prompt_tokens': 461, 'event': 'llm_generate_start', 'level': 'info'}
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 {'model': 'llama-3.1-8b-instant', 'prompt_tokens': 1214, 'completion_tokens': 268, 'duration_seconds': 0.52, 'event': 'llm_generate_complete', 'level': 'info'}
 {'citations': 5, 'answer_length': 1040, 'event': 'llm_answer_ready', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'latency_ms': 3263.54, 'citations': 5, 'confidence': 0.9942, 'event': 'query_pipeline_complete', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'Which file defines the Prometheus metrics? What is the exact metric name for query latency?', 'event': 'query_request', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'Which file defines the Prometheus metrics? What is the exact metric name for query latency?', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'Which file defines the Prometheus metrics? What is the exact metric name for query latency?', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'latency_ms': 3263.54, 'citations': 5, 'confidence': 0.9942, 'event': 'query_pipeline_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'Which file defines the Prometheus metrics? What is the exact metric name for query latency?', 'event': 'query_request', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'Which file defines the Prometheus metrics? What is the exact metric name for query latency?', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'Which file defines the Prometheus metrics? What is the exact metric name for query latency?', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
 {'query_preview': 'Which file defines the Prometheus metrics? What is the exact metric name for que', 'event': 'embed_query', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 122, 'event': 'store_collection_ready', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'top_k': 20, 'collection_size': 122, 'event': 'store_search', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'collection': 'santhoshkumars2004_codelens', 'existing_vectors': 122, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'top_k': 20, 'collection_size': 122, 'event': 'store_search', 'level': 'info'}
 {'rank': 1, 'file': 'backend\\app\\utils\\metrics.py', 'name': 'module-level', 'relevance': 0.8075, 'event': 'store_search_hit', 'level': 'info'}
 {'rank': 2, 'file': 'backend\\main.py', 'name': 'module-level', 'relevance': 0.6817, 'event': 'store_search_hit', 'level': 'info'}
 {'rank': 3, 'file': 'backend\\app\\core\\pipeline.py', 'name': 'query_pipeline', 'relevance': 0.671, 'event': 'store_search_hit', 'level': 'info'}
@@ -392,18 +392,18 @@ HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200
 {'rank': 3, 'score': 0.0378, 'file': 'backend\\app\\core\\pipeline.py', 'name': 'query_pipeline', 'lines': '22-113', 'event': 'rerank_result', 'level': 'info'}
 {'rank': 4, 'score': 0.0153, 'file': 'backend\\app\\core\\pipeline.py', 'name': 'module-level', 'lines': '1-21', 'event': 'rerank_result', 'level': 'info'}
 {'rank': 5, 'score': 0.0091, 'file': 'backend\\app\\core\\retriever.py', 'name': 'module-level', 'lines': '1-18', 'event': 'rerank_result', 'level': 'info'}
-{'chunks': 5, 'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'llm_build_context', 'level': 'info'}
+{'chunks': 5, 'repo_id': 'santhoshkumars2004/CodeLens', 'event': 'llm_build_context', 'level': 'info'}
 {'model': 'llama-3.1-8b-instant', 'context_chunks': 5, 'approx_prompt_tokens': 913, 'event': 'llm_generate_start', 'level': 'info'}
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 {'model': 'llama-3.1-8b-instant', 'prompt_tokens': 2338, 'completion_tokens': 150, 'duration_seconds': 0.57, 'event': 'llm_generate_complete', 'level': 'info'}
 {'citations': 5, 'answer_length': 491, 'event': 'llm_answer_ready', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'latency_ms': 3375.05, 'citations': 5, 'confidence': 0.3482, 'event': 'query_pipeline_complete', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'Trace the complete journey of a GitHub URL from submission to the first chunk stored in ChromaDB. Li', 'event': 'query_request', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'Trace the complete journey of a GitHub URL from submission to the first chunk stored in ChromaDB. Li', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'Trace the complete journey of a GitHub URL from submission to the first chunk stored in ChromaDB. Li', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'latency_ms': 3375.05, 'citations': 5, 'confidence': 0.3482, 'event': 'query_pipeline_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'Trace the complete journey of a GitHub URL from submission to the first chunk stored in ChromaDB. Li', 'event': 'query_request', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'Trace the complete journey of a GitHub URL from submission to the first chunk stored in ChromaDB. Li', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'Trace the complete journey of a GitHub URL from submission to the first chunk stored in ChromaDB. Li', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
 {'query_preview': 'Trace the complete journey of a GitHub URL from submission to the first chunk st', 'event': 'embed_query', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 122, 'event': 'store_collection_ready', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'top_k': 20, 'collection_size': 122, 'event': 'store_search', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'collection': 'santhoshkumars2004_codelens', 'existing_vectors': 122, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'top_k': 20, 'collection_size': 122, 'event': 'store_search', 'level': 'info'}
 {'rank': 1, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'store_chunks', 'relevance': 0.674, 'event': 'store_search_hit', 'level': 'info'}
 {'rank': 2, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'search_chunks', 'relevance': 0.6653, 'event': 'store_search_hit', 'level': 'info'}
 {'rank': 3, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'list_collections', 'relevance': 0.6624, 'event': 'store_search_hit', 'level': 'info'}
@@ -415,18 +415,18 @@ HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200
 {'rank': 3, 'score': 0.0311, 'file': 'backend\\app\\core\\ingestion.py', 'name': 'ingest_repository', 'lines': '39-230', 'event': 'rerank_result', 'level': 'info'}
 {'rank': 4, 'score': 0.0066, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'search_chunks', 'lines': '122-160', 'event': 'rerank_result', 'level': 'info'}
 {'rank': 5, 'score': 0.004, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'module-level', 'lines': '1-198', 'event': 'rerank_result', 'level': 'info'}
-{'chunks': 5, 'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'llm_build_context', 'level': 'info'}
+{'chunks': 5, 'repo_id': 'santhoshkumars2004/CodeLens', 'event': 'llm_build_context', 'level': 'info'}
 {'model': 'llama-3.1-8b-instant', 'context_chunks': 5, 'approx_prompt_tokens': 1070, 'event': 'llm_generate_start', 'level': 'info'}
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 {'model': 'llama-3.1-8b-instant', 'prompt_tokens': 2809, 'completion_tokens': 578, 'duration_seconds': 1.18, 'event': 'llm_generate_complete', 'level': 'info'}
 {'citations': 5, 'answer_length': 2358, 'event': 'llm_answer_ready', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'latency_ms': 3961.82, 'citations': 5, 'confidence': 0.0243, 'event': 'query_pipeline_complete', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'What happens if ChromaDB is down when a user asks a question? Does the app crash or handle it gracef', 'event': 'query_request', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'What happens if ChromaDB is down when a user asks a question? Does the app crash or handle it gracef', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'What happens if ChromaDB is down when a user asks a question? Does the app crash or handle it gracef', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'latency_ms': 3961.82, 'citations': 5, 'confidence': 0.0243, 'event': 'query_pipeline_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'What happens if ChromaDB is down when a user asks a question? Does the app crash or handle it gracef', 'event': 'query_request', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'What happens if ChromaDB is down when a user asks a question? Does the app crash or handle it gracef', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'question': 'What happens if ChromaDB is down when a user asks a question? Does the app crash or handle it gracef', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
 {'query_preview': 'What happens if ChromaDB is down when a user asks a question? Does the app crash', 'event': 'embed_query', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 122, 'event': 'store_collection_ready', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'top_k': 20, 'collection_size': 122, 'event': 'store_search', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'collection': 'santhoshkumars2004_codelens', 'existing_vectors': 122, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'top_k': 20, 'collection_size': 122, 'event': 'store_search', 'level': 'info'}
 {'rank': 1, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'is_connected', 'relevance': 0.7201, 'event': 'store_search_hit', 'level': 'info'}
 {'rank': 2, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'get_chroma_client', 'relevance': 0.6523, 'event': 'store_search_hit', 'level': 'info'}
 {'rank': 3, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'delete_collection', 'relevance': 0.6461, 'event': 'store_search_hit', 'level': 'info'}
@@ -438,10 +438,10 @@ HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200
 {'rank': 3, 'score': 0.0029, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'module-level', 'lines': '1-198', 'event': 'rerank_result', 'level': 'info'}
 {'rank': 4, 'score': 0.002, 'file': 'backend\\app\\core\\retriever.py', 'name': 'retrieve', 'lines': '19-54', 'event': 'rerank_result', 'level': 'info'}
 {'rank': 5, 'score': 0.0018, 'file': 'backend\\app\\core\\retriever.py', 'name': 'module-level', 'lines': '1-18', 'event': 'rerank_result', 'level': 'info'}
-{'chunks': 5, 'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'llm_build_context', 'level': 'info'}
+{'chunks': 5, 'repo_id': 'santhoshkumars2004/CodeLens', 'event': 'llm_build_context', 'level': 'info'}
 {'model': 'llama-3.1-8b-instant', 'context_chunks': 5, 'approx_prompt_tokens': 464, 'event': 'llm_generate_start', 'level': 'info'}
 HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 {'model': 'llama-3.1-8b-instant', 'prompt_tokens': 1144, 'completion_tokens': 329, 'duration_seconds': 0.77, 'event': 'llm_generate_complete', 'level': 'info'}
 {'citations': 5, 'answer_length': 1393, 'event': 'llm_answer_ready', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/Stacksense', 'latency_ms': 3783.45, 'citations': 5, 'confidence': 0.003, 'event': 'query_pipeline_complete', 'level': 'info'}
-{'event': 'stacksense_shutting_down', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/CodeLens', 'latency_ms': 3783.45, 'citations': 5, 'confidence': 0.003, 'event': 'query_pipeline_complete', 'level': 'info'}
+{'event': 'codelens_shutting_down', 'level': 'info'}

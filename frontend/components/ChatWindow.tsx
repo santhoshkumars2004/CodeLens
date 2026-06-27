@@ -23,7 +23,7 @@ const LANGUAGES = [
   { value: "c", label: "🔧 C" },
 ];
 
-const HISTORY_KEY = (repoId: string) => `stacksense_chat_${repoId}`;
+const HISTORY_KEY = (repoId: string) => `codelens_chat_${repoId}`;
 
 /** Restore messages from localStorage, handling Date revival */
 function loadHistory(repoId: string): Message[] {

@@ -1,5 +1,5 @@
 """
-StackSense Retriever.
+CodeLens Retriever.
 
 Performs vector similarity search on ChromaDB and optional
 cross-encoder reranking for improved accuracy.

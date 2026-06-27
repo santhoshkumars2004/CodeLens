@@ -1,5 +1,5 @@
 """
-StackSense — Reranker (app/retrieval/reranker.py)
+CodeLens — Reranker (app/retrieval/reranker.py)
 
 Uses a cross-encoder model to score and re-rank the top chunks
 retrieved from vector search for improved relevance.

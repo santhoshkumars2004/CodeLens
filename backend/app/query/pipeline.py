@@ -1,5 +1,5 @@
 """
-StackSense — Query Pipeline (app/query/pipeline.py)
+CodeLens — Query Pipeline (app/query/pipeline.py)
 
 Orchestrates the full RAG query flow:
   Question → Retrieve (vector search) → Rerank (cross-encoder) → Generate (LLM) → Response.

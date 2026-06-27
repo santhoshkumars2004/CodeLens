@@ -1,5 +1,5 @@
 """
-StackSense Code Chunker (app/utils/chunker.py)
+CodeLens Code Chunker (app/utils/chunker.py)
 
 Splits code files into semantically meaningful chunks, then wraps each
 chunk in a context header so the embedding model can answer questions like

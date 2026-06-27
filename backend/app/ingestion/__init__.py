@@ -1,1 +1,1 @@
-"""StackSense Ingestion Package — Clone → Filter → Chunk → Embed → Store."""
+"""CodeLens Ingestion Package — Clone → Filter → Chunk → Embed → Store."""

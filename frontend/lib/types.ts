@@ -1,5 +1,5 @@
 /**
- * StackSense — TypeScript Type Definitions
+ * CodeLens — TypeScript Type Definitions
  */
 
 export interface Citation {

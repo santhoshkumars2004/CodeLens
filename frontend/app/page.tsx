@@ -104,7 +104,7 @@ export default function HomePage() {
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#6366f1] to-[#a855f7] flex items-center justify-center text-sm font-bold">
               S
             </div>
-            <span className="text-lg font-semibold">StackSense</span>
+            <span className="text-lg font-semibold">CodeLens</span>
           </div>
           <div className="flex items-center gap-4">
             <a
@@ -302,7 +302,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="border-t border-[var(--color-border)] px-6 py-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between text-xs text-[var(--color-text-muted)]">
-          <span>StackSense v1.0.0</span>
+          <span>CodeLens v1.0.0</span>
           <span>RAG + ChromaDB + LLaMA3</span>
         </div>
       </footer>

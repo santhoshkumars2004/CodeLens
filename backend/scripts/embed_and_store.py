@@ -1,7 +1,7 @@
 """
 scripts/embed_and_store.py
 
-Skip cloning — use the already-cloned repo at \tmp\stacksense_repos\
+Skip cloning — use the already-cloned repo at \tmp\codelens_repos\
 to embed and store with the correct BGE model.
 
 Run from backend/:
@@ -26,14 +26,14 @@ settings = get_settings()
 setup_logging(settings.log_level)
 logger = get_logger("embed_and_store")
 
-REPO_ID   = "santhoshkumars2004/Stacksense"
-REPO_PATH = Path(r"\tmp\stacksense_repos\santhoshkumars2004\Stacksense")
+REPO_ID   = "santhoshkumars2004/CodeLens"
+REPO_PATH = Path(r"\tmp\codelens_repos\santhoshkumars2004\CodeLens")
 
 
 def main():
     print()
     print("=" * 62)
-    print("  StackSense — Embed & Store (skip clone)")
+    print("  CodeLens — Embed & Store (skip clone)")
     print("=" * 62)
 
     if not REPO_PATH.exists():

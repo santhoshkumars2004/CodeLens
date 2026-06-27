@@ -1,6 +1,6 @@
-# StackSense — Docker Compose
+# CodeLens — Docker Compose
 #
-# This file defines ALL services needed to run StackSense.
+# This file defines ALL services needed to run CodeLens.
 # ONE command to rule them all: docker-compose up --build
 #
 # HOW DOCKER COMPOSE NETWORKING WORKS:
@@ -23,7 +23,7 @@ services:
     build:
       context: ./backend       # Build from backend/Dockerfile
       dockerfile: Dockerfile
-    container_name: stacksense-backend
+    container_name: codelens-backend
     ports:
       - "8000:8000"            # HOST:CONTAINER — access via localhost:8000
 
@@ -50,12 +50,12 @@ services:
       # Named volume: ChromaDB data persists even if backend container is deleted
       - chromadb_data:/app/data/chromadb
       # Named volume: cloned GitHub repos cached here
-      - repos_data:/tmp/stacksense_repos
+      - repos_data:/tmp/codelens_repos
       # HuggingFace model cache — download once, reuse forever
       - hf_cache:/root/.cache/huggingface
 
     networks:
-      - stacksense-network
+      - codelens-network
 
     depends_on:
       - chromadb
@@ -77,7 +77,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: stacksense-frontend
+    container_name: codelens-frontend
     ports:
       - "3000:3000"
 
@@ -91,7 +91,7 @@ services:
         condition: service_healthy  # Don't start until backend is healthy
 
     networks:
-      - stacksense-network
+      - codelens-network
 
     restart: unless-stopped
 
@@ -102,7 +102,7 @@ services:
   # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   chromadb:
     image: chromadb/chroma:latest   # Official image from Docker Hub
-    container_name: stacksense-chromadb
+    container_name: codelens-chromadb
     ports:
       - "8001:8000"                 # ChromaDB runs on 8000 internally, mapped to 8001
 
@@ -115,7 +115,7 @@ services:
       - chromadb_data:/chroma/chroma
 
     networks:
-      - stacksense-network
+      - codelens-network
 
     restart: unless-stopped
 
@@ -123,7 +123,7 @@ services:
 # Named Volumes
 # Managed by Docker — data survives container restarts/deletions
 # View them: docker volume ls
-# Delete them: docker volume rm stacksense_chromadb_data
+# Delete them: docker volume rm codelens_chromadb_data
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 volumes:
   chromadb_data:    # Vector DB data
@@ -133,9 +133,9 @@ volumes:
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # Network
 # All services join this bridge network and can reach each other by name
-# "stacksense-backend" → http://backend:8000
-# "stacksense-frontend" → http://frontend:3000
+# "codelens-backend" → http://backend:8000
+# "codelens-frontend" → http://frontend:3000
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 networks:
-  stacksense-network:
+  codelens-network:
     driver: bridge

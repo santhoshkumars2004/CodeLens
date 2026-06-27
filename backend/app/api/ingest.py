@@ -1,5 +1,5 @@
 """
-StackSense Ingest Endpoint.
+CodeLens Ingest Endpoint.
 
 POST /api/ingest               — start indexing a GitHub repository (returns 202).
 GET  /api/ingest/status/{owner}/{repo} — poll ingestion progress.

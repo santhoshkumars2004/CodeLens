@@ -2,10 +2,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: backend
-  namespace: stacksense
+  namespace: codelens
 spec:
   selector:
-    app: stacksense
+    app: codelens
     component: backend
   ports:
     - port: 8000

@@ -1,5 +1,5 @@
 """
-StackSense — File Filter (app/ingestion/file_filter.py)
+CodeLens — File Filter (app/ingestion/file_filter.py)
 
 Walks a cloned repository and decides which files are worth indexing.
 Every skipped file is logged at DEBUG level with a clear reason.

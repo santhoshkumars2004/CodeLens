@@ -1,5 +1,5 @@
 """
-scripts/test_chat.py — Interactive CLI to test the full StackSense Backend RAG pipeline.
+scripts/test_chat.py — Interactive CLI to test the full CodeLens Backend RAG pipeline.
 
 Run from backend/:
     python scripts/test_chat.py
@@ -25,7 +25,7 @@ def get_latest_repo():
 
 def main():
     print("\n========================================================")
-    print("🤖 StackSense Backend — Interactive CLI Test")
+    print("🤖 CodeLens Backend — Interactive CLI Test")
     print("========================================================\n")
     
     repo_id = get_latest_repo()
@@ -54,7 +54,7 @@ def main():
             )
             
             print("\n" + "="*50)
-            print("🤖 STACKSENSE RESPONSE:")
+            print("🤖 CODELENS RESPONSE:")
             print("="*50 + "\n")
             
             print(result["answer"])

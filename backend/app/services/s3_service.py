@@ -1,5 +1,5 @@
 """
-StackSense S3 Service.
+CodeLens S3 Service.
 
 Stores repository metadata and indexing state on AWS S3 free tier.
 Optional — falls back gracefully when AWS credentials are not set.

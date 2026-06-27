@@ -1,5 +1,5 @@
 """
-StackSense — Vector Store (app/vectordb/vector_store.py)
+CodeLens — Vector Store (app/vectordb/vector_store.py)
 
 Manages the ChromaDB vector database:
   - Create/get collections per repository

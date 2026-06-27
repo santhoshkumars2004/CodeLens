@@ -1,5 +1,5 @@
 # ============================================
-# StackSense Makefile
+# CodeLens Makefile
 # ============================================
 
 .PHONY: dev build test lint clean k8s-deploy k8s-status setup
@@ -34,10 +34,10 @@ k8s-deploy:
 	kubectl apply -f kubernetes/monitoring/
 
 k8s-status:
-	kubectl get all -n stacksense
+	kubectl get all -n codelens
 
 k8s-delete:
-	kubectl delete namespace stacksense
+	kubectl delete namespace codelens
 
 # ── Setup ─────────────────────────────────────────────────────────
 setup:
@@ -49,4 +49,4 @@ setup:
 clean:
 	docker-compose down -v
 	rm -rf backend/data/chromadb
-	rm -rf /tmp/stacksense_repos
+	rm -rf /tmp/codelens_repos

@@ -1,5 +1,5 @@
 """
-StackSense RAG Pipeline.
+CodeLens RAG Pipeline.
 
 Orchestrates the full query pipeline:
 Question → Retrieve → Rerank → Generate → Response.

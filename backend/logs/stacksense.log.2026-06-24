@@ -685,17 +685,17 @@ HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200
 {'total_chunks': 290, 'files_processed': 46, 'event': 'chunk_phase_complete', 'level': 'info'}
 {'path': 'data\\chromadb\\chunk_dumps\\santhoshkumars2004_ATS-Resume-Maker', 'chunk_count': 290, 'event': 'chunks_dumped', 'level': 'info'}
 {'total_chunks': 290, 'batch_size': 32, 'total_batches': 10, 'event': 'embed_start', 'level': 'info'}
-{'version': '1.0.0', 'debug': False, 'event': 'stacksense_starting', 'level': 'info'}
+{'version': '1.0.0', 'debug': False, 'event': 'codelens_starting', 'level': 'info'}
 {'persist_dir': './data/chromadb', 'event': 'store_connecting', 'level': 'info'}
 {'persist_dir': './data/chromadb', 'event': 'store_connected', 'level': 'info'}
 {'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'event': 'ingest_accepted', 'level': 'info'}
 {'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'branch': 'default', 'event': 'ingestion_started', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'log_file': 'C:\\Users\\Prem\\Downloads\\Stacksense\\Stacksense\\backend\\logs\\runs\\ingestion_santhoshkumars2004_ATS-Resume-Maker_2026-06-23T18-47-22.log', 'event': 'ingestion_run_log', 'level': 'info'}
-{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'clone_removing_old_dir', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'branch': 'default', 'target': '\\tmp\\stacksense_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'clone_started', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'log_file': 'C:\\Users\\Prem\\Downloads\\CodeLens\\CodeLens\\backend\\logs\\runs\\ingestion_santhoshkumars2004_ATS-Resume-Maker_2026-06-23T18-47-22.log', 'event': 'ingestion_run_log', 'level': 'info'}
+{'path': '\\tmp\\codelens_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'clone_removing_old_dir', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'branch': 'default', 'target': '\\tmp\\codelens_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'clone_started', 'level': 'info'}
 {'repo': 'santhoshkumars2004/ATS-Resume-Maker', 'error': 'HTTP Error 401: Unauthorized', 'note': 'Proceeding without size check.', 'event': 'clone_size_check_failed', 'level': 'warning'}
-{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'clone_successful', 'level': 'info'}
-{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'filter_walking_repo', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'path': '\\tmp\\codelens_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'clone_successful', 'level': 'info'}
+{'path': '\\tmp\\codelens_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'filter_walking_repo', 'level': 'info'}
 {'total_indexed': 46, 'total_skipped': 18, 'languages': 'python:31  javascript:10  toml:1  html:1  json:1  markdown:1  css:1', 'event': 'filter_complete', 'level': 'info'}
 {'path': 'data\\chromadb\\skip_manifest_santhoshkumars2004_ATS-Resume-Maker.json', 'skipped_files': 18, 'event': 'skip_manifest_saved', 'level': 'info'}
 {'total_files': 46, 'event': 'chunk_phase_start', 'level': 'info'}
@@ -1546,8 +1546,8 @@ HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-base-en-v1.5 "HTTP/
 {'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'error': 'An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.', 'event': 's3_save_failed', 'level': 'warning'}
 {'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'status': 'completed', 'files_indexed': 46, 'chunks_created': 290, 'languages': ['css', 'html', 'javascript', 'json', 'markdown', 'python', 'toml'], 'duration_seconds': 831.83, 'message': 'Successfully indexed 46 files into 290 chunks', 'event': 'ingestion_complete', 'level': 'info'}
 {'summary': '{\n  "type": "ingestion_summary",\n  "timestamp": "2026-06-23T19:01:15.371795+00:00",\n  "repo_id": "santhoshkumars2004/ATS-Resume-Maker",\n  "status": "completed",\n  "files_indexed": 46,\n  "chunks_created": 290,\n  "languages": [\n    "css",\n    "html",\n    "javascript",\n    "json",\n    "markdown",\n    "python",\n    "toml"\n  ],\n  "duration_seconds": 831.83,\n  "message": "Successfully indexed 46 files into 290 chunks"\n}', 'event': 'ingestion_summary_json', 'level': 'info'}
-{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'clone_removed', 'level': 'info'}
-{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'ingestion_cleanup_done', 'level': 'info'}
+{'path': '\\tmp\\codelens_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'clone_removed', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'path': '\\tmp\\codelens_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'ingestion_cleanup_done', 'level': 'info'}
 {'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'question': 'How does authentication work?', 'event': 'query_request', 'level': 'info'}
 {'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'question': 'How does authentication work?', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
 {'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'question': 'How does authentication work?', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
@@ -1560,9 +1560,9 @@ HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-base-en-v1.5 "HTTP/
 {'dense_count': 20, 'sparse_count': 20, 'fused_count': 20, 'event': 'hybrid_search_fusion', 'level': 'info'}
 {'chunks_found': 20, 'top_file': 'frontend\\src\\components\\AuthScreen.jsx', 'top_relevance': 0.6003, 'duration_seconds': 0.097, 'event': 'retrieve_complete', 'level': 'info'}
 {'input_chunks': 20, 'top_k': 5, 'question': 'How does authentication work?', 'event': 'rerank_start', 'level': 'info'}
-{'source': 'local', 'path': 'C:\\Users\\Prem\\Downloads\\Stacksense\\Stacksense\\backend\\local_model', 'event': 'rerank_model_loading', 'level': 'info'}
+{'source': 'local', 'path': 'C:\\Users\\Prem\\Downloads\\CodeLens\\CodeLens\\backend\\local_model', 'event': 'rerank_model_loading', 'level': 'info'}
 No device provided, using cpu
-No modules.json found for C:\Users\Prem\Downloads\Stacksense\Stacksense\backend\local_model, initializing a new CrossEncoder model.
+No modules.json found for C:\Users\Prem\Downloads\CodeLens\CodeLens\backend\local_model, initializing a new CrossEncoder model.
 {'event': 'rerank_model_ready', 'level': 'info'}
 {'total_scored': 20, 'kept': 5, 'event': 'rerank_scores', 'level': 'info'}
 {'rank': 1, 'score': 0.2421, 'file': 'backend\\auth_store.py', 'name': 'authenticate_user', 'lines': '159-170', 'event': 'rerank_result', 'level': 'info'}
@@ -1579,11 +1579,11 @@ HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200
 {'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'latency_ms': 2648.03, 'citations': 5, 'confidence': 0.1214, 'event': 'query_pipeline_complete', 'level': 'info'}
 {'repo_id': 'mesouvikdev/forage-midas', 'event': 'ingest_accepted', 'level': 'info'}
 {'repo_id': 'mesouvikdev/forage-midas', 'branch': 'default', 'event': 'ingestion_started', 'level': 'info'}
-{'repo_id': 'mesouvikdev/forage-midas', 'log_file': 'C:\\Users\\Prem\\Downloads\\Stacksense\\Stacksense\\backend\\logs\\runs\\ingestion_mesouvikdev_forage-midas_2026-06-23T19-05-44.log', 'event': 'ingestion_run_log', 'level': 'info'}
-{'repo_id': 'mesouvikdev/forage-midas', 'branch': 'default', 'target': '\\tmp\\stacksense_repos\\mesouvikdev\\forage-midas', 'event': 'clone_started', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'log_file': 'C:\\Users\\Prem\\Downloads\\CodeLens\\CodeLens\\backend\\logs\\runs\\ingestion_mesouvikdev_forage-midas_2026-06-23T19-05-44.log', 'event': 'ingestion_run_log', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'branch': 'default', 'target': '\\tmp\\codelens_repos\\mesouvikdev\\forage-midas', 'event': 'clone_started', 'level': 'info'}
 {'repo': 'mesouvikdev/forage-midas', 'error': 'HTTP Error 401: Unauthorized', 'note': 'Proceeding without size check.', 'event': 'clone_size_check_failed', 'level': 'warning'}
-{'repo_id': 'mesouvikdev/forage-midas', 'path': '\\tmp\\stacksense_repos\\mesouvikdev\\forage-midas', 'event': 'clone_successful', 'level': 'info'}
-{'path': '\\tmp\\stacksense_repos\\mesouvikdev\\forage-midas', 'event': 'filter_walking_repo', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'path': '\\tmp\\codelens_repos\\mesouvikdev\\forage-midas', 'event': 'clone_successful', 'level': 'info'}
+{'path': '\\tmp\\codelens_repos\\mesouvikdev\\forage-midas', 'event': 'filter_walking_repo', 'level': 'info'}
 {'total_indexed': 16, 'total_skipped': 6, 'languages': 'java:15  xml:1', 'event': 'filter_complete', 'level': 'info'}
 {'path': 'data\\chromadb\\skip_manifest_mesouvikdev_forage-midas.json', 'skipped_files': 6, 'event': 'skip_manifest_saved', 'level': 'info'}
 {'total_files': 16, 'event': 'chunk_phase_start', 'level': 'info'}
@@ -1633,8 +1633,8 @@ HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200
 {'repo_id': 'mesouvikdev/forage-midas', 'error': 'An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.', 'event': 's3_save_failed', 'level': 'warning'}
 {'repo_id': 'mesouvikdev/forage-midas', 'status': 'completed', 'files_indexed': 16, 'chunks_created': 16, 'languages': ['java', 'xml'], 'duration_seconds': 15.04, 'message': 'Successfully indexed 16 files into 16 chunks', 'event': 'ingestion_complete', 'level': 'info'}
 {'summary': '{\n  "type": "ingestion_summary",\n  "timestamp": "2026-06-23T19:06:00.435765+00:00",\n  "repo_id": "mesouvikdev/forage-midas",\n  "status": "completed",\n  "files_indexed": 16,\n  "chunks_created": 16,\n  "languages": [\n    "java",\n    "xml"\n  ],\n  "duration_seconds": 15.04,\n  "message": "Successfully indexed 16 files into 16 chunks"\n}', 'event': 'ingestion_summary_json', 'level': 'info'}
-{'path': '\\tmp\\stacksense_repos\\mesouvikdev\\forage-midas', 'event': 'clone_removed', 'level': 'info'}
-{'repo_id': 'mesouvikdev/forage-midas', 'path': '\\tmp\\stacksense_repos\\mesouvikdev\\forage-midas', 'event': 'ingestion_cleanup_done', 'level': 'info'}
+{'path': '\\tmp\\codelens_repos\\mesouvikdev\\forage-midas', 'event': 'clone_removed', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'path': '\\tmp\\codelens_repos\\mesouvikdev\\forage-midas', 'event': 'ingestion_cleanup_done', 'level': 'info'}
 {'repo_id': 'mesouvikdev/forage-midas', 'question': 'How to handle the request using kafka ?', 'event': 'query_request', 'level': 'info'}
 {'repo_id': 'mesouvikdev/forage-midas', 'question': 'How to handle the request using kafka ?', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
 {'repo_id': 'mesouvikdev/forage-midas', 'question': 'How to handle the request using kafka ?', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}

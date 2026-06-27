@@ -1,5 +1,5 @@
 """
-StackSense Pydantic Response Models.
+CodeLens Pydantic Response Models.
 
 Defines the schema for all API response payloads.
 """

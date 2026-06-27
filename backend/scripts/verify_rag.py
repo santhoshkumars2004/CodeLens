@@ -267,7 +267,7 @@ def check_language_breakdown(col):
 if __name__ == "__main__":
     print()
     print("╔══════════════════════════════════════════════════════════╗")
-    print("║         StackSense — RAG Pipeline Verification           ║")
+    print("║         CodeLens — RAG Pipeline Verification           ║")
     print("╚══════════════════════════════════════════════════════════╝")
 
     col, col_name = get_collection()

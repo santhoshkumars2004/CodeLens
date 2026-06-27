@@ -1,5 +1,5 @@
 """
-StackSense — Embedder (app/embeddings/embedder.py)
+CodeLens — Embedder (app/embeddings/embedder.py)
 
 Thin wrapper around EmbeddingService for use by the ingestion and query pipelines.
 The actual model logic lives in app/services/embedding_service.py.

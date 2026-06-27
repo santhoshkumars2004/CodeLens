@@ -1,5 +1,5 @@
 """
-StackSense GitHub Service.
+CodeLens GitHub Service.
 
 Handles cloning GitHub repositories and extracting metadata.
 """

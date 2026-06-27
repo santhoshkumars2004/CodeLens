@@ -1,1 +1,1 @@
-"""StackSense Backend Tests."""
+"""CodeLens Backend Tests."""

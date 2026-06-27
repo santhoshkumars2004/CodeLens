@@ -4,13 +4,13 @@ scripts/reset_and_reindex.py
 Wipes all ChromaDB collections and re-indexes a GitHub repository from scratch.
 
 Usage:
-    python scripts/reset_and_reindex.py --repo-url https://github.com/santhoshkumars2004/Stacksense
+    python scripts/reset_and_reindex.py --repo-url https://github.com/santhoshkumars2004/CodeLens
     python scripts/reset_and_reindex.py --repo-url https://github.com/owner/repo --branch main
     python scripts/reset_and_reindex.py --nuke-only          # just clear DB, don't re-index
 
 Run from the backend/ directory:
     cd backend
-    python scripts/reset_and_reindex.py --repo-url https://github.com/santhoshkumars2004/Stacksense
+    python scripts/reset_and_reindex.py --repo-url https://github.com/santhoshkumars2004/CodeLens
 """
 
 import argparse
@@ -317,7 +317,7 @@ def main() -> None:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python scripts/reset_and_reindex.py --repo-url https://github.com/santhoshkumars2004/Stacksense
+  python scripts/reset_and_reindex.py --repo-url https://github.com/santhoshkumars2004/CodeLens
   python scripts/reset_and_reindex.py --repo-url https://github.com/owner/repo --branch develop
   python scripts/reset_and_reindex.py --nuke-only
         """,
@@ -335,7 +335,7 @@ Examples:
 
     print()
     print("╔══════════════════════════════════════════════════════════╗")
-    print("║            StackSense — Reset & Re-index                 ║")
+    print("║            CodeLens — Reset & Re-index                 ║")
     print("╚══════════════════════════════════════════════════════════╝")
 
     # ── Step 1: Nuke ChromaDB ─────────────────────────────────────

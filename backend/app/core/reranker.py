@@ -1,5 +1,5 @@
 """
-StackSense Reranker.
+CodeLens Reranker.
 
 Uses a cross-encoder model to rerank retrieved chunks
 for improved relevance accuracy.

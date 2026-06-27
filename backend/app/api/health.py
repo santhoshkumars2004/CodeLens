@@ -1,5 +1,5 @@
 """
-StackSense Health Check Endpoint.
+CodeLens Health Check Endpoint.
 
 GET /health — returns system health status.
 """

@@ -1,5 +1,5 @@
 """
-StackSense File Filter Utility.
+CodeLens File Filter Utility.
 
 Determines which files should be included or skipped during
 repository indexing.

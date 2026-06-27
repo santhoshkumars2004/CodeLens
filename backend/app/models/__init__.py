@@ -1,1 +1,1 @@
-"""Pydantic data models for StackSense."""
+"""Pydantic data models for CodeLens."""

@@ -138,7 +138,7 @@ export default function MessageBubble({
             </div>
           )}
           <span className="text-xs text-[var(--color-text-muted)]">
-            {isUser ? "You" : "StackSense"}
+            {isUser ? "You" : "CodeLens"}
           </span>
           {message.latency_ms && !isUser && (
             <span className="text-xs text-[var(--color-text-muted)] opacity-60">

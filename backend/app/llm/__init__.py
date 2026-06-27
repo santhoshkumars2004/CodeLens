@@ -1,1 +1,1 @@
-"""StackSense LLM Package — Groq client and answer generation."""
+"""CodeLens LLM Package — Groq client and answer generation."""

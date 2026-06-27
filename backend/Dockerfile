@@ -1,4 +1,4 @@
-# StackSense Backend Dockerfile
+# CodeLens Backend Dockerfile
 # Multi-stage build for optimized, production-ready image
 
 # ── Stage 1: Dependency installer ──────────────────────────────────
@@ -18,13 +18,14 @@ WORKDIR /app
 # As long as requirements.txt doesn't change, pip install is SKIPPED on
 # subsequent builds (huge speed improvement in CI/CD pipelines).
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
 # ── Stage 2: Application ───────────────────────────────────────────
 COPY . .
 
 # Pre-create data directories so they exist even if volume isn't mounted
-RUN mkdir -p /app/data/chromadb /tmp/stacksense_repos
+RUN mkdir -p /app/data/chromadb /tmp/codelens_repos
 
 # Expose the port (documentation only — actual binding is in CMD)
 EXPOSE 8000

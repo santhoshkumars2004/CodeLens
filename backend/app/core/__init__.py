@@ -1,1 +1,1 @@
-"""Core RAG pipeline logic for StackSense."""
+"""Core RAG pipeline logic for CodeLens."""

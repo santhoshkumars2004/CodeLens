@@ -1,5 +1,5 @@
 """
-StackSense Pydantic Request Models.
+CodeLens Pydantic Request Models.
 
 Defines the schema for all incoming API request payloads.
 """

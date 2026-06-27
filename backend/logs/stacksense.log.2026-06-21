@@ -1,2 +1,2 @@
-{'version': '1.0.0', 'debug': False, 'event': 'stacksense_starting', 'level': 'info'}
-{'event': 'stacksense_shutting_down', 'level': 'info'}
+{'version': '1.0.0', 'debug': False, 'event': 'codelens_starting', 'level': 'info'}
+{'event': 'codelens_shutting_down', 'level': 'info'}

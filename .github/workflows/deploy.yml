@@ -1,4 +1,4 @@
-# StackSense — CD Pipeline (Render.com Deployment)
+# CodeLens — CD Pipeline (Render.com Deployment)
 #
 # WHAT IS CD (Continuous Deployment)?
 #   Once CI passes and Docker images are built and pushed to Docker Hub,
@@ -62,7 +62,7 @@ jobs:
         if: always()
         run: |
           if [ "${{ job.status }}" == "success" ]; then
-            echo "🎉 StackSense deployed successfully!"
+            echo "🎉 CodeLens deployed successfully!"
             echo "Commit: ${{ github.sha }}"
           else
             echo "❌ Deployment failed — check logs above"

@@ -1,15 +1,15 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: stacksense-ingress
-  namespace: stacksense
+  name: codelens-ingress
+  namespace: codelens
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/proxy-body-size: "50m"
 spec:
   ingressClassName: nginx
   rules:
-    - host: stacksense.local
+    - host: codelens.local
       http:
         paths:
           - path: /

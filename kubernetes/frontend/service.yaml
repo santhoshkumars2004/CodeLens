@@ -2,10 +2,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: frontend
-  namespace: stacksense
+  namespace: codelens
 spec:
   selector:
-    app: stacksense
+    app: codelens
     component: frontend
   ports:
     - port: 3000

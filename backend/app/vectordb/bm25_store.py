@@ -1,5 +1,5 @@
 """
-StackSense — BM25 Store (app/vectordb/bm25_store.py)
+CodeLens — BM25 Store (app/vectordb/bm25_store.py)
 
 Manages BM25 lexical search indexes. Since rank_bm25 is completely
 in-memory, we serialize the index alongside chunk metadata to disk

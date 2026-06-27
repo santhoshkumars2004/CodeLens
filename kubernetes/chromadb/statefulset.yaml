@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: chromadb
-  namespace: stacksense
+  namespace: codelens
 spec:
   serviceName: chromadb
   replicas: 1
   selector:
     matchLabels:
-      app: stacksense
+      app: codelens
       component: chromadb
   template:
     metadata:
       labels:
-        app: stacksense
+        app: codelens
         component: chromadb
     spec:
       containers:

@@ -1,5 +1,5 @@
 """
-StackSense ChromaDB Service.
+CodeLens ChromaDB Service.
 
 Manages vector storage using ChromaDB — a free, local vector database.
 Handles creating collections, storing chunks, and similarity search.

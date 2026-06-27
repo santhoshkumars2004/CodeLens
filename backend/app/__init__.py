@@ -1,1 +1,1 @@
-"""StackSense Backend Application."""
+"""CodeLens Backend Application."""

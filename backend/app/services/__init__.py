@@ -1,1 +1,1 @@
-"""External service integrations for StackSense."""
+"""External service integrations for CodeLens."""

@@ -1,5 +1,5 @@
 """
-StackSense — AI-Powered Codebase Q&A System.
+CodeLens — AI-Powered Codebase Q&A System.
 
 FastAPI application entry point. Configures CORS, routing,
 middleware, Prometheus metrics, and structured logging.
@@ -25,17 +25,17 @@ async def lifespan(app: FastAPI):
     setup_logging(settings.log_level)
     logger = get_logger("main")
     logger.info(
-        "stacksense_starting",
+        "codelens_starting",
         version=settings.app_version,
         debug=settings.debug,
     )
     yield
-    logger.info("stacksense_shutting_down")
+    logger.info("codelens_shutting_down")
 
 
 # ── Create FastAPI Application ──────────────────────────────────────
 app = FastAPI(
-    title="StackSense API",
+    title="CodeLens API",
     description=(
         "AI-powered codebase Q&A system. Index GitHub repositories "
         "and ask natural language questions with cited answers."

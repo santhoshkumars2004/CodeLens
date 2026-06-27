@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-  namespace: stacksense
+  namespace: codelens
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: stacksense
+      app: codelens
       component: frontend
   template:
     metadata:
       labels:
-        app: stacksense
+        app: codelens
         component: frontend
     spec:
       containers:
         - name: frontend
-          image: stacksense/frontend:latest
+          image: codelens/frontend:latest
           ports:
             - containerPort: 3000
           resources:

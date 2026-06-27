@@ -1,4 +1,4 @@
-# 🧠 StackSense — AI Codebase Q&A
+# 🧠 CodeLens — AI Codebase Q&A
 
 > Ask questions about any GitHub repository and get precise, cited answers with exact file and line references.
 
@@ -8,13 +8,13 @@
 ![ChromaDB](https://img.shields.io/badge/VectorDB-ChromaDB-orange)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-## 🚀 What is StackSense?
+## 🚀 What is CodeLens?
 
-StackSense is an AI-powered codebase Q&A system that uses **RAG (Retrieval Augmented Generation)** to help developers understand any GitHub repository through natural language questions.
+CodeLens is an AI-powered codebase Q&A system that uses **RAG (Retrieval Augmented Generation)** to help developers understand any GitHub repository through natural language questions.
 
 **How it works:**
 1. Paste a GitHub repo URL
-2. StackSense clones, parses, and indexes the codebase
+2. CodeLens clones, parses, and indexes the codebase
 3. Ask questions like *"How does authentication work?"*
 4. Get answers with **exact file:line citations**
 
@@ -40,8 +40,8 @@ StackSense is an AI-powered codebase Q&A system that uses **RAG (Retrieval Augme
 
 ### 1. Clone & Setup
 ```bash
-git clone https://github.com/your-username/stacksense.git
-cd stacksense
+git clone https://github.com/santhoshkumars2004/CodeLens.git
+cd codelens
 cp .env.example .env
 # Add your GROQ_API_KEY to .env
 ```

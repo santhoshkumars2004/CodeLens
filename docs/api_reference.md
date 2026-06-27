@@ -1,4 +1,4 @@
-# StackSense — API Reference
+# CodeLens — API Reference
 
 Base URL: `http://localhost:8000`
 
@@ -122,11 +122,11 @@ List all indexed repositories.
 Prometheus-compatible metrics endpoint.
 
 Key metrics:
-- `stacksense_query_latency_seconds` — Query processing time
-- `stacksense_queries_total` — Total queries by repo and status
-- `stacksense_llm_tokens_used_total` — LLM token consumption
-- `stacksense_ingestion_duration_seconds` — Repo indexing time
-- `stacksense_repos_indexed` — Number of indexed repos
+- `codelens_query_latency_seconds` — Query processing time
+- `codelens_queries_total` — Total queries by repo and status
+- `codelens_llm_tokens_used_total` — LLM token consumption
+- `codelens_ingestion_duration_seconds` — Repo indexing time
+- `codelens_repos_indexed` — Number of indexed repos
 
 ---
 

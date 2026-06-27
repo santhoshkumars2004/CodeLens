@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: backend-config
-  namespace: stacksense
+  namespace: codelens
 data:
   GROQ_MODEL: "llama3-8b-8192"
   CHROMA_HOST: "chromadb"

@@ -1,5 +1,5 @@
 """
-StackSense Test Fixtures.
+CodeLens Test Fixtures.
 
 Shared pytest fixtures for backend tests.
 """

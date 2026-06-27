@@ -1,1 +1,1 @@
-"""Language-specific code parsers for StackSense."""
+"""Language-specific code parsers for CodeLens."""

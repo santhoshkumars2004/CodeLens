@@ -1,5 +1,5 @@
 """
-StackSense — Ingestion Pipeline (app/ingestion/pipeline.py)
+CodeLens — Ingestion Pipeline (app/ingestion/pipeline.py)
 
 Orchestrates the full ingestion flow:
   Clone repo → Discover files → Chunk → Embed → Store in ChromaDB.

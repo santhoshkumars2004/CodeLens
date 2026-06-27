@@ -1,1 +1,1 @@
-"""StackSense Chunking Package — Split code into semantic chunks."""
+"""CodeLens Chunking Package — Split code into semantic chunks."""

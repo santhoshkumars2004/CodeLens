@@ -1,8 +1,8 @@
-# StackSense — Architecture
+# CodeLens — Architecture
 
 ## System Overview
 
-StackSense is built on a **RAG (Retrieval Augmented Generation)** architecture that combines
+CodeLens is built on a **RAG (Retrieval Augmented Generation)** architecture that combines
 vector similarity search with LLM-powered answer generation.
 
 ## Architecture Flow

@@ -1,10 +1,10 @@
 """
-StackSense Logger — Console + Persistent File Logging.
+CodeLens Logger — Console + Persistent File Logging.
 
 Every log event goes to TWO places simultaneously:
   1. Console   — colored, stage-tagged, human-readable output
   2. Log files — persistent storage you can review later:
-       logs/stacksense.log              (rolling daily, keeps 30 days)
+       logs/codelens.log              (rolling daily, keeps 30 days)
        logs/runs/<repo>_<ts>.log        (one file per ingestion run)
 
 Set LOG_FORMAT=json in your .env for structured JSON file output.
@@ -159,7 +159,7 @@ def _file_renderer(logger, method, event_dict: dict) -> str:
 class _DualHandler(logging.Handler):
     """
     Routes every log record to two file handlers:
-      1. The daily rolling log (logs/stacksense_YYYY-MM-DD.log)
+      1. The daily rolling log (logs/codelens_YYYY-MM-DD.log)
       2. The current per-run log (set via set_run_log_file)
     """
     def __init__(self):
@@ -170,7 +170,7 @@ class _DualHandler(logging.Handler):
     def setup_daily(self, logs_dir: Path, level: int):
         """Create or replace the daily rolling file handler."""
         logs_dir.mkdir(parents=True, exist_ok=True)
-        log_path = logs_dir / "stacksense.log"
+        log_path = logs_dir / "codelens.log"
         h = logging.handlers.TimedRotatingFileHandler(
             filename=str(log_path),
             when="midnight",
@@ -213,7 +213,7 @@ def set_run_log_file(repo_id: str) -> Path:
     Call this at the start of each ingestion run to create a dedicated log file.
 
     Args:
-        repo_id: e.g. "santhoshkumars2004/Stacksense"
+        repo_id: e.g. "santhoshkumars2004/CodeLens"
 
     Returns:
         Path to the run log file that was created.
@@ -244,7 +244,7 @@ _logging_configured = False
 
 def setup_logging(log_level: str = "INFO") -> None:
     """
-    Configure all logging for StackSense.
+    Configure all logging for CodeLens.
     """
     global _logging_configured
     if _logging_configured:
@@ -308,7 +308,7 @@ def get_file_logger(name: str) -> logging.Logger:
     """
     Get a plain stdlib logger that writes ONLY to the log files (not console).
     """
-    lg = logging.getLogger(f"stacksense.file.{name}")
+    lg = logging.getLogger(f"codelens.file.{name}")
     lg.propagate = False
     if not lg.handlers:
         lg.addHandler(_dual_handler)

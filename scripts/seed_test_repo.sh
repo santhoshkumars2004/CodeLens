@@ -1,5 +1,5 @@
 #!/bin/bash
-# StackSense — Seed a test repo for development
+# CodeLens — Seed a test repo for development
 set -e
 
 API_URL="${1:-http://localhost:8000}"

@@ -1,5 +1,5 @@
 """
-StackSense — Query Rewriter (app/query/rewriter.py)
+CodeLens — Query Rewriter (app/query/rewriter.py)
 
 Rewrites a user's natural language question into a code-search-optimized
 query before embedding. This bridges the vocabulary gap between how humans

@@ -11,7 +11,7 @@ from app.utils.logger import setup_logging
 
 def main():
     setup_logging("DEBUG")
-    repo_id = "santhoshkumars2004/Stacksense"
+    repo_id = "santhoshkumars2004/CodeLens"
     
     print("Testing Conceptual Query (Dense Should Shine)")
     res = retrieve("how does login and authentication work?", repo_id, top_k=5)

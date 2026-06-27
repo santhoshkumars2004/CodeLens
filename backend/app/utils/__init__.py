@@ -1,1 +1,1 @@
-"""Helper utilities for StackSense."""
+"""Helper utilities for CodeLens."""

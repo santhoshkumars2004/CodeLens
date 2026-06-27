@@ -1,4 +1,4 @@
-# StackSense Frontend Dockerfile
+# CodeLens Frontend Dockerfile
 # Multi-stage build: three stages keep the final image tiny (~150MB vs 1GB+)
 
 # ══════════════════════════════════════════════════════════════════════

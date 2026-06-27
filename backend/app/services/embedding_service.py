@@ -1,5 +1,5 @@
 """
-StackSense Embedding Service (app/services/embedding_service.py)
+CodeLens Embedding Service (app/services/embedding_service.py)
 
 Wraps HuggingFace sentence-transformers to generate dense vector
 embeddings for code chunks and natural-language queries.

@@ -1,5 +1,5 @@
 """
-StackSense — Generator (app/llm/generator.py)
+CodeLens — Generator (app/llm/generator.py)
 
 Builds the prompt, calls the LLM client, and formats the response
 with source citations from chunk metadata.

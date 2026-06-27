@@ -1,5 +1,5 @@
 """
-StackSense Repos Endpoint.
+CodeLens Repos Endpoint.
 
 GET /api/repos — list all indexed repositories.
 """

@@ -1,8 +1,8 @@
 #!/bin/bash
-# StackSense — One-Command Local Setup
+# CodeLens — One-Command Local Setup
 set -e
 
-echo "🧠 StackSense — Local Setup"
+echo "🧠 CodeLens — Local Setup"
 echo "================================"
 
 # Check prerequisites

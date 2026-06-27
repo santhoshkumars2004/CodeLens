@@ -1,1 +1,1 @@
-"""StackSense Embeddings Package — Convert code chunks into vectors."""
+"""CodeLens Embeddings Package — Convert code chunks into vectors."""

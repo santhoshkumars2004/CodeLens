@@ -1,5 +1,5 @@
 """
-StackSense LLM Service.
+CodeLens LLM Service.
 
 Wraps the Groq API to call LLaMA3 for answer generation.
 Groq free tier: 6000 requests/day, fast inference.
@@ -68,7 +68,7 @@ def generate_answer(
     context_text = "\n\n".join(context_parts)
 
     system_prompt = (
-        "You are StackSense, an expert code analyst. You answer questions about "
+        "You are CodeLens, an expert code analyst. You answer questions about "
         "codebases based ONLY on the provided source code context.\n\n"
         "ALWAYS respond in EXACTLY this format — no exceptions:\n\n"
         "📝 EXPLANATION\n"
