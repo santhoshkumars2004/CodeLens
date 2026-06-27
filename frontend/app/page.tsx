@@ -4,8 +4,8 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import RepoInput from "@/components/RepoInput";
 import IndexingProgress from "@/components/IndexingProgress";
-import { ingestRepo, listRepos } from "@/lib/api";
-import type { RepoInfo, IngestResponse } from "@/lib/types";
+import { ingestRepo, listRepos, getIngestStatus, deleteRepo } from "@/lib/api";
+import type { RepoInfo, IngestResponse, IngestStatus } from "@/lib/types";
 
 export default function HomePage() {
   const router = useRouter();
@@ -17,11 +17,27 @@ export default function HomePage() {
   const [result, setResult] = useState<IngestResponse | null>(null);
 
   // Fetch existing indexed repos
-  useEffect(() => {
+  const fetchRepos = () => {
     listRepos()
       .then((data) => setRepos(data.repos))
       .catch(() => {});
+  };
+
+  useEffect(() => {
+    fetchRepos();
   }, []);
+
+  const handleDelete = async (e: React.MouseEvent, repoId: string) => {
+    e.stopPropagation();
+    if (!confirm(`Are you sure you want to delete ${repoId}?`)) return;
+    try {
+      await deleteRepo(repoId);
+      // Remove from state immediately for snappy UI
+      setRepos((prev) => prev.filter((r) => r.repo_id !== repoId));
+    } catch (err) {
+      alert("Failed to delete repository");
+    }
+  };
 
   const handleIngest = async (url: string) => {
     setIsIngesting(true);
@@ -30,31 +46,49 @@ export default function HomePage() {
     setProgress(10);
     setStatusMessage("Starting ingestion...");
 
-    // Simulate progress updates since ingestion is synchronous
-    const progressInterval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 90) return prev;
-        return prev + Math.random() * 8;
-      });
-    }, 2000);
-
     try {
       const response = await ingestRepo(url);
-      clearInterval(progressInterval);
-      setProgress(100);
-      setStatusMessage("Repository indexed successfully!");
-      setResult(response);
+      
+      // Poll for status
+      const repoId = response.repo_id;
+      
+      const pollInterval = setInterval(async () => {
+        try {
+          const statusData = await getIngestStatus(repoId);
+          setProgress(statusData.progress);
+          setStatusMessage(statusData.message);
+          
+          if (statusData.status === "completed") {
+            clearInterval(pollInterval);
+            setProgress(100);
+            setStatusMessage("Repository indexed successfully!");
+            setResult({
+              ...response,
+              status: "completed",
+              message: "Repository indexed successfully!"
+            });
 
-      // Refresh repos list
-      const reposData = await listRepos();
-      setRepos(reposData.repos);
+            // Refresh repos list
+            const reposData = await listRepos();
+            setRepos(reposData.repos);
 
-      // Navigate to chat after short delay
-      setTimeout(() => {
-        router.push(`/chat/${encodeURIComponent(response.repo_id)}`);
-      }, 1500);
+            // Navigate to chat after short delay
+            setTimeout(() => {
+              router.push(`/chat/${encodeURIComponent(repoId)}`);
+            }, 1500);
+          } else if (statusData.status === "error") {
+            clearInterval(pollInterval);
+            setProgress(0);
+            setError(statusData.message || "Ingestion failed");
+            setIsIngesting(false);
+          }
+        } catch (pollErr) {
+          // Keep polling even if one request fails
+          console.error("Poll error:", pollErr);
+        }
+      }, 2000);
+      
     } catch (err) {
-      clearInterval(progressInterval);
       setProgress(0);
       setError(err instanceof Error ? err.message : "Ingestion failed");
       setIsIngesting(false);
@@ -174,30 +208,39 @@ export default function HomePage() {
             </h2>
             <div className="grid gap-3">
               {repos.map((repo) => (
-                <button
+                <div
                   key={repo.repo_id}
                   id={`repo-${repo.repo_id.replace("/", "-")}`}
-                  onClick={() =>
-                    router.push(
-                      `/chat/${encodeURIComponent(repo.repo_id)}`
-                    )
-                  }
-                  className="glass glass-hover rounded-xl p-4 text-left transition-all group"
+                  className="glass glass-hover rounded-xl p-4 text-left transition-all group flex items-center justify-between cursor-pointer"
+                  onClick={() => router.push(`/chat/${encodeURIComponent(repo.repo_id)}`)}
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-[var(--color-bg-tertiary)] flex items-center justify-center text-sm">
-                        📦
-                      </div>
-                      <div>
-                        <p className="font-medium text-sm group-hover:text-[var(--color-accent)] transition-colors">
-                          {repo.repo_id}
-                        </p>
-                        <p className="text-xs text-[var(--color-text-muted)]">
-                          {repo.chunks_count} chunks indexed
-                        </p>
-                      </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-[var(--color-bg-tertiary)] flex items-center justify-center text-sm">
+                      📦
                     </div>
+                    <div>
+                      <p className="font-medium text-sm group-hover:text-[var(--color-accent)] transition-colors">
+                        {repo.repo_id}
+                      </p>
+                      <p className="text-xs text-[var(--color-text-muted)]">
+                        {repo.chunks_count} chunks indexed
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={(e) => handleDelete(e, repo.repo_id)}
+                      className="p-2 rounded-lg text-[var(--color-text-muted)] hover:text-[var(--color-error)] hover:bg-[var(--color-bg-tertiary)] transition-all opacity-0 group-hover:opacity-100"
+                      title="Delete repository"
+                    >
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6l-1 14H6L5 6" />
+                        <path d="M10 11v6M14 11v6" />
+                        <path d="M9 6V4h6v2" />
+                      </svg>
+                    </button>
                     <svg
                       className="w-4 h-4 text-[var(--color-text-muted)] group-hover:text-[var(--color-accent)] transition-all group-hover:translate-x-1"
                       fill="none"
@@ -212,7 +255,7 @@ export default function HomePage() {
                       />
                     </svg>
                   </div>
-                </button>
+                </div>
               ))}
             </div>
           </div>

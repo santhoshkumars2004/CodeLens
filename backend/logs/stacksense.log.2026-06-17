@@ -1,0 +1,222 @@
+{'version': '1.0.0', 'debug': False, 'event': 'stacksense_starting', 'level': 'info'}
+{'version': '1.0.0', 'debug': False, 'event': 'stacksense_starting', 'level': 'info'}
+{'persist_dir': './data/chromadb', 'event': 'store_connecting', 'level': 'info'}
+{'persist_dir': './data/chromadb', 'event': 'store_connected', 'level': 'info'}
+{'version': '1.0.0', 'debug': False, 'event': 'stacksense_starting', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'ingest_request', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'event': 'ingestion_started', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'log_file': 'C:\\Users\\Prem\\Downloads\\Stacksense\\Stacksense\\backend\\logs\\runs\\ingestion_santhoshkumars2004_Stacksense_2026-06-17T18-02-05.log', 'event': 'ingestion_run_log', 'level': 'info'}
+{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_removing_old_dir', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'target': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_started', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_successful', 'level': 'info'}
+{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'filter_walking_repo', 'level': 'info'}
+{'total_files': 72, 'skipped': 13, 'languages': 'python:22  yaml:16  typescript:12  json:6  unknown:5  markdown:4  shell:3  dockerfile:2  makefile:1  css:1', 'event': 'filter_complete', 'level': 'info'}
+{'total_files': 72, 'event': 'chunk_phase_start', 'level': 'info'}
+{'file': '.env.example', 'chunks': 1, 'types': 'generic:1', 'language': 'unknown', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': '.gitignore', 'chunks': 1, 'types': 'generic:1', 'language': 'unknown', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'docker-compose.yml', 'chunks': 2, 'types': 'generic:2', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'Makefile', 'chunks': 1, 'types': 'generic:1', 'language': 'makefile', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'README.md', 'chunks': 2, 'types': 'generic:2', 'language': 'markdown', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\Dockerfile', 'chunks': 1, 'types': 'generic:1', 'language': 'dockerfile', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\main.py', 'chunks': 2, 'types': 'function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\requirements.txt', 'chunks': 1, 'types': 'generic:1', 'language': 'unknown', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\config.py', 'chunks': 5, 'types': 'class:2  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\health.py', 'chunks': 1, 'types': 'function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\ingest.py', 'chunks': 2, 'types': 'function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\query.py', 'chunks': 1, 'types': 'function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\repos.py', 'chunks': 1, 'types': 'function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\generator.py', 'chunks': 1, 'types': 'function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\ingestion.py', 'chunks': 2, 'types': 'function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\pipeline.py', 'chunks': 1, 'types': 'function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\reranker.py', 'chunks': 3, 'types': 'function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\retriever.py', 'chunks': 1, 'types': 'function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\models\\request_models.py', 'chunks': 2, 'types': 'class:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\models\\response_models.py', 'chunks': 6, 'types': 'class:6', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\chromadb_service.py', 'chunks': 7, 'types': 'function:7', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\embedding_service.py', 'chunks': 3, 'types': 'function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\github_service.py', 'chunks': 4, 'types': 'function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\llm_service.py', 'chunks': 2, 'types': 'function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\s3_service.py', 'chunks': 3, 'types': 'function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\chunker.py', 'chunks': 6, 'types': 'class:1  function:5', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\file_filter.py', 'chunks': 4, 'types': 'function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\logger.py', 'chunks': 2, 'types': 'function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\metrics.py', 'chunks': 2, 'types': 'generic:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\local_model\\.gitattributes', 'chunks': 1, 'types': 'generic:1', 'language': 'unknown', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\local_model\\config.json', 'chunks': 1, 'types': 'generic:1', 'language': 'json', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\local_model\\README.md', 'chunks': 2, 'types': 'generic:2', 'language': 'markdown', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\local_model\\special_tokens_map.json', 'chunks': 1, 'types': 'generic:1', 'language': 'json', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\local_model\\tokenizer.json', 'chunks': 614, 'types': 'generic:614', 'language': 'json', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\local_model\\tokenizer_config.json', 'chunks': 1, 'types': 'generic:1', 'language': 'json', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\local_model\\vocab.txt', 'chunks': 611, 'types': 'generic:611', 'language': 'unknown', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'docs\\api_reference.md', 'chunks': 3, 'types': 'generic:3', 'language': 'markdown', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'docs\\architecture.md', 'chunks': 2, 'types': 'generic:2', 'language': 'markdown', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\Dockerfile', 'chunks': 1, 'types': 'generic:1', 'language': 'dockerfile', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\next-env.d.ts', 'chunks': 1, 'types': 'generic:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\next.config.ts', 'chunks': 1, 'types': 'generic:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\package.json', 'chunks': 1, 'types': 'generic:1', 'language': 'json', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\tsconfig.json', 'chunks': 1, 'types': 'generic:1', 'language': 'json', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\globals.css', 'chunks': 4, 'types': 'generic:4', 'language': 'css', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\layout.tsx', 'chunks': 1, 'types': 'generic:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\page.tsx', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\chat\\[repoId]\\page.tsx', 'chunks': 2, 'types': 'generic:2', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\ChatWindow.tsx', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\CitationCard.tsx', 'chunks': 2, 'types': 'generic:2', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\IndexingProgress.tsx', 'chunks': 2, 'types': 'generic:2', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\MessageBubble.tsx', 'chunks': 2, 'types': 'generic:2', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\RepoInput.tsx', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\lib\\api.ts', 'chunks': 6, 'types': 'module:1  function:5', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\lib\\types.ts', 'chunks': 1, 'types': 'generic:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\backend\\configmap.yaml', 'chunks': 1, 'types': 'generic:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\backend\\deployment.yaml', 'chunks': 1, 'types': 'generic:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\backend\\hpa.yaml', 'chunks': 1, 'types': 'generic:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\backend\\service.yaml', 'chunks': 1, 'types': 'generic:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\chromadb\\pvc.yaml', 'chunks': 1, 'types': 'generic:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\chromadb\\service.yaml', 'chunks': 1, 'types': 'generic:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\chromadb\\statefulset.yaml', 'chunks': 1, 'types': 'generic:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\frontend\\deployment.yaml', 'chunks': 1, 'types': 'generic:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\frontend\\service.yaml', 'chunks': 1, 'types': 'generic:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\ingress\\ingress.yaml', 'chunks': 1, 'types': 'generic:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\monitoring\\grafana-deployment.yaml', 'chunks': 1, 'types': 'generic:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\monitoring\\prometheus-config.yaml', 'chunks': 1, 'types': 'generic:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\monitoring\\prometheus-deployment.yaml', 'chunks': 1, 'types': 'generic:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'monitoring\\grafana\\datasources.yaml', 'chunks': 1, 'types': 'generic:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'monitoring\\prometheus\\prometheus.yml', 'chunks': 1, 'types': 'generic:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'scripts\\deploy_aws.sh', 'chunks': 1, 'types': 'generic:1', 'language': 'shell', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'scripts\\seed_test_repo.sh', 'chunks': 1, 'types': 'generic:1', 'language': 'shell', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'scripts\\setup.sh', 'chunks': 1, 'types': 'generic:1', 'language': 'shell', 'event': 'chunk_file_done', 'level': 'info'}
+{'total_chunks': 1358, 'files_processed': 72, 'event': 'chunk_phase_complete', 'level': 'info'}
+{'model': './local_model', 'event': 'embed_model_loading', 'level': 'info'}
+No device provided, using cpu
+No modules.json found for ./local_model, initializing a new SentenceTransformer model.
+{'model': './local_model', 'event': 'embed_model_ready', 'level': 'info'}
+{'total_chunks': 1358, 'batch_size': 32, 'total_batches': 43, 'model': './local_model', 'event': 'embed_start', 'level': 'info'}
+{'batch': '1/43', 'chunks': '1-32', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '2/43', 'chunks': '33-64', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '3/43', 'chunks': '65-96', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '4/43', 'chunks': '97-128', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '5/43', 'chunks': '129-160', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '6/43', 'chunks': '161-192', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '7/43', 'chunks': '193-224', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '8/43', 'chunks': '225-256', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '9/43', 'chunks': '257-288', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '10/43', 'chunks': '289-320', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '11/43', 'chunks': '321-352', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '12/43', 'chunks': '353-384', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '13/43', 'chunks': '385-416', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '14/43', 'chunks': '417-448', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '15/43', 'chunks': '449-480', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '16/43', 'chunks': '481-512', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '17/43', 'chunks': '513-544', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '18/43', 'chunks': '545-576', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '19/43', 'chunks': '577-608', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '20/43', 'chunks': '609-640', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '21/43', 'chunks': '641-672', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '22/43', 'chunks': '673-704', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '23/43', 'chunks': '705-736', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '24/43', 'chunks': '737-768', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '25/43', 'chunks': '769-800', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '26/43', 'chunks': '801-832', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '27/43', 'chunks': '833-864', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '28/43', 'chunks': '865-896', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '29/43', 'chunks': '897-928', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '30/43', 'chunks': '929-960', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '31/43', 'chunks': '961-992', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '32/43', 'chunks': '993-1024', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '33/43', 'chunks': '1025-1056', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '34/43', 'chunks': '1057-1088', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '35/43', 'chunks': '1089-1120', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '36/43', 'chunks': '1121-1152', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '37/43', 'chunks': '1153-1184', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '38/43', 'chunks': '1185-1216', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '39/43', 'chunks': '1217-1248', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '40/43', 'chunks': '1249-1280', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '41/43', 'chunks': '1281-1312', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '42/43', 'chunks': '1313-1344', 'size': 32, 'event': 'embed_batch', 'level': 'info'}
+{'batch': '43/43', 'chunks': '1345-1358', 'size': 14, 'event': 'embed_batch', 'level': 'info'}
+{'total_embeddings': 1358, 'duration_seconds': 81.01, 'dims': 384, 'event': 'embed_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'store_collection_deleted', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 0, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'total_chunks': 1358, 'batch_size': 500, 'total_batches': 3, 'event': 'store_start', 'level': 'info'}
+{'batch': '1/3', 'chunks': '1-500', 'event': 'store_batch', 'level': 'info'}
+{'batch': '2/3', 'chunks': '501-1000', 'event': 'store_batch', 'level': 'info'}
+{'batch': '3/3', 'chunks': '1001-1358', 'event': 'store_batch', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'stored': 1358, 'total_in_collection': 1358, 'event': 'store_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'error': 'An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.', 'event': 's3_save_failed', 'level': 'warning'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'status': 'completed', 'files_indexed': 72, 'chunks_created': 1358, 'languages': ['css', 'dockerfile', 'json', 'makefile', 'markdown', 'python', 'shell', 'typescript', 'unknown', 'yaml'], 'duration_seconds': 152.84, 'message': 'Successfully indexed 72 files into 1358 chunks', 'event': 'ingestion_complete', 'level': 'info'}
+{'summary': '{\n  "type": "ingestion_summary",\n  "timestamp": "2026-06-17T18:04:41.370039+00:00",\n  "repo_id": "santhoshkumars2004/Stacksense",\n  "status": "completed",\n  "files_indexed": 72,\n  "chunks_created": 1358,\n  "languages": [\n    "css",\n    "dockerfile",\n    "json",\n    "makefile",\n    "markdown",\n    "python",\n    "shell",\n    "typescript",\n    "unknown",\n    "yaml"\n  ],\n  "duration_seconds": 152.84,\n  "message": "Successfully indexed 72 files into 1358 chunks"\n}', 'event': 'ingestion_summary_json', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'Where is the user authentication logic handled in this codebase?\nWhat database does StackSense use t', 'event': 'query_request', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'Where is the user authentication logic handled in this codebase?\nWhat database does StackSense use t', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'question': 'Where is the user authentication logic handled in this codebase?\nWhat database does StackSense use t', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
+{'query_preview': 'Where is the user authentication logic handled in this codebase?\nWhat database d', 'event': 'embed_query', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 1358, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'top_k': 20, 'collection_size': 1358, 'event': 'store_search', 'level': 'info'}
+{'rank': 1, 'file': 'backend\\app\\models\\response_models.py', 'name': 'RepoListResponse', 'relevance': 0.9413, 'event': 'store_search_hit', 'level': 'info'}
+{'rank': 2, 'file': 'backend\\app\\config.py', 'name': 'get_settings', 'relevance': 0.9402, 'event': 'store_search_hit', 'level': 'info'}
+{'rank': 3, 'file': 'backend\\app\\services\\github_service.py', 'name': 'remove_readonly', 'relevance': 0.9391, 'event': 'store_search_hit', 'level': 'info'}
+{'chunks_found': 20, 'top_file': 'backend\\app\\models\\response_models.py', 'top_relevance': 0.9413, 'duration_seconds': 0.063, 'event': 'retrieve_complete', 'level': 'info'}
+{'input_chunks': 20, 'top_k': 5, 'question': 'Where is the user authentication logic handled in this codebase?\nWhat database d', 'event': 'rerank_start', 'level': 'info'}
+{'source': 'local', 'path': 'C:\\Users\\Prem\\Downloads\\Stacksense\\Stacksense\\backend\\local_model', 'event': 'rerank_model_loading', 'level': 'info'}
+No device provided, using cpu
+No modules.json found for C:\Users\Prem\Downloads\Stacksense\Stacksense\backend\local_model, initializing a new CrossEncoder model.
+{'event': 'rerank_model_ready', 'level': 'info'}
+{'total_scored': 20, 'kept': 5, 'event': 'rerank_scores', 'level': 'info'}
+{'rank': 1, 'score': 0.0315, 'file': 'kubernetes\\backend\\service.yaml', 'name': '', 'lines': '1-14', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 2, 'score': 0.0214, 'file': 'kubernetes\\chromadb\\service.yaml', 'name': '', 'lines': '1-13', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 3, 'score': 0.0, 'file': 'backend\\app\\models\\response_models.py', 'name': 'RepoListResponse', 'lines': '56-59', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 4, 'score': 0.0, 'file': 'backend\\app\\config.py', 'name': 'get_settings', 'lines': '88-93', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 5, 'score': 0.0, 'file': 'backend\\app\\services\\github_service.py', 'name': 'remove_readonly', 'lines': '19-21', 'event': 'rerank_result', 'level': 'info'}
+{'chunks': 5, 'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'llm_build_context', 'level': 'info'}
+{'model': 'llama-3.1-8b-instant', 'event': 'llm_client_ready', 'level': 'info'}
+{'model': 'llama-3.1-8b-instant', 'context_chunks': 5, 'approx_prompt_tokens': 284, 'event': 'llm_generate_start', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'model': 'llama-3.1-8b-instant', 'prompt_tokens': 696, 'completion_tokens': 182, 'duration_seconds': 0.89, 'event': 'llm_generate_complete', 'level': 'info'}
+{'citations': 5, 'answer_length': 966, 'event': 'llm_answer_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'latency_ms': 1479.59, 'citations': 5, 'confidence': 0.0106, 'event': 'query_pipeline_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'question': '3. Which file contains the embedding service code? What model does it use?\n\n4. Which file contains t', 'event': 'query_request', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'question': '3. Which file contains the embedding service code? What model does it use?\n\n4. Which file contains t', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'question': '3. Which file contains the embedding service code? What model does it use?\n\n4. Which file contains t', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
+{'query_preview': '3. Which file contains the embedding service code? What model does it use?\n\n4. W', 'event': 'embed_query', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 1358, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'top_k': 20, 'collection_size': 1358, 'event': 'store_search', 'level': 'info'}
+{'rank': 1, 'file': 'backend\\app\\config.py', 'name': 'get_settings', 'relevance': 0.9597, 'event': 'store_search_hit', 'level': 'info'}
+{'rank': 2, 'file': 'backend\\app\\models\\response_models.py', 'name': 'RepoListResponse', 'relevance': 0.9516, 'event': 'store_search_hit', 'level': 'info'}
+{'rank': 3, 'file': 'backend\\app\\services\\github_service.py', 'name': 'remove_readonly', 'relevance': 0.9507, 'event': 'store_search_hit', 'level': 'info'}
+{'chunks_found': 20, 'top_file': 'backend\\app\\config.py', 'top_relevance': 0.9597, 'duration_seconds': 0.028, 'event': 'retrieve_complete', 'level': 'info'}
+{'input_chunks': 20, 'top_k': 5, 'question': '3. Which file contains the embedding service code? What model does it use?\n\n4. W', 'event': 'rerank_start', 'level': 'info'}
+{'total_scored': 20, 'kept': 5, 'event': 'rerank_scores', 'level': 'info'}
+{'rank': 1, 'score': 0.7736, 'file': 'kubernetes\\chromadb\\service.yaml', 'name': '', 'lines': '1-13', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 2, 'score': 0.6527, 'file': 'backend\\app\\services\\chromadb_service.py', 'name': 'is_connected', 'lines': '199-206', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 3, 'score': 0.129, 'file': 'backend\\app\\config.py', 'name': 'chroma_persist_path', 'lines': '76-78', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 4, 'score': 0.1105, 'file': 'backend\\app\\models\\response_models.py', 'name': 'HealthResponse', 'lines': '62-67', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 5, 'score': 0.0167, 'file': 'backend\\app\\api\\health.py', 'name': 'health_check', 'lines': '20-27', 'event': 'rerank_result', 'level': 'info'}
+{'chunks': 5, 'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'llm_build_context', 'level': 'info'}
+{'model': 'llama-3.1-8b-instant', 'context_chunks': 5, 'approx_prompt_tokens': 289, 'event': 'llm_generate_start', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'model': 'llama-3.1-8b-instant', 'prompt_tokens': 714, 'completion_tokens': 258, 'duration_seconds': 0.63, 'event': 'llm_generate_complete', 'level': 'info'}
+{'citations': 5, 'answer_length': 1153, 'event': 'llm_answer_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'latency_ms': 1078.63, 'citations': 5, 'confidence': 0.3365, 'event': 'query_pipeline_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'question': '6. Trace the complete journey of a GitHub URL from submission to the first chunk stored in ChromaDB.', 'event': 'query_request', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'question': '6. Trace the complete journey of a GitHub URL from submission to the first chunk stored in ChromaDB.', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'question': '6. Trace the complete journey of a GitHub URL from submission to the first chunk stored in ChromaDB.', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
+{'query_preview': '6. Trace the complete journey of a GitHub URL from submission to the first chunk', 'event': 'embed_query', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 1358, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'top_k': 20, 'collection_size': 1358, 'event': 'store_search', 'level': 'info'}
+{'rank': 1, 'file': 'backend\\local_model\\vocab.txt', 'name': '', 'relevance': 0.9583, 'event': 'store_search_hit', 'level': 'info'}
+{'rank': 2, 'file': 'backend\\local_model\\vocab.txt', 'name': '', 'relevance': 0.9575, 'event': 'store_search_hit', 'level': 'info'}
+{'rank': 3, 'file': 'backend\\local_model\\vocab.txt', 'name': '', 'relevance': 0.9567, 'event': 'store_search_hit', 'level': 'info'}
+{'chunks_found': 20, 'top_file': 'backend\\local_model\\vocab.txt', 'top_relevance': 0.9583, 'duration_seconds': 0.035, 'event': 'retrieve_complete', 'level': 'info'}
+{'input_chunks': 20, 'top_k': 5, 'question': '6. Trace the complete journey of a GitHub URL from submission to the first chunk', 'event': 'rerank_start', 'level': 'info'}
+{'total_scored': 20, 'kept': 5, 'event': 'rerank_scores', 'level': 'info'}
+{'rank': 1, 'score': 0.0002, 'file': 'kubernetes\\chromadb\\pvc.yaml', 'name': '', 'lines': '1-11', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 2, 'score': 0.0, 'file': 'backend\\local_model\\vocab.txt', 'name': '', 'lines': '2101-2160', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 3, 'score': 0.0, 'file': 'backend\\local_model\\vocab.txt', 'name': '', 'lines': '2551-2610', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 4, 'score': 0.0, 'file': 'backend\\local_model\\vocab.txt', 'name': '', 'lines': '2451-2510', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 5, 'score': 0.0, 'file': 'backend\\local_model\\vocab.txt', 'name': '', 'lines': '2501-2560', 'event': 'rerank_result', 'level': 'info'}
+{'chunks': 5, 'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'llm_build_context', 'level': 'info'}
+{'model': 'llama-3.1-8b-instant', 'context_chunks': 5, 'approx_prompt_tokens': 471, 'event': 'llm_generate_start', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'model': 'llama-3.1-8b-instant', 'prompt_tokens': 1080, 'completion_tokens': 404, 'duration_seconds': 0.82, 'event': 'llm_generate_complete', 'level': 'info'}
+{'citations': 5, 'answer_length': 1927, 'event': 'llm_answer_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'latency_ms': 1276.57, 'citations': 5, 'confidence': 0.0, 'event': 'query_pipeline_complete', 'level': 'info'}
+{'event': 'stacksense_shutting_down', 'level': 'info'}
+{'event': 'stacksense_shutting_down', 'level': 'info'}

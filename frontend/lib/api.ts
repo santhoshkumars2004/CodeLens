@@ -32,12 +32,22 @@ export async function ingestRepo(
 export async function queryRepo(
   repoId: string,
   question: string,
-  topK: number = 5
+  topK: number = 5,
+  languageFilter?: string,
+  pathFilter?: string,
 ): Promise<QueryResponse> {
+  const body: Record<string, unknown> = {
+    repo_id: repoId,
+    question,
+    top_k: topK,
+  };
+  if (languageFilter) body.language_filter = languageFilter;
+  if (pathFilter) body.path_filter = pathFilter;
+
   const res = await fetch(`${API_URL}/api/query`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ repo_id: repoId, question, top_k: topK }),
+    body: JSON.stringify(body),
   });
 
   if (!res.ok) {
@@ -58,6 +68,17 @@ export async function listRepos(): Promise<{
     throw new Error("Failed to fetch repos");
   }
 
+  return res.json();
+}
+
+export async function deleteRepo(repoId: string): Promise<{ status: string, message: string }> {
+  const res = await fetch(`${API_URL}/api/repos/${repoId}`, {
+    method: "DELETE",
+  });
+  if (!res.ok) {
+    const error = await res.json().catch(() => ({ detail: res.statusText }));
+    throw new Error(error.detail || "Failed to delete repository");
+  }
   return res.json();
 }
 

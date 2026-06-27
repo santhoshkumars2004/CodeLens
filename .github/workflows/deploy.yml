@@ -1,48 +1,69 @@
-name: Deploy to AWS EKS
+# StackSense — CD Pipeline (Render.com Deployment)
+#
+# WHAT IS CD (Continuous Deployment)?
+#   Once CI passes and Docker images are built and pushed to Docker Hub,
+#   this pipeline automatically deploys the new version to your server.
+#
+# WHY RENDER.COM (not AWS/K8s yet)?
+#   Render is the easiest starting point:
+#     - Free tier available
+#     - No server management
+#     - Deploy from Docker Hub in minutes
+#     - Once you understand this, upgrading to AWS EKS is just more config
+#
+# TRIGGER: Runs ONLY after the CI job "docker-build" succeeds on main
+#
+# TO USE THIS:
+#   1. Create account on render.com
+#   2. Create a new "Web Service" → Deploy from Docker Hub image
+#   3. Copy your service IDs and deploy hook URLs
+#   4. Add them as GitHub Secrets
+
+name: CD — Deploy to Render
 
 on:
   workflow_run:
-    workflows: ["Build & Push Docker Images"]
+    workflows: ["CI — Test & Build"]  # Must match the name: field in ci.yml exactly
     types: [completed]
     branches: [main]
 
 jobs:
   deploy:
+    name: 🚀 Deploy to Render.com
     runs-on: ubuntu-latest
+
+    # Only deploy if CI succeeded (don't deploy broken code!)
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
-
-      - name: Update kubeconfig
-        run: aws eks update-kubeconfig --name stacksense-cluster --region us-east-1
-
-      - name: Deploy to EKS
+      # ── Deploy Backend ──────────────────────────────────────────────
+      # Render provides a "Deploy Hook" URL — POSTing to it triggers a redeploy
+      # Get this from: Render Dashboard → Your Service → Settings → Deploy Hook
+      - name: Deploy Backend to Render
         run: |
-          # Update backend image
-          kubectl set image deployment/backend \
-            backend=${{ secrets.DOCKERHUB_USERNAME }}/stacksense-backend:${{ github.sha }} \
-            -n stacksense
+          curl --fail -X POST "${{ secrets.RENDER_BACKEND_DEPLOY_HOOK }}" \
+            -H "Accept: application/json" \
+            -d ""
+          echo "✅ Backend deployment triggered"
 
-          # Update frontend image
-          kubectl set image deployment/frontend \
-            frontend=${{ secrets.DOCKERHUB_USERNAME }}/stacksense-frontend:${{ github.sha }} \
-            -n stacksense
+      # ── Deploy Frontend ─────────────────────────────────────────────
+      - name: Deploy Frontend to Render
+        run: |
+          curl --fail -X POST "${{ secrets.RENDER_FRONTEND_DEPLOY_HOOK }}" \
+            -H "Accept: application/json" \
+            -d ""
+          echo "✅ Frontend deployment triggered"
 
-          # Wait for rollout
-          kubectl rollout status deployment/backend -n stacksense --timeout=300s
-          kubectl rollout status deployment/frontend -n stacksense --timeout=300s
-
-      - name: Post deployment status
+      # ── Notify on success ───────────────────────────────────────────
+      - name: Report deployment
         if: always()
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const status = '${{ job.status }}' === 'success' ? '✅' : '❌';
-            console.log(`Deployment ${status}: ${{ github.sha }}`);
+        run: |
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "🎉 StackSense deployed successfully!"
+            echo "Commit: ${{ github.sha }}"
+          else
+            echo "❌ Deployment failed — check logs above"
+          fi

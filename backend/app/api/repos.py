@@ -7,7 +7,7 @@ GET /api/repos — list all indexed repositories.
 from fastapi import APIRouter
 
 from app.models.response_models import RepoListResponse, RepoInfo
-from app.services.chromadb_service import list_collections
+from app.vectordb.vector_store import list_collections, delete_collection
 from app.utils.logger import get_logger
 
 router = APIRouter(prefix="/api", tags=["Repositories"])
@@ -32,3 +32,14 @@ async def list_repos():
         ))
 
     return RepoListResponse(repos=repos, total=len(repos))
+
+
+@router.delete("/repos/{owner}/{repo}")
+async def delete_repo(owner: str, repo: str):
+    """Delete an indexed repository from ChromaDB."""
+    repo_id = f"{owner}/{repo}"
+    success = delete_collection(repo_id)
+    if not success:
+        from fastapi import HTTPException
+        raise HTTPException(status_code=500, detail="Failed to delete repository collection")
+    return {"status": "success", "message": f"Deleted repository {repo_id}"}

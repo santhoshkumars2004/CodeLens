@@ -1,0 +1,56 @@
+# Backend .dockerignore
+# Files listed here are EXCLUDED from the Docker build context.
+# Without this, Docker sends 1.25GB+ to the build daemon — very slow!
+
+# ── Python cache ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual environments ───────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── ChromaDB data — this is the BIG one (vector DB persists in a volume)
+# The volume in docker-compose.yml handles data persistence.
+# We do NOT want to bake 1GB+ of vector data into the image.
+data/
+*.db
+*.sqlite3
+
+# ── Cloned repos (also handled by Docker volume) ──────────────────
+repos/
+tmp/
+
+# ── Logs ──────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Environment files (secrets must NEVER go in an image!) ────────
+.env
+.env.*
+!.env.example
+
+# ── Test artifacts ─────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# ── IDE / OS files ─────────────────────────────────────────────────
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# ── Git ────────────────────────────────────────────────────────────
+.git/
+.gitignore

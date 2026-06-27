@@ -34,6 +34,7 @@ SKIP_EXTENSIONS: Set[str] = {
 SKIP_FILENAMES: Set[str] = {
     "package-lock.json", "yarn.lock", "pnpm-lock.yaml",
     "Pipfile.lock", "poetry.lock", ".DS_Store",
+    "__init__.py", "conftest.py"
 }
 
 SUPPORTED_EXTENSIONS: dict[str, str] = {
@@ -51,7 +52,7 @@ SUPPORTED_EXTENSIONS: dict[str, str] = {
 }
 
 MAX_FILE_SIZE_BYTES = 1_000_000
-
+MIN_FILE_SIZE_BYTES = 100
 
 def should_skip_directory(dir_name: str) -> bool:
     """Check if a directory should be skipped."""
@@ -66,7 +67,7 @@ def should_skip_file(file_path: Path) -> bool:
         return True
     try:
         size = file_path.stat().st_size
-        if size > MAX_FILE_SIZE_BYTES or size == 0:
+        if size > MAX_FILE_SIZE_BYTES or size < MIN_FILE_SIZE_BYTES:
             return True
     except OSError:
         return True

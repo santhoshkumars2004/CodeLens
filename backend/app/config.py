@@ -38,11 +38,11 @@ class Settings(BaseSettings):
     chroma_persist_dir: str = "./data/chromadb"
 
     # ── HuggingFace Embeddings (Local, Free) ────────────────────
-    embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
+    embedding_model: str = "BAAI/bge-base-en-v1.5"
     embedding_batch_size: int = 32
 
     # ── Reranker Model ──────────────────────────────────────────
-    reranker_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+    reranker_model: str = "cross-encoder/ms-marco-MiniLM-L-12-v2"
     reranker_top_k: int = 5
 
     # ── GitHub ──────────────────────────────────────────────────
@@ -63,9 +63,9 @@ class Settings(BaseSettings):
     # ── Limits ──────────────────────────────────────────────────
     max_repo_size_mb: int = 500
     max_files_per_repo: int = 10000
-    retriever_top_k: int = 10
-    chunk_size: int = 500  # tokens
-    chunk_overlap: int = 50  # tokens
+    retriever_top_k: int = 20
+    chunk_lines: int = 60        # sliding-window chunk size in lines
+    chunk_overlap_lines: int = 10  # overlap between consecutive sliding-window chunks
 
     @property
     def repos_path(self) -> Path:

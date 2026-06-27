@@ -10,7 +10,7 @@ from fastapi import APIRouter
 
 from app.config import get_settings
 from app.models.response_models import HealthResponse
-from app.services.chromadb_service import is_connected
+from app.vectordb.vector_store import is_connected
 
 router = APIRouter()
 settings = get_settings()

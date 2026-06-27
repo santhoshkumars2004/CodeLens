@@ -21,17 +21,9 @@ def get_reranker():
     global _reranker
     if _reranker is None:
         from sentence_transformers import CrossEncoder
-        import os
-        
-        # We manually downloaded the model via curl into local_model to avoid HF cache issues
-        local_dir = "/Users/santsiva/Desktop/Project/Stacksense/backend/local_model"
-        
-        logger.info("loading_reranker", model="local_model")
-        if os.path.exists(local_dir):
-            _reranker = CrossEncoder(local_dir, local_files_only=True)
-        else:
-            _reranker = CrossEncoder(settings.reranker_model)
-            
+
+        logger.info("loading_reranker", model=settings.reranker_model)
+        _reranker = CrossEncoder(settings.reranker_model)
         logger.info("reranker_loaded")
     return _reranker
 

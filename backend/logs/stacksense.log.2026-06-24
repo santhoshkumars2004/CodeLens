@@ -1,0 +1,1661 @@
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\main.py', 'chunks': 25, 'types': 'module:1  class:3  function:21', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\models.py', 'chunks': 14, 'types': 'module:1  function:1  class:12', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\agents\\ats_scorer.py', 'chunks': 22, 'types': 'module:1  function:21', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\agents\\jd_analyzer.py', 'chunks': 18, 'types': 'module:1  function:17', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\agents\\latex_compiler_agent.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\agents\\pipeline.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\agents\\resume_optimizer.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\agents\\review.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\agents\\score_roadmap.py', 'chunks': 7, 'types': 'module:1  function:6', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\latex\\compiler.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\latex\\editor.py', 'chunks': 23, 'types': 'module:1  function:22', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\latex\\parser.py', 'chunks': 5, 'types': 'module:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\base.py', 'chunks': 2, 'types': 'module:1  class:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\claude_provider.py', 'chunks': 2, 'types': 'module:1  class:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\cli_base.py', 'chunks': 6, 'types': 'module:1  function:4  class:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\codex_provider.py', 'chunks': 2, 'types': 'module:1  class:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\copilot_provider.py', 'chunks': 2, 'types': 'module:1  class:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\factory.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\mock_provider.py', 'chunks': 2, 'types': 'module:1  class:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\ollama_provider.py', 'chunks': 2, 'types': 'module:1  class:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\openai_provider.py', 'chunks': 2, 'types': 'module:1  class:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\registry.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\pdf\\generator.py', 'chunks': 4, 'types': 'module:1  class:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\pdf\\parser.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\rag\\ingest.py', 'chunks': 5, 'types': 'module:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\rag\\retriever.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\rag\\store.py', 'chunks': 5, 'types': 'module:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\tests\\test_dynamic_skill_injection.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\tests\\test_jd_analyzer_hybrid.py', 'chunks': 3, 'types': 'module:1  class:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\eslint.config.js', 'chunks': 1, 'types': 'block:1', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\index.html', 'chunks': 1, 'types': 'block:1', 'language': 'html', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\package.json', 'chunks': 1, 'types': 'block:1', 'language': 'json', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\README.md', 'chunks': 1, 'types': 'block:1', 'language': 'markdown', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\vite.config.js', 'chunks': 1, 'types': 'block:1', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 6.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\App.jsx', 'chunks': 14, 'types': 'block:14', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 6.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\index.css', 'chunks': 14, 'types': 'block:14', 'language': 'css', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\main.jsx', 'chunks': 1, 'types': 'block:1', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\components\\AuthScreen.jsx', 'chunks': 5, 'types': 'block:5', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\components\\DiffView.jsx', 'chunks': 5, 'types': 'block:5', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\components\\HistoryPanel.jsx', 'chunks': 4, 'types': 'block:4', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\components\\JDInput.jsx', 'chunks': 10, 'types': 'block:10', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\components\\LoadingOverlay.jsx', 'chunks': 1, 'types': 'block:1', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\components\\ScoreDashboard.jsx', 'chunks': 15, 'types': 'block:15', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+{'total_chunks': 290, 'files_processed': 46, 'event': 'chunk_phase_complete', 'level': 'info'}
+{'path': 'data\\chromadb\\chunk_dumps\\santhoshkumars2004_ATS-Resume-Maker', 'chunk_count': 290, 'event': 'chunks_dumped', 'level': 'info'}
+{'total_chunks': 290, 'batch_size': 32, 'total_batches': 10, 'event': 'embed_start', 'level': 'info'}
+{'version': '1.0.0', 'debug': False, 'event': 'stacksense_starting', 'level': 'info'}
+{'persist_dir': './data/chromadb', 'event': 'store_connecting', 'level': 'info'}
+{'persist_dir': './data/chromadb', 'event': 'store_connected', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'event': 'ingest_accepted', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'branch': 'default', 'event': 'ingestion_started', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'log_file': 'C:\\Users\\Prem\\Downloads\\Stacksense\\Stacksense\\backend\\logs\\runs\\ingestion_santhoshkumars2004_ATS-Resume-Maker_2026-06-23T18-47-22.log', 'event': 'ingestion_run_log', 'level': 'info'}
+{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'clone_removing_old_dir', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'branch': 'default', 'target': '\\tmp\\stacksense_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'clone_started', 'level': 'info'}
+{'repo': 'santhoshkumars2004/ATS-Resume-Maker', 'error': 'HTTP Error 401: Unauthorized', 'note': 'Proceeding without size check.', 'event': 'clone_size_check_failed', 'level': 'warning'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'clone_successful', 'level': 'info'}
+{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'filter_walking_repo', 'level': 'info'}
+{'total_indexed': 46, 'total_skipped': 18, 'languages': 'python:31  javascript:10  toml:1  html:1  json:1  markdown:1  css:1', 'event': 'filter_complete', 'level': 'info'}
+{'path': 'data\\chromadb\\skip_manifest_santhoshkumars2004_ATS-Resume-Maker.json', 'skipped_files': 18, 'event': 'skip_manifest_saved', 'level': 'info'}
+{'total_files': 46, 'event': 'chunk_phase_start', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'pyproject.toml', 'chunks': 1, 'types': 'block:1', 'language': 'toml', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\auth_store.py', 'chunks': 30, 'types': 'module:1  class:1  function:28', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\logging_utils.py', 'chunks': 5, 'types': 'module:1  class:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\main.py', 'chunks': 25, 'types': 'module:1  class:3  function:21', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\models.py', 'chunks': 14, 'types': 'module:1  function:1  class:12', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\agents\\ats_scorer.py', 'chunks': 22, 'types': 'module:1  function:21', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\agents\\jd_analyzer.py', 'chunks': 18, 'types': 'module:1  function:17', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\agents\\latex_compiler_agent.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\agents\\pipeline.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\agents\\resume_optimizer.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\agents\\review.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\agents\\score_roadmap.py', 'chunks': 7, 'types': 'module:1  function:6', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\latex\\compiler.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\latex\\editor.py', 'chunks': 23, 'types': 'module:1  function:22', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\latex\\parser.py', 'chunks': 5, 'types': 'module:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\base.py', 'chunks': 2, 'types': 'module:1  class:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\claude_provider.py', 'chunks': 2, 'types': 'module:1  class:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\cli_base.py', 'chunks': 6, 'types': 'module:1  function:4  class:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\codex_provider.py', 'chunks': 2, 'types': 'module:1  class:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\copilot_provider.py', 'chunks': 2, 'types': 'module:1  class:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\factory.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\mock_provider.py', 'chunks': 2, 'types': 'module:1  class:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\ollama_provider.py', 'chunks': 2, 'types': 'module:1  class:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\openai_provider.py', 'chunks': 2, 'types': 'module:1  class:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\llm\\registry.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\pdf\\generator.py', 'chunks': 4, 'types': 'module:1  class:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\pdf\\parser.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\rag\\ingest.py', 'chunks': 5, 'types': 'module:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\rag\\retriever.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\rag\\store.py', 'chunks': 5, 'types': 'module:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\tests\\test_dynamic_skill_injection.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'backend\\tests\\test_jd_analyzer_hybrid.py', 'chunks': 3, 'types': 'module:1  class:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\eslint.config.js', 'chunks': 1, 'types': 'block:1', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\index.html', 'chunks': 1, 'types': 'block:1', 'language': 'html', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\package.json', 'chunks': 1, 'types': 'block:1', 'language': 'json', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\README.md', 'chunks': 1, 'types': 'block:1', 'language': 'markdown', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\vite.config.js', 'chunks': 1, 'types': 'block:1', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 6.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\App.jsx', 'chunks': 14, 'types': 'block:14', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 6.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 5.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\index.css', 'chunks': 14, 'types': 'block:14', 'language': 'css', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\main.jsx', 'chunks': 1, 'types': 'block:1', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\components\\AuthScreen.jsx', 'chunks': 5, 'types': 'block:5', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\components\\DiffView.jsx', 'chunks': 5, 'types': 'block:5', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\components\\HistoryPanel.jsx', 'chunks': 4, 'types': 'block:4', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\components\\JDInput.jsx', 'chunks': 10, 'types': 'block:10', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\components\\LoadingOverlay.jsx', 'chunks': 1, 'types': 'block:1', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'frontend\\src\\components\\ScoreDashboard.jsx', 'chunks': 15, 'types': 'block:15', 'language': 'javascript', 'event': 'chunk_file_done', 'level': 'info'}
+{'total_chunks': 290, 'files_processed': 46, 'event': 'chunk_phase_complete', 'level': 'info'}
+{'path': 'data\\chromadb\\chunk_dumps\\santhoshkumars2004_ATS-Resume-Maker', 'chunk_count': 290, 'event': 'chunks_dumped', 'level': 'info'}
+{'model': 'BAAI/bge-base-en-v1.5', 'event': 'embed_model_loading', 'level': 'info'}
+{'event': 'Loading code embedding model — first run may take 2-3 minutes to download...', 'level': 'info'}
+No device provided, using cpu
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/modules.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+Loading SentenceTransformer model from BAAI/bge-base-en-v1.5.
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/README.md "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/modules.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/sentence_bert_config.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/tokenizer_config.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/tokenizer_config.json "HTTP/1.1 200 OK"
+HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-base-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-base-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-base-en-v1.5 "HTTP/1.1 200 OK"
+{'model': 'BAAI/bge-base-en-v1.5', 'dimensions': 768, 'load_time_seconds': 6.3, 'event': 'embed_model_ready', 'level': 'info'}
+{'total_chunks': 290, 'batch_size': 32, 'total_batches': 10, 'event': 'embed_start', 'level': 'info'}
+{'total_embeddings': 290, 'dimensions': 768, 'duration_seconds': 80.56, 'chunks_per_second': 3.6, 'event': 'embed_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'event': 'store_collection_deleted', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'collection': 'santhoshkumars2004_ats_resume_maker', 'existing_vectors': 0, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'total_chunks': 290, 'batch_size': 500, 'total_batches': 1, 'event': 'store_start', 'level': 'info'}
+{'batch': '1/1', 'chunks': '1-290', 'event': 'store_batch', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'stored': 290, 'total_in_collection': 290, 'event': 'store_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'chunk_count': 290, 'event': 'bm25_build_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'path': 'data\\chromadb\\bm25\\santhoshkumars2004_ats_resume_maker.pkl', 'event': 'bm25_build_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'error': 'An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.', 'event': 's3_save_failed', 'level': 'warning'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'status': 'completed', 'files_indexed': 46, 'chunks_created': 290, 'languages': ['css', 'html', 'javascript', 'json', 'markdown', 'python', 'toml'], 'duration_seconds': 831.83, 'message': 'Successfully indexed 46 files into 290 chunks', 'event': 'ingestion_complete', 'level': 'info'}
+{'summary': '{\n  "type": "ingestion_summary",\n  "timestamp": "2026-06-23T19:01:15.371795+00:00",\n  "repo_id": "santhoshkumars2004/ATS-Resume-Maker",\n  "status": "completed",\n  "files_indexed": 46,\n  "chunks_created": 290,\n  "languages": [\n    "css",\n    "html",\n    "javascript",\n    "json",\n    "markdown",\n    "python",\n    "toml"\n  ],\n  "duration_seconds": 831.83,\n  "message": "Successfully indexed 46 files into 290 chunks"\n}', 'event': 'ingestion_summary_json', 'level': 'info'}
+{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'clone_removed', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\ATS-Resume-Maker', 'event': 'ingestion_cleanup_done', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'question': 'How does authentication work?', 'event': 'query_request', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'question': 'How does authentication work?', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'question': 'How does authentication work?', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
+{'query_preview': 'How does authentication work?', 'event': 'embed_query', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'collection': 'santhoshkumars2004_ats_resume_maker', 'existing_vectors': 290, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'top_k': 20, 'collection_size': 290, 'event': 'store_search', 'level': 'info'}
+{'rank': 1, 'file': 'backend\\auth_store.py', 'name': 'authenticate_user', 'relevance': 0.6859, 'event': 'store_search_hit', 'level': 'info'}
+{'rank': 2, 'file': 'backend\\main.py', 'name': 'login', 'relevance': 0.6396, 'event': 'store_search_hit', 'level': 'info'}
+{'rank': 3, 'file': 'backend\\auth_store.py', 'name': '_verify_password', 'relevance': 0.6356, 'event': 'store_search_hit', 'level': 'info'}
+{'dense_count': 20, 'sparse_count': 20, 'fused_count': 20, 'event': 'hybrid_search_fusion', 'level': 'info'}
+{'chunks_found': 20, 'top_file': 'frontend\\src\\components\\AuthScreen.jsx', 'top_relevance': 0.6003, 'duration_seconds': 0.097, 'event': 'retrieve_complete', 'level': 'info'}
+{'input_chunks': 20, 'top_k': 5, 'question': 'How does authentication work?', 'event': 'rerank_start', 'level': 'info'}
+{'source': 'local', 'path': 'C:\\Users\\Prem\\Downloads\\Stacksense\\Stacksense\\backend\\local_model', 'event': 'rerank_model_loading', 'level': 'info'}
+No device provided, using cpu
+No modules.json found for C:\Users\Prem\Downloads\Stacksense\Stacksense\backend\local_model, initializing a new CrossEncoder model.
+{'event': 'rerank_model_ready', 'level': 'info'}
+{'total_scored': 20, 'kept': 5, 'event': 'rerank_scores', 'level': 'info'}
+{'rank': 1, 'score': 0.2421, 'file': 'backend\\auth_store.py', 'name': 'authenticate_user', 'lines': '159-170', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 2, 'score': 0.1508, 'file': 'backend\\main.py', 'name': 'login', 'lines': '193-207', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 3, 'score': 0.0967, 'file': 'frontend\\src\\components\\AuthScreen.jsx', 'name': 'chunk-4', 'lines': '97-142', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 4, 'score': 0.062, 'file': 'backend\\main.py', 'name': 'get_current_user', 'lines': '97-105', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 5, 'score': 0.0553, 'file': 'backend\\auth_store.py', 'name': 'configure_auth_store', 'lines': '32-42', 'event': 'rerank_result', 'level': 'info'}
+{'chunks': 5, 'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'event': 'llm_build_context', 'level': 'info'}
+{'model': 'llama-3.1-8b-instant', 'event': 'llm_client_ready', 'level': 'info'}
+{'model': 'llama-3.1-8b-instant', 'context_chunks': 5, 'approx_prompt_tokens': 654, 'event': 'llm_generate_start', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'model': 'llama-3.1-8b-instant', 'prompt_tokens': 1420, 'completion_tokens': 203, 'duration_seconds': 0.64, 'event': 'llm_generate_complete', 'level': 'info'}
+{'citations': 5, 'answer_length': 891, 'event': 'llm_answer_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/ATS-Resume-Maker', 'latency_ms': 2648.03, 'citations': 5, 'confidence': 0.1214, 'event': 'query_pipeline_complete', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'event': 'ingest_accepted', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'branch': 'default', 'event': 'ingestion_started', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'log_file': 'C:\\Users\\Prem\\Downloads\\Stacksense\\Stacksense\\backend\\logs\\runs\\ingestion_mesouvikdev_forage-midas_2026-06-23T19-05-44.log', 'event': 'ingestion_run_log', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'branch': 'default', 'target': '\\tmp\\stacksense_repos\\mesouvikdev\\forage-midas', 'event': 'clone_started', 'level': 'info'}
+{'repo': 'mesouvikdev/forage-midas', 'error': 'HTTP Error 401: Unauthorized', 'note': 'Proceeding without size check.', 'event': 'clone_size_check_failed', 'level': 'warning'}
+{'repo_id': 'mesouvikdev/forage-midas', 'path': '\\tmp\\stacksense_repos\\mesouvikdev\\forage-midas', 'event': 'clone_successful', 'level': 'info'}
+{'path': '\\tmp\\stacksense_repos\\mesouvikdev\\forage-midas', 'event': 'filter_walking_repo', 'level': 'info'}
+{'total_indexed': 16, 'total_skipped': 6, 'languages': 'java:15  xml:1', 'event': 'filter_complete', 'level': 'info'}
+{'path': 'data\\chromadb\\skip_manifest_mesouvikdev_forage-midas.json', 'skipped_files': 6, 'event': 'skip_manifest_saved', 'level': 'info'}
+{'total_files': 16, 'event': 'chunk_phase_start', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'pom.xml', 'chunks': 1, 'types': 'block:1', 'language': 'xml', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'src\\main\\java\\com\\jpmc\\midascore\\MidasCoreApplication.java', 'chunks': 1, 'types': 'block:1', 'language': 'java', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'src\\main\\java\\com\\jpmc\\midascore\\component\\DatabaseConduit.java', 'chunks': 1, 'types': 'block:1', 'language': 'java', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'src\\main\\java\\com\\jpmc\\midascore\\entity\\UserRecord.java', 'chunks': 1, 'types': 'block:1', 'language': 'java', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'src\\main\\java\\com\\jpmc\\midascore\\foundation\\Balance.java', 'chunks': 1, 'types': 'block:1', 'language': 'java', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'src\\main\\java\\com\\jpmc\\midascore\\foundation\\Transaction.java', 'chunks': 1, 'types': 'block:1', 'language': 'java', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'src\\main\\java\\com\\jpmc\\midascore\\repository\\UserRepository.java', 'chunks': 1, 'types': 'block:1', 'language': 'java', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'src\\test\\java\\com\\jpmc\\midascore\\BalanceQuerier.java', 'chunks': 1, 'types': 'block:1', 'language': 'java', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'src\\test\\java\\com\\jpmc\\midascore\\FileLoader.java', 'chunks': 1, 'types': 'block:1', 'language': 'java', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'src\\test\\java\\com\\jpmc\\midascore\\KafkaProducer.java', 'chunks': 1, 'types': 'block:1', 'language': 'java', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'src\\test\\java\\com\\jpmc\\midascore\\TaskFiveTests.java', 'chunks': 1, 'types': 'block:1', 'language': 'java', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'src\\test\\java\\com\\jpmc\\midascore\\TaskFourTests.java', 'chunks': 1, 'types': 'block:1', 'language': 'java', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'src\\test\\java\\com\\jpmc\\midascore\\TaskOneTests.java', 'chunks': 1, 'types': 'block:1', 'language': 'java', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'src\\test\\java\\com\\jpmc\\midascore\\TaskThreeTests.java', 'chunks': 1, 'types': 'block:1', 'language': 'java', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'src\\test\\java\\com\\jpmc\\midascore\\TaskTwoTests.java', 'chunks': 1, 'types': 'block:1', 'language': 'java', 'event': 'chunk_file_done', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'file': 'src\\test\\java\\com\\jpmc\\midascore\\UserPopulator.java', 'chunks': 1, 'types': 'block:1', 'language': 'java', 'event': 'chunk_file_done', 'level': 'info'}
+{'total_chunks': 16, 'files_processed': 16, 'event': 'chunk_phase_complete', 'level': 'info'}
+{'path': 'data\\chromadb\\chunk_dumps\\mesouvikdev_forage-midas', 'chunk_count': 16, 'event': 'chunks_dumped', 'level': 'info'}
+{'total_chunks': 16, 'batch_size': 32, 'total_batches': 1, 'event': 'embed_start', 'level': 'info'}
+{'total_embeddings': 16, 'dimensions': 768, 'duration_seconds': 7.52, 'chunks_per_second': 2.1, 'event': 'embed_complete', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'error': 'Collection [mesouvikdev_forage_midas] does not exist', 'event': 'store_collection_delete_failed', 'level': 'warning'}
+{'repo_id': 'mesouvikdev/forage-midas', 'collection': 'mesouvikdev_forage_midas', 'existing_vectors': 0, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'total_chunks': 16, 'batch_size': 500, 'total_batches': 1, 'event': 'store_start', 'level': 'info'}
+{'batch': '1/1', 'chunks': '1-16', 'event': 'store_batch', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'stored': 16, 'total_in_collection': 16, 'event': 'store_complete', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'chunk_count': 16, 'event': 'bm25_build_start', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'path': 'data\\chromadb\\bm25\\mesouvikdev_forage_midas.pkl', 'event': 'bm25_build_complete', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'error': 'An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.', 'event': 's3_save_failed', 'level': 'warning'}
+{'repo_id': 'mesouvikdev/forage-midas', 'status': 'completed', 'files_indexed': 16, 'chunks_created': 16, 'languages': ['java', 'xml'], 'duration_seconds': 15.04, 'message': 'Successfully indexed 16 files into 16 chunks', 'event': 'ingestion_complete', 'level': 'info'}
+{'summary': '{\n  "type": "ingestion_summary",\n  "timestamp": "2026-06-23T19:06:00.435765+00:00",\n  "repo_id": "mesouvikdev/forage-midas",\n  "status": "completed",\n  "files_indexed": 16,\n  "chunks_created": 16,\n  "languages": [\n    "java",\n    "xml"\n  ],\n  "duration_seconds": 15.04,\n  "message": "Successfully indexed 16 files into 16 chunks"\n}', 'event': 'ingestion_summary_json', 'level': 'info'}
+{'path': '\\tmp\\stacksense_repos\\mesouvikdev\\forage-midas', 'event': 'clone_removed', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'path': '\\tmp\\stacksense_repos\\mesouvikdev\\forage-midas', 'event': 'ingestion_cleanup_done', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'question': 'How to handle the request using kafka ?', 'event': 'query_request', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'question': 'How to handle the request using kafka ?', 'top_k': 5, 'retrieve_k': 20, 'event': 'query_pipeline_start', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'question': 'How to handle the request using kafka ?', 'top_k': 20, 'event': 'retrieve_start', 'level': 'info'}
+{'query_preview': 'How to handle the request using kafka ?', 'event': 'embed_query', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'collection': 'mesouvikdev_forage_midas', 'existing_vectors': 16, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'top_k': 20, 'collection_size': 16, 'event': 'store_search', 'level': 'info'}
+{'rank': 1, 'file': 'src\\test\\java\\com\\jpmc\\midascore\\KafkaProducer.java', 'name': 'chunk-1', 'relevance': 0.6932, 'event': 'store_search_hit', 'level': 'info'}
+{'rank': 2, 'file': 'src\\test\\java\\com\\jpmc\\midascore\\TaskTwoTests.java', 'name': 'chunk-1', 'relevance': 0.6704, 'event': 'store_search_hit', 'level': 'info'}
+{'rank': 3, 'file': 'src\\test\\java\\com\\jpmc\\midascore\\TaskThreeTests.java', 'name': 'chunk-1', 'relevance': 0.6586, 'event': 'store_search_hit', 'level': 'info'}
+{'dense_count': 16, 'sparse_count': 14, 'fused_count': 16, 'event': 'hybrid_search_fusion', 'level': 'info'}
+{'chunks_found': 16, 'top_file': 'src\\test\\java\\com\\jpmc\\midascore\\KafkaProducer.java', 'top_relevance': 0.6932, 'duration_seconds': 0.092, 'event': 'retrieve_complete', 'level': 'info'}
+{'input_chunks': 16, 'top_k': 5, 'question': 'How to handle the request using kafka ?', 'event': 'rerank_start', 'level': 'info'}
+{'total_scored': 16, 'kept': 5, 'event': 'rerank_scores', 'level': 'info'}
+{'rank': 1, 'score': 0.2039, 'file': 'src\\test\\java\\com\\jpmc\\midascore\\KafkaProducer.java', 'name': 'chunk-1', 'lines': '1-22', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 2, 'score': 0.1708, 'file': 'src\\test\\java\\com\\jpmc\\midascore\\TaskThreeTests.java', 'name': 'chunk-1', 'lines': '1-46', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 3, 'score': 0.095, 'file': 'src\\test\\java\\com\\jpmc\\midascore\\TaskTwoTests.java', 'name': 'chunk-1', 'lines': '1-41', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 4, 'score': 0.0646, 'file': 'src\\test\\java\\com\\jpmc\\midascore\\TaskFourTests.java', 'name': 'chunk-1', 'lines': '1-46', 'event': 'rerank_result', 'level': 'info'}
+{'rank': 5, 'score': 0.0037, 'file': 'src\\test\\java\\com\\jpmc\\midascore\\TaskFiveTests.java', 'name': 'chunk-1', 'lines': '1-52', 'event': 'rerank_result', 'level': 'info'}
+{'chunks': 5, 'repo_id': 'mesouvikdev/forage-midas', 'event': 'llm_build_context', 'level': 'info'}
+{'model': 'llama-3.1-8b-instant', 'context_chunks': 5, 'approx_prompt_tokens': 872, 'event': 'llm_generate_start', 'level': 'info'}
+HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{'model': 'llama-3.1-8b-instant', 'prompt_tokens': 2297, 'completion_tokens': 141, 'duration_seconds': 0.66, 'event': 'llm_generate_complete', 'level': 'info'}
+{'citations': 5, 'answer_length': 620, 'event': 'llm_answer_ready', 'level': 'info'}
+{'repo_id': 'mesouvikdev/forage-midas', 'latency_ms': 1948.26, 'citations': 5, 'confidence': 0.1076, 'event': 'query_pipeline_complete', 'level': 'info'}

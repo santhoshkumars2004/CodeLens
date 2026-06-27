@@ -41,3 +41,14 @@ class QueryRequest(BaseModel):
         le=20,
         description="Number of relevant chunks to retrieve",
     )
+    language_filter: Optional[str] = Field(
+        default=None,
+        description="Restrict search to a specific language (e.g. 'python', 'typescript')",
+        examples=["python"],
+    )
+    path_filter: Optional[str] = Field(
+        default=None,
+        description="Restrict search to files whose path contains this string (e.g. 'backend/api')",
+        examples=["backend/api"],
+    )
+

@@ -1,0 +1,24 @@
+# Frontend .dockerignore
+
+# ── node_modules (Docker installs these fresh inside the image) ────
+node_modules/
+.next/
+
+# ── Environment files ──────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── IDE / OS files ─────────────────────────────────────────────────
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# ── Git ────────────────────────────────────────────────────────────
+.git/
+.gitignore
+
+# ── Logs ───────────────────────────────────────────────────────────
+*.log
+npm-debug.log*

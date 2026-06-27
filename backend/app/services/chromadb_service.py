@@ -89,7 +89,13 @@ def store_chunks(
     for i, chunk in enumerate(chunks):
         chunk_id = f"{repo_id}_{i}_{chunk.get('start_line', 0)}"
         ids.append(chunk_id)
-        documents.append(chunk["content"])
+        
+        # Prepend context header for better retrieval accuracy
+        chunk_type = chunk.get("chunk_type", "generic")
+        name_str = chunk.get("name") or "module-level"
+        header = f"File: {chunk['file_path']}\nType: {chunk_type}\nName: {name_str}\n\n"
+        
+        documents.append(header + chunk["content"])
         metadatas.append({
             "file_path": chunk["file_path"],
             "start_line": chunk["start_line"],
@@ -122,7 +128,8 @@ def store_chunks(
 def search_chunks(
     repo_id: str,
     query_embedding: List[float],
-    top_k: int = 10,
+    top_k: int = 20,
+    where: Optional[Dict[str, Any]] = None,
 ) -> List[Dict[str, Any]]:
     """
     Search for similar chunks in a repository's collection.
@@ -141,11 +148,15 @@ def search_chunks(
         logger.warning("empty_collection", repo_id=repo_id)
         return []
 
-    results = collection.query(
-        query_embeddings=[query_embedding],
-        n_results=min(top_k, collection.count()),
-        include=["documents", "metadatas", "distances"],
-    )
+    query_args = {
+        "query_embeddings": [query_embedding],
+        "n_results": min(top_k, collection.count()),
+        "include": ["documents", "metadatas", "distances"],
+    }
+    if where:
+        query_args["where"] = where
+
+    results = collection.query(**query_args)
 
     chunks = []
     for i in range(len(results["ids"][0])):

@@ -8,9 +8,10 @@ uvicorn[standard]==0.34.0
 python-multipart==0.0.20
 
 # RAG Framework
-langchain==0.3.14
-langchain-community==0.3.14
-langchain-groq==0.2.4
+langchain
+langchain-community
+langchain-groq
+langchain-text-splitters
 
 # Vector Database
 chromadb==0.6.3
@@ -22,7 +23,7 @@ sentence-transformers>=3.0.0
 gitpython==3.1.43
 
 # LLM Provider
-groq==0.13.1
+groq>=0.30.0
 
 # AWS (optional)
 boto3>=1.35.0
@@ -49,3 +50,5 @@ pytest-cov>=6.0.0
 
 # Linting
 ruff>=0.8.0
+
+rank-bm25==0.2.2

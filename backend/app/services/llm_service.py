@@ -70,20 +70,25 @@ def generate_answer(
     system_prompt = (
         "You are StackSense, an expert code analyst. You answer questions about "
         "codebases based ONLY on the provided source code context.\n\n"
-        "RULES:\n"
-        "1. Answer based ONLY on the provided code context. Do not make up code.\n"
-        "2. Always cite the exact file path and line numbers.\n"
-        "3. Use format: `file_path:start_line-end_line` for citations.\n"
-        "4. If the context doesn't contain enough info, say so clearly.\n"
-        "5. Include relevant code snippets in your answer.\n"
-        "6. Be concise but thorough.\n"
-        f"7. Repository: {repo_id}"
+        "ALWAYS respond in EXACTLY this format — no exceptions:\n\n"
+        "📝 EXPLANATION\n"
+        "[2-3 sentences explaining what the code does in plain English]\n\n"
+        "💻 CODE\n"
+        "[exact relevant code snippet from the retrieved context]\n\n"
+        "📄 SOURCE\n"
+        "[file_path:start_line-end_line]\n\n"
+        "STRICT RULES:\n"
+        "1. NEVER make up code. Only use code from the provided context.\n"
+        "2. Explanation must be plain English — no jargon where possible.\n"
+        "3. Source must always cite exact file path and line numbers from the context.\n"
+        "4. If the context has no relevant answer, say so in the EXPLANATION section.\n"
+        f"5. Repository: {repo_id}"
     )
 
     user_prompt = (
         f"CODE CONTEXT:\n{context_text}\n\n"
         f"QUESTION: {question}\n\n"
-        "Provide a clear answer with exact file and line citations."
+        "Provide a clear answer strictly following the required format."
     )
 
     import time

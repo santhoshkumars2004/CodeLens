@@ -1,0 +1,368 @@
+{'version': '1.0.0', 'debug': False, 'event': 'stacksense_starting', 'level': 'info'}
+{'persist_dir': './data/chromadb', 'event': 'store_connecting', 'level': 'info'}
+{'persist_dir': './data/chromadb', 'event': 'store_connected', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'ingest_accepted', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'event': 'ingestion_started', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'log_file': 'C:\\Users\\Prem\\Downloads\\Stacksense\\Stacksense\\backend\\logs\\runs\\ingestion_santhoshkumars2004_Stacksense_2026-06-22T08-13-55.log', 'event': 'ingestion_run_log', 'level': 'info'}
+{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_removing_old_dir', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'target': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_started', 'level': 'info'}
+{'repo': 'santhoshkumars2004/Stacksense', 'error': 'HTTP Error 401: Unauthorized', 'note': 'Proceeding without size check.', 'event': 'clone_size_check_failed', 'level': 'warning'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_successful', 'level': 'info'}
+{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'filter_walking_repo', 'level': 'info'}
+{'total_indexed': 42, 'total_skipped': 35, 'languages': 'python:23  typescript:12  shell:3  dockerfile:2  makefile:1  css:1', 'event': 'filter_complete', 'level': 'info'}
+{'path': 'data\\chromadb\\skip_manifest_santhoshkumars2004_Stacksense.json', 'skipped_files': 35, 'event': 'skip_manifest_saved', 'level': 'info'}
+{'total_files': 42, 'event': 'chunk_phase_start', 'level': 'info'}
+{'file': 'Makefile', 'chunks': 1, 'types': 'block:1', 'language': 'makefile', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\Dockerfile', 'chunks': 1, 'types': 'block:1', 'language': 'dockerfile', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\main.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\config.py', 'chunks': 3, 'types': 'module:1  class:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\health.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\ingest.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\query.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\repos.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\generator.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\ingestion.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\pipeline.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\reranker.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\retriever.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\models\\request_models.py', 'chunks': 3, 'types': 'module:1  class:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\models\\response_models.py', 'chunks': 7, 'types': 'module:1  class:6', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\chromadb_service.py', 'chunks': 8, 'types': 'module:1  function:7', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\embedding_service.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\github_service.py', 'chunks': 5, 'types': 'module:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\llm_service.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\s3_service.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\chunker.py', 'chunks': 6, 'types': 'module:1  class:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\file_filter.py', 'chunks': 5, 'types': 'module:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\logger.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\metrics.py', 'chunks': 1, 'types': 'module:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\tests\\conftest.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\Dockerfile', 'chunks': 1, 'types': 'block:1', 'language': 'dockerfile', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\next-env.d.ts', 'chunks': 1, 'types': 'block:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\next.config.ts', 'chunks': 1, 'types': 'block:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\globals.css', 'chunks': 4, 'types': 'block:4', 'language': 'css', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\layout.tsx', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\page.tsx', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\chat\\[repoId]\\page.tsx', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\ChatWindow.tsx', 'chunks': 5, 'types': 'module:1  function:4', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\CitationCard.tsx', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\IndexingProgress.tsx', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\MessageBubble.tsx', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\RepoInput.tsx', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\lib\\api.ts', 'chunks': 6, 'types': 'module:1  function:5', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\lib\\types.ts', 'chunks': 1, 'types': 'block:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'scripts\\deploy_aws.sh', 'chunks': 1, 'types': 'block:1', 'language': 'shell', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'scripts\\seed_test_repo.sh', 'chunks': 1, 'types': 'block:1', 'language': 'shell', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'scripts\\setup.sh', 'chunks': 1, 'types': 'block:1', 'language': 'shell', 'event': 'chunk_file_done', 'level': 'info'}
+{'total_chunks': 122, 'files_processed': 42, 'event': 'chunk_phase_complete', 'level': 'info'}
+{'model': 'BAAI/bge-base-en-v1.5', 'event': 'embed_model_loading', 'level': 'info'}
+{'event': 'Loading code embedding model — first run may take 2-3 minutes to download...', 'level': 'info'}
+No device provided, using cpu
+HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/modules.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+Loading SentenceTransformer model from BAAI/bge-base-en-v1.5.
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/README.md "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/modules.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/sentence_bert_config.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/tokenizer_config.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/tokenizer_config.json "HTTP/1.1 200 OK"
+HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-base-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-base-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-base-en-v1.5 "HTTP/1.1 200 OK"
+{'model': 'BAAI/bge-base-en-v1.5', 'dimensions': 768, 'load_time_seconds': 6.7, 'event': 'embed_model_ready', 'level': 'info'}
+{'total_chunks': 122, 'batch_size': 32, 'total_batches': 4, 'event': 'embed_start', 'level': 'info'}
+{'total_embeddings': 122, 'dimensions': 768, 'duration_seconds': 29.18, 'chunks_per_second': 4.2, 'event': 'embed_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'store_collection_deleted', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 0, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'total_chunks': 122, 'batch_size': 500, 'total_batches': 1, 'event': 'store_start', 'level': 'info'}
+{'batch': '1/1', 'chunks': '1-122', 'event': 'store_batch', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'stored': 122, 'total_in_collection': 122, 'event': 'store_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'error': 'An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.', 'event': 's3_save_failed', 'level': 'warning'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'status': 'completed', 'files_indexed': 42, 'chunks_created': 122, 'languages': ['css', 'dockerfile', 'makefile', 'python', 'shell', 'typescript'], 'duration_seconds': 88.74, 'message': 'Successfully indexed 42 files into 122 chunks', 'event': 'ingestion_complete', 'level': 'info'}
+{'summary': '{\n  "type": "ingestion_summary",\n  "timestamp": "2026-06-22T08:15:26.090754+00:00",\n  "repo_id": "santhoshkumars2004/Stacksense",\n  "status": "completed",\n  "files_indexed": 42,\n  "chunks_created": 122,\n  "languages": [\n    "css",\n    "dockerfile",\n    "makefile",\n    "python",\n    "shell",\n    "typescript"\n  ],\n  "duration_seconds": 88.74,\n  "message": "Successfully indexed 42 files into 122 chunks"\n}', 'event': 'ingestion_summary_json', 'level': 'info'}
+{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_removed', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'ingestion_cleanup_done', 'level': 'info'}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+{'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'ingest_accepted', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'event': 'ingestion_started', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'log_file': 'C:\\Users\\Prem\\Downloads\\Stacksense\\Stacksense\\backend\\logs\\runs\\ingestion_santhoshkumars2004_Stacksense_2026-06-22T10-00-52.log', 'event': 'ingestion_run_log', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'target': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_started', 'level': 'info'}
+{'repo': 'santhoshkumars2004/Stacksense', 'error': 'HTTP Error 401: Unauthorized', 'note': 'Proceeding without size check.', 'event': 'clone_size_check_failed', 'level': 'warning'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_successful', 'level': 'info'}
+{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'filter_walking_repo', 'level': 'info'}
+{'total_indexed': 42, 'total_skipped': 35, 'languages': 'python:23  typescript:12  shell:3  dockerfile:2  makefile:1  css:1', 'event': 'filter_complete', 'level': 'info'}
+{'path': 'data\\chromadb\\skip_manifest_santhoshkumars2004_Stacksense.json', 'skipped_files': 35, 'event': 'skip_manifest_saved', 'level': 'info'}
+{'total_files': 42, 'event': 'chunk_phase_start', 'level': 'info'}
+{'file': 'Makefile', 'chunks': 1, 'types': 'block:1', 'language': 'makefile', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\Dockerfile', 'chunks': 1, 'types': 'block:1', 'language': 'dockerfile', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\main.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\config.py', 'chunks': 3, 'types': 'module:1  class:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\health.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\ingest.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\query.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\repos.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\generator.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\ingestion.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\pipeline.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\reranker.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\retriever.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\models\\request_models.py', 'chunks': 3, 'types': 'module:1  class:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\models\\response_models.py', 'chunks': 7, 'types': 'module:1  class:6', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\chromadb_service.py', 'chunks': 8, 'types': 'module:1  function:7', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\embedding_service.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\github_service.py', 'chunks': 5, 'types': 'module:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\llm_service.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\s3_service.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\chunker.py', 'chunks': 6, 'types': 'module:1  class:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\file_filter.py', 'chunks': 5, 'types': 'module:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\logger.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\metrics.py', 'chunks': 1, 'types': 'module:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\tests\\conftest.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\Dockerfile', 'chunks': 1, 'types': 'block:1', 'language': 'dockerfile', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\next-env.d.ts', 'chunks': 1, 'types': 'block:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\next.config.ts', 'chunks': 1, 'types': 'block:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\globals.css', 'chunks': 4, 'types': 'block:4', 'language': 'css', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\layout.tsx', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\page.tsx', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\chat\\[repoId]\\page.tsx', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\ChatWindow.tsx', 'chunks': 5, 'types': 'module:1  function:4', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\CitationCard.tsx', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\IndexingProgress.tsx', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\MessageBubble.tsx', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\RepoInput.tsx', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\lib\\api.ts', 'chunks': 6, 'types': 'module:1  function:5', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\lib\\types.ts', 'chunks': 1, 'types': 'block:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'scripts\\deploy_aws.sh', 'chunks': 1, 'types': 'block:1', 'language': 'shell', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'scripts\\seed_test_repo.sh', 'chunks': 1, 'types': 'block:1', 'language': 'shell', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'scripts\\setup.sh', 'chunks': 1, 'types': 'block:1', 'language': 'shell', 'event': 'chunk_file_done', 'level': 'info'}
+{'total_chunks': 122, 'files_processed': 42, 'event': 'chunk_phase_complete', 'level': 'info'}
+{'total_chunks': 122, 'batch_size': 32, 'total_batches': 4, 'event': 'embed_start', 'level': 'info'}
+{'total_embeddings': 122, 'dimensions': 768, 'duration_seconds': 35.76, 'chunks_per_second': 3.4, 'event': 'embed_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'store_collection_deleted', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 0, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'total_chunks': 122, 'batch_size': 500, 'total_batches': 1, 'event': 'store_start', 'level': 'info'}
+{'batch': '1/1', 'chunks': '1-122', 'event': 'store_batch', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'stored': 122, 'total_in_collection': 122, 'event': 'store_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'error': 'An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.', 'event': 's3_save_failed', 'level': 'warning'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'status': 'completed', 'files_indexed': 42, 'chunks_created': 122, 'languages': ['css', 'dockerfile', 'makefile', 'python', 'shell', 'typescript'], 'duration_seconds': 105.21, 'message': 'Successfully indexed 42 files into 122 chunks', 'event': 'ingestion_complete', 'level': 'info'}
+{'summary': '{\n  "type": "ingestion_summary",\n  "timestamp": "2026-06-22T10:02:39.093639+00:00",\n  "repo_id": "santhoshkumars2004/Stacksense",\n  "status": "completed",\n  "files_indexed": 42,\n  "chunks_created": 122,\n  "languages": [\n    "css",\n    "dockerfile",\n    "makefile",\n    "python",\n    "shell",\n    "typescript"\n  ],\n  "duration_seconds": 105.21,\n  "message": "Successfully indexed 42 files into 122 chunks"\n}', 'event': 'ingestion_summary_json', 'level': 'info'}
+{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_removed', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'ingestion_cleanup_done', 'level': 'info'}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+{'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'ingest_accepted', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'event': 'ingestion_started', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'log_file': 'C:\\Users\\Prem\\Downloads\\Stacksense\\Stacksense\\backend\\logs\\runs\\ingestion_santhoshkumars2004_Stacksense_2026-06-22T10-39-08.log', 'event': 'ingestion_run_log', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'target': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_started', 'level': 'info'}
+{'repo': 'santhoshkumars2004/Stacksense', 'error': 'HTTP Error 401: Unauthorized', 'note': 'Proceeding without size check.', 'event': 'clone_size_check_failed', 'level': 'warning'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_successful', 'level': 'info'}
+{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'filter_walking_repo', 'level': 'info'}
+{'total_indexed': 42, 'total_skipped': 35, 'languages': 'python:23  typescript:12  shell:3  dockerfile:2  makefile:1  css:1', 'event': 'filter_complete', 'level': 'info'}
+{'path': 'data\\chromadb\\skip_manifest_santhoshkumars2004_Stacksense.json', 'skipped_files': 35, 'event': 'skip_manifest_saved', 'level': 'info'}
+{'total_files': 42, 'event': 'chunk_phase_start', 'level': 'info'}
+{'file': 'Makefile', 'chunks': 1, 'types': 'block:1', 'language': 'makefile', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\Dockerfile', 'chunks': 1, 'types': 'block:1', 'language': 'dockerfile', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\main.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\config.py', 'chunks': 3, 'types': 'module:1  class:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\health.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\ingest.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\query.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\repos.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\generator.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\ingestion.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\pipeline.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\reranker.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\retriever.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\models\\request_models.py', 'chunks': 3, 'types': 'module:1  class:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\models\\response_models.py', 'chunks': 7, 'types': 'module:1  class:6', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\chromadb_service.py', 'chunks': 8, 'types': 'module:1  function:7', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\embedding_service.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\github_service.py', 'chunks': 5, 'types': 'module:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\llm_service.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\s3_service.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\chunker.py', 'chunks': 6, 'types': 'module:1  class:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\file_filter.py', 'chunks': 5, 'types': 'module:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\logger.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\metrics.py', 'chunks': 1, 'types': 'module:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\tests\\conftest.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\Dockerfile', 'chunks': 1, 'types': 'block:1', 'language': 'dockerfile', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\next-env.d.ts', 'chunks': 1, 'types': 'block:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\next.config.ts', 'chunks': 1, 'types': 'block:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\globals.css', 'chunks': 4, 'types': 'block:4', 'language': 'css', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\layout.tsx', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\page.tsx', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\chat\\[repoId]\\page.tsx', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\ChatWindow.tsx', 'chunks': 5, 'types': 'module:1  function:4', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\CitationCard.tsx', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\IndexingProgress.tsx', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\MessageBubble.tsx', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\RepoInput.tsx', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\lib\\api.ts', 'chunks': 6, 'types': 'module:1  function:5', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\lib\\types.ts', 'chunks': 1, 'types': 'block:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'scripts\\deploy_aws.sh', 'chunks': 1, 'types': 'block:1', 'language': 'shell', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'scripts\\seed_test_repo.sh', 'chunks': 1, 'types': 'block:1', 'language': 'shell', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'scripts\\setup.sh', 'chunks': 1, 'types': 'block:1', 'language': 'shell', 'event': 'chunk_file_done', 'level': 'info'}
+{'total_chunks': 122, 'files_processed': 42, 'event': 'chunk_phase_complete', 'level': 'info'}
+{'total_chunks': 122, 'batch_size': 32, 'total_batches': 4, 'event': 'embed_start', 'level': 'info'}
+{'total_embeddings': 122, 'dimensions': 768, 'duration_seconds': 36.81, 'chunks_per_second': 3.3, 'event': 'embed_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'store_collection_deleted', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 0, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'total_chunks': 122, 'batch_size': 500, 'total_batches': 1, 'event': 'store_start', 'level': 'info'}
+{'batch': '1/1', 'chunks': '1-122', 'event': 'store_batch', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'stored': 122, 'total_in_collection': 122, 'event': 'store_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'error': 'An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.', 'event': 's3_save_failed', 'level': 'warning'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'status': 'completed', 'files_indexed': 42, 'chunks_created': 122, 'languages': ['css', 'dockerfile', 'makefile', 'python', 'shell', 'typescript'], 'duration_seconds': 96.07, 'message': 'Successfully indexed 42 files into 122 chunks', 'event': 'ingestion_complete', 'level': 'info'}
+{'summary': '{\n  "type": "ingestion_summary",\n  "timestamp": "2026-06-22T10:40:45.593956+00:00",\n  "repo_id": "santhoshkumars2004/Stacksense",\n  "status": "completed",\n  "files_indexed": 42,\n  "chunks_created": 122,\n  "languages": [\n    "css",\n    "dockerfile",\n    "makefile",\n    "python",\n    "shell",\n    "typescript"\n  ],\n  "duration_seconds": 96.07,\n  "message": "Successfully indexed 42 files into 122 chunks"\n}', 'event': 'ingestion_summary_json', 'level': 'info'}
+{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_removed', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'ingestion_cleanup_done', 'level': 'info'}
+{'version': '1.0.0', 'debug': False, 'event': 'stacksense_starting', 'level': 'info'}
+{'persist_dir': './data/chromadb', 'event': 'store_connecting', 'level': 'info'}
+{'persist_dir': './data/chromadb', 'event': 'store_connected', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'ingest_accepted', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'event': 'ingestion_started', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'log_file': 'C:\\Users\\Prem\\Downloads\\Stacksense\\Stacksense\\backend\\logs\\runs\\ingestion_santhoshkumars2004_Stacksense_2026-06-22T10-42-54.log', 'event': 'ingestion_run_log', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'branch': 'default', 'target': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_started', 'level': 'info'}
+{'repo': 'santhoshkumars2004/Stacksense', 'error': 'HTTP Error 401: Unauthorized', 'note': 'Proceeding without size check.', 'event': 'clone_size_check_failed', 'level': 'warning'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_successful', 'level': 'info'}
+{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'filter_walking_repo', 'level': 'info'}
+{'total_indexed': 63, 'total_skipped': 14, 'languages': 'python:23  yaml:16  typescript:12  markdown:3  shell:3  dockerfile:2  json:2  makefile:1  css:1', 'event': 'filter_complete', 'level': 'info'}
+{'path': 'data\\chromadb\\skip_manifest_santhoshkumars2004_Stacksense.json', 'skipped_files': 14, 'event': 'skip_manifest_saved', 'level': 'info'}
+{'total_files': 63, 'event': 'chunk_phase_start', 'level': 'info'}
+{'file': 'docker-compose.yml', 'chunks': 2, 'types': 'block:2', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'Makefile', 'chunks': 1, 'types': 'block:1', 'language': 'makefile', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'README.md', 'chunks': 1, 'types': 'block:1', 'language': 'markdown', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\Dockerfile', 'chunks': 1, 'types': 'block:1', 'language': 'dockerfile', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\main.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\config.py', 'chunks': 3, 'types': 'module:1  class:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\health.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\ingest.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\query.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\api\\repos.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\generator.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\ingestion.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\pipeline.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\reranker.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\core\\retriever.py', 'chunks': 2, 'types': 'module:1  function:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\models\\request_models.py', 'chunks': 3, 'types': 'module:1  class:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\models\\response_models.py', 'chunks': 7, 'types': 'module:1  class:6', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\chromadb_service.py', 'chunks': 8, 'types': 'module:1  function:7', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\embedding_service.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\github_service.py', 'chunks': 5, 'types': 'module:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\llm_service.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\services\\s3_service.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\chunker.py', 'chunks': 6, 'types': 'module:1  class:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\file_filter.py', 'chunks': 5, 'types': 'module:1  function:4', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\logger.py', 'chunks': 3, 'types': 'module:1  function:2', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\app\\utils\\metrics.py', 'chunks': 1, 'types': 'module:1', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'backend\\tests\\conftest.py', 'chunks': 4, 'types': 'module:1  function:3', 'language': 'python', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'docs\\api_reference.md', 'chunks': 1, 'types': 'block:1', 'language': 'markdown', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'docs\\architecture.md', 'chunks': 1, 'types': 'block:1', 'language': 'markdown', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\Dockerfile', 'chunks': 1, 'types': 'block:1', 'language': 'dockerfile', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\next-env.d.ts', 'chunks': 1, 'types': 'block:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\next.config.ts', 'chunks': 1, 'types': 'block:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\package.json', 'chunks': 1, 'types': 'block:1', 'language': 'json', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\tsconfig.json', 'chunks': 1, 'types': 'block:1', 'language': 'json', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\globals.css', 'chunks': 3, 'types': 'block:3', 'language': 'css', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\layout.tsx', 'chunks': 1, 'types': 'block:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\page.tsx', 'chunks': 6, 'types': 'block:6', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\app\\chat\\[repoId]\\page.tsx', 'chunks': 1, 'types': 'block:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\ChatWindow.tsx', 'chunks': 4, 'types': 'block:4', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\CitationCard.tsx', 'chunks': 3, 'types': 'block:3', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\IndexingProgress.tsx', 'chunks': 1, 'types': 'block:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\MessageBubble.tsx', 'chunks': 3, 'types': 'block:3', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\components\\RepoInput.tsx', 'chunks': 3, 'types': 'block:3', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\lib\\api.ts', 'chunks': 1, 'types': 'block:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'frontend\\lib\\types.ts', 'chunks': 1, 'types': 'block:1', 'language': 'typescript', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\backend\\configmap.yaml', 'chunks': 1, 'types': 'block:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\backend\\deployment.yaml', 'chunks': 1, 'types': 'block:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\backend\\hpa.yaml', 'chunks': 1, 'types': 'block:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\backend\\service.yaml', 'chunks': 1, 'types': 'block:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\chromadb\\pvc.yaml', 'chunks': 1, 'types': 'block:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\chromadb\\service.yaml', 'chunks': 1, 'types': 'block:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\chromadb\\statefulset.yaml', 'chunks': 1, 'types': 'block:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\frontend\\deployment.yaml', 'chunks': 1, 'types': 'block:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\frontend\\service.yaml', 'chunks': 1, 'types': 'block:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\ingress\\ingress.yaml', 'chunks': 1, 'types': 'block:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\monitoring\\grafana-deployment.yaml', 'chunks': 1, 'types': 'block:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\monitoring\\prometheus-config.yaml', 'chunks': 1, 'types': 'block:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'kubernetes\\monitoring\\prometheus-deployment.yaml', 'chunks': 1, 'types': 'block:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'monitoring\\grafana\\datasources.yaml', 'chunks': 1, 'types': 'block:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'monitoring\\prometheus\\prometheus.yml', 'chunks': 1, 'types': 'block:1', 'language': 'yaml', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'scripts\\deploy_aws.sh', 'chunks': 1, 'types': 'block:1', 'language': 'shell', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'scripts\\seed_test_repo.sh', 'chunks': 1, 'types': 'block:1', 'language': 'shell', 'event': 'chunk_file_done', 'level': 'info'}
+{'file': 'scripts\\setup.sh', 'chunks': 1, 'types': 'block:1', 'language': 'shell', 'event': 'chunk_file_done', 'level': 'info'}
+{'total_chunks': 138, 'files_processed': 63, 'event': 'chunk_phase_complete', 'level': 'info'}
+{'path': 'data\\chromadb\\chunk_dumps\\santhoshkumars2004_Stacksense\\chunks.json', 'chunk_count': 138, 'event': 'chunks_dumped', 'level': 'info'}
+{'model': 'BAAI/bge-base-en-v1.5', 'event': 'embed_model_loading', 'level': 'info'}
+{'event': 'Loading code embedding model — first run may take 2-3 minutes to download...', 'level': 'info'}
+No device provided, using cpu
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/modules.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+Loading SentenceTransformer model from BAAI/bge-base-en-v1.5.
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/README.md "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/modules.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/sentence_bert_config.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/tokenizer_config.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/config.json "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/tokenizer_config.json "HTTP/1.1 200 OK"
+HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-base-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-base-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+HTTP Request: HEAD https://huggingface.co/BAAI/bge-base-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-base-en-v1.5/a5beb1e3e68b9ab74eb54cfd186867f64f240e1a/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-base-en-v1.5 "HTTP/1.1 200 OK"
+{'model': 'BAAI/bge-base-en-v1.5', 'dimensions': 768, 'load_time_seconds': 6.3, 'event': 'embed_model_ready', 'level': 'info'}
+{'total_chunks': 138, 'batch_size': 32, 'total_batches': 5, 'event': 'embed_start', 'level': 'info'}
+{'total_embeddings': 138, 'dimensions': 768, 'duration_seconds': 45.11, 'chunks_per_second': 3.1, 'event': 'embed_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'event': 'store_collection_deleted', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'collection': 'santhoshkumars2004_stacksense', 'existing_vectors': 0, 'event': 'store_collection_ready', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'total_chunks': 138, 'batch_size': 500, 'total_batches': 1, 'event': 'store_start', 'level': 'info'}
+{'batch': '1/1', 'chunks': '1-138', 'event': 'store_batch', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'stored': 138, 'total_in_collection': 138, 'event': 'store_complete', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'error': 'An error occurred (InvalidAccessKeyId) when calling the PutObject operation: The AWS Access Key Id you provided does not exist in our records.', 'event': 's3_save_failed', 'level': 'warning'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'status': 'completed', 'files_indexed': 63, 'chunks_created': 138, 'languages': ['css', 'dockerfile', 'json', 'makefile', 'markdown', 'python', 'shell', 'typescript', 'yaml'], 'duration_seconds': 115.33, 'message': 'Successfully indexed 63 files into 138 chunks', 'event': 'ingestion_complete', 'level': 'info'}
+{'summary': '{\n  "type": "ingestion_summary",\n  "timestamp": "2026-06-22T10:44:51.664848+00:00",\n  "repo_id": "santhoshkumars2004/Stacksense",\n  "status": "completed",\n  "files_indexed": 63,\n  "chunks_created": 138,\n  "languages": [\n    "css",\n    "dockerfile",\n    "json",\n    "makefile",\n    "markdown",\n    "python",\n    "shell",\n    "typescript",\n    "yaml"\n  ],\n  "duration_seconds": 115.33,\n  "message": "Successfully indexed 63 files into 138 chunks"\n}', 'event': 'ingestion_summary_json', 'level': 'info'}
+{'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'clone_removed', 'level': 'info'}
+{'repo_id': 'santhoshkumars2004/Stacksense', 'path': '\\tmp\\stacksense_repos\\santhoshkumars2004\\Stacksense', 'event': 'ingestion_cleanup_done', 'level': 'info'}

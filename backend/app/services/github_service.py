@@ -100,7 +100,7 @@ def clone_repository(
                 f"https://{settings.github_token}@github.com",
             )
 
-        Repo.clone_from(clone_url, str(clone_dir), **clone_kwargs)
+        Repo.clone_from(clone_url, str(clone_dir), env={"GIT_CLONE_PROTECTION_ACTIVE": "false"}, **clone_kwargs)
 
         logger.info(
             "clone_successful",

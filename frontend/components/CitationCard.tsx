@@ -27,6 +27,13 @@ export default function CitationCard({
       ? "text-[var(--color-warning)]"
       : "text-[var(--color-text-muted)]";
 
+  const scoreLabel = (() => {
+    const pct = Math.round(citation.relevance_score * 100);
+    if (pct >= 70) return `${pct}% match — highly relevant`;
+    if (pct >= 40) return `${pct}% match — partially relevant`;
+    return `${pct}% match — low relevance`;
+  })();
+
   return (
     <div
       className="citation-card p-3 animate-slide-in"
@@ -63,15 +70,19 @@ export default function CitationCard({
         </button>
 
         <div className="flex items-center gap-3">
-          <span className={`text-xs font-mono ${scoreColor}`}>
-            {Math.round(citation.relevance_score * 100)}%
+          {/* Relevance score with tooltip */}
+          <span
+            className={`text-xs font-mono ${scoreColor} cursor-help`}
+            title={`Relevance score: ${scoreLabel}\nThis is how closely this code chunk matches your query, scored by a cross-encoder AI model (0% = no match, 100% = perfect match).`}
+          >
+            {Math.round(citation.relevance_score * 100)}% relevance
           </span>
           {repoUrl && (
             <a
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors"
+              className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors whitespace-nowrap"
             >
               View in GitHub ↗
             </a>
@@ -79,18 +90,26 @@ export default function CitationCard({
         </div>
       </div>
 
-      {/* Expandable code preview */}
       {expanded && (
         <div className="mt-3 code-block animate-fade-in-up">
           <div className="flex items-center justify-between px-4 py-2 border-b border-[var(--color-border)]">
             <span className="text-xs text-[var(--color-text-muted)]">
               {citation.language}
             </span>
-            <span className="text-xs text-[var(--color-text-muted)]">
-              L{citation.start_line}–{citation.end_line}
-            </span>
+            <div className="flex items-center gap-3">
+              <span className="text-xs text-[var(--color-text-muted)]">
+                L{citation.start_line}–{citation.end_line}
+              </span>
+              <button
+                onClick={() => setExpanded(false)}
+                className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors"
+              >
+                ✕ Collapse
+              </button>
+            </div>
           </div>
-          <pre className="p-4 text-xs leading-relaxed overflow-x-auto">
+          {/* Full code — scrollable, no truncation */}
+          <pre className="p-4 text-xs leading-relaxed overflow-x-auto overflow-y-auto max-h-[600px]">
             <code>{citation.content}</code>
           </pre>
         </div>

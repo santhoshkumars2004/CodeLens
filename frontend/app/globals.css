@@ -192,3 +192,39 @@ body {
 
 .dot-pulse span:nth-child(2) { animation-delay: 0.2s; }
 .dot-pulse span:nth-child(3) { animation-delay: 0.4s; }
+
+/* ── Markdown Rendering ─────────────────────────────────── */
+.markdown-body {
+  font-family: var(--font-sans);
+}
+
+.markdown-body p {
+  margin-bottom: 0.75rem;
+}
+
+.markdown-body p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.markdown-body ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown-body ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown-body a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

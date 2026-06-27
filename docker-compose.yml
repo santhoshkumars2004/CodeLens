@@ -1,37 +1,78 @@
-# StackSense — Docker Compose (Development)
-# Run: docker-compose up -d
-
-version: "3.9"
+# StackSense — Docker Compose
+#
+# This file defines ALL services needed to run StackSense.
+# ONE command to rule them all: docker-compose up --build
+#
+# HOW DOCKER COMPOSE NETWORKING WORKS:
+#   - Every service gets a hostname = its service name
+#   - "backend" container can reach "chromadb" container at http://chromadb:8001
+#   - From your HOST machine, access via localhost:PORT
+#
+# HOW VOLUMES WORK:
+#   - Containers are ephemeral (data dies when container dies)
+#   - Named volumes persist data outside containers
+#   - chromadb_data persists your vector DB even if you restart containers
 
 services:
-  # ── FastAPI Backend ──────────────────────────────────────────────
+
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # FastAPI Backend
+  # Runs the RAG pipeline: ingestion, retrieval, reranking, generation
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   backend:
     build:
-      context: ./backend
+      context: ./backend       # Build from backend/Dockerfile
       dockerfile: Dockerfile
     container_name: stacksense-backend
     ports:
-      - "8000:8000"
+      - "8000:8000"            # HOST:CONTAINER — access via localhost:8000
+
     environment:
+      # Secrets — loaded from .env file in project root (never commit .env!)
       - GROQ_API_KEY=${GROQ_API_KEY}
       - GROQ_MODEL=${GROQ_MODEL:-llama3-8b-8192}
+
+      # ChromaDB is accessed via service name (not localhost!) inside Docker
+      # Because containers talk to each other through the Docker network
+      - CHROMA_HOST=chromadb
+      - CHROMA_PORT=8001
       - CHROMA_PERSIST_DIR=/app/data/chromadb
-      - EMBEDDING_MODEL=${EMBEDDING_MODEL:-all-MiniLM-L6-v2}
-      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+
+      # Embedding + Reranker (local HuggingFace models — no API key needed)
+      - EMBEDDING_MODEL=${EMBEDDING_MODEL:-BAAI/bge-base-en-v1.5}
+      - RERANKER_MODEL=${RERANKER_MODEL:-cross-encoder/ms-marco-MiniLM-L-12-v2}
+
+      # CORS — allow the frontend container to call the backend
       - FRONTEND_URL=http://localhost:3000
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+
     volumes:
+      # Named volume: ChromaDB data persists even if backend container is deleted
       - chromadb_data:/app/data/chromadb
+      # Named volume: cloned GitHub repos cached here
       - repos_data:/tmp/stacksense_repos
+      # HuggingFace model cache — download once, reuse forever
+      - hf_cache:/root/.cache/huggingface
+
     networks:
       - stacksense-network
-    restart: unless-stopped
+
+    depends_on:
+      - chromadb
+
+    restart: unless-stopped         # Auto-restart if it crashes (not on manual stop)
+
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
       interval: 30s
       timeout: 10s
+      start_period: 60s             # Give it time to download HuggingFace models
       retries: 3
 
-  # ── Next.js Frontend ─────────────────────────────────────────────
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # Next.js Frontend
+  # Production build served on port 3000
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   frontend:
     build:
       context: ./frontend
@@ -39,54 +80,62 @@ services:
     container_name: stacksense-frontend
     ports:
       - "3000:3000"
+
     environment:
-      - NEXT_PUBLIC_API_URL=http://localhost:8000
+      # This URL is used by the Next.js server at runtime (not build time)
+      # Inside Docker, "backend" is the hostname of the backend service
+      - NEXT_PUBLIC_API_URL=http://backend:8000
+
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy  # Don't start until backend is healthy
+
     networks:
       - stacksense-network
+
     restart: unless-stopped
 
-  # ── Prometheus Monitoring ────────────────────────────────────────
-  prometheus:
-    image: prom/prometheus:latest
-    container_name: stacksense-prometheus
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # ChromaDB — Vector Database
+  # Pre-built official image (no Dockerfile needed!)
+  # Stores code chunk embeddings for semantic search
+  # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  chromadb:
+    image: chromadb/chroma:latest   # Official image from Docker Hub
+    container_name: stacksense-chromadb
     ports:
-      - "9090:9090"
-    volumes:
-      - ./monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
-      - prometheus_data:/prometheus
-    networks:
-      - stacksense-network
-    restart: unless-stopped
+      - "8001:8000"                 # ChromaDB runs on 8000 internally, mapped to 8001
 
-  # ── Grafana Dashboard ───────────────────────────────────────────
-  grafana:
-    image: grafana/grafana:latest
-    container_name: stacksense-grafana
-    ports:
-      - "3001:3000"
     environment:
-      - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=stacksense
-      - GF_USERS_ALLOW_SIGN_UP=false
+      - IS_PERSISTENT=TRUE
+      - PERSIST_DIRECTORY=/chroma/chroma
+
     volumes:
-      - ./monitoring/grafana/datasources.yaml:/etc/grafana/provisioning/datasources/datasources.yaml
-      - grafana_data:/var/lib/grafana
-    depends_on:
-      - prometheus
+      # CRITICAL: Without this volume, ALL your indexed vectors are lost on restart
+      - chromadb_data:/chroma/chroma
+
     networks:
       - stacksense-network
+
     restart: unless-stopped
 
-# ── Volumes ───────────────────────────────────────────────────────
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Named Volumes
+# Managed by Docker — data survives container restarts/deletions
+# View them: docker volume ls
+# Delete them: docker volume rm stacksense_chromadb_data
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 volumes:
-  chromadb_data:
-  repos_data:
-  prometheus_data:
-  grafana_data:
+  chromadb_data:    # Vector DB data
+  repos_data:       # Cloned GitHub repos (temp cache)
+  hf_cache:         # HuggingFace model weights (avoid re-downloading)
 
-# ── Network ───────────────────────────────────────────────────────
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Network
+# All services join this bridge network and can reach each other by name
+# "stacksense-backend" → http://backend:8000
+# "stacksense-frontend" → http://frontend:3000
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 networks:
   stacksense-network:
     driver: bridge

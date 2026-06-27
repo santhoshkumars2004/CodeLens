@@ -18,6 +18,7 @@ export interface QueryResponse {
   query: string;
   repo_id: string;
   latency_ms: number;
+  rewritten_query?: string;
 }
 
 export interface IngestResponse {
