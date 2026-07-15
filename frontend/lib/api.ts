@@ -10,14 +10,19 @@ import type {
   RepoInfo,
   IngestStatus,
 } from "./types";
+import type { Message } from "./types";
 
 export async function ingestRepo(
   repoUrl: string,
-  branch?: string
+  branch?: string,
+  token?: string | null,
 ): Promise<IngestResponse> {
+  const headers: Record<string, string> = { "Content-Type": "application/json" };
+  if (token) headers["Authorization"] = `Bearer ${token}`;
+
   const res = await fetch(`${API_URL}/api/ingest`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers,
     body: JSON.stringify({ repo_url: repoUrl, branch }),
   });
 
@@ -35,6 +40,7 @@ export async function queryRepo(
   topK: number = 5,
   languageFilter?: string,
   pathFilter?: string,
+  token?: string | null,
 ): Promise<QueryResponse> {
   const body: Record<string, unknown> = {
     repo_id: repoId,
@@ -44,9 +50,12 @@ export async function queryRepo(
   if (languageFilter) body.language_filter = languageFilter;
   if (pathFilter) body.path_filter = pathFilter;
 
+  const headers: Record<string, string> = { "Content-Type": "application/json" };
+  if (token) headers["Authorization"] = `Bearer ${token}`;
+
   const res = await fetch(`${API_URL}/api/query`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers,
     body: JSON.stringify(body),
   });
 
@@ -102,4 +111,21 @@ export async function checkHealth(): Promise<{
 }> {
   const res = await fetch(`${API_URL}/health`);
   return res.json();
+}
+
+export async function getChatHistory(repoId: string, token: string): Promise<Message[]> {
+  const [owner, repo] = repoId.split("/");
+  const res = await fetch(`${API_URL}/api/query/history/${owner}/${repo}`, {
+    headers: {
+      "Authorization": `Bearer ${token}`
+    }
+  });
+
+  if (!res.ok) {
+    console.error("Failed to fetch chat history");
+    return [];
+  }
+
+  const data = await res.json();
+  return data.messages;
 }

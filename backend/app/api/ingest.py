@@ -12,6 +12,9 @@ from app.models.request_models import IngestRequest
 from app.ingestion.pipeline import ingest_repository_background, get_ingestion_status
 from app.ingestion.cloner import parse_repo_url
 from app.utils.logger import get_logger
+from app.api.auth import get_current_user
+from fastapi import Depends
+from app.db.supabase import save_user_repo
 
 router = APIRouter(prefix="/api", tags=["Ingestion"])
 logger = get_logger(__name__)
@@ -21,6 +24,7 @@ logger = get_logger(__name__)
 async def ingest_repo(
     request: IngestRequest,
     background_tasks: BackgroundTasks,
+    user_id: str = Depends(get_current_user),
 ):
     """
     Start indexing a GitHub repository.
@@ -47,6 +51,9 @@ async def ingest_repo(
         repo_url=request.repo_url,
         branch=request.branch,
     )
+
+    # Save to Supabase (Option B)
+    save_user_repo(user_id=user_id, repo_id=repo_id)
 
     return JSONResponse(
         status_code=202,

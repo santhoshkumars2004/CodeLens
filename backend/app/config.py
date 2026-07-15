@@ -60,6 +60,10 @@ class Settings(BaseSettings):
     langfuse_secret_key: Optional[str] = None
     langfuse_host: str = "http://localhost:3002"
 
+    # ── Supabase (Database) ─────────────────────────────────────
+    supabase_url: Optional[str] = None
+    supabase_key: Optional[str] = None
+
     # ── Limits ──────────────────────────────────────────────────
     max_repo_size_mb: int = 500
     max_files_per_repo: int = 10000

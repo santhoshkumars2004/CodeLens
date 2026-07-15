@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { SignInButton, SignedIn, SignedOut, UserButton, useAuth } from '@clerk/nextjs'
 import RepoInput from "@/components/RepoInput";
 import IndexingProgress from "@/components/IndexingProgress";
 import { ingestRepo, listRepos, getIngestStatus, deleteRepo } from "@/lib/api";
@@ -9,6 +10,7 @@ import type { RepoInfo, IngestResponse, IngestStatus } from "@/lib/types";
 
 export default function HomePage() {
   const router = useRouter();
+  const { getToken } = useAuth();
   const [isIngesting, setIsIngesting] = useState(false);
   const [progress, setProgress] = useState(0);
   const [statusMessage, setStatusMessage] = useState("");
@@ -47,7 +49,11 @@ export default function HomePage() {
     setStatusMessage("Starting ingestion...");
 
     try {
-      const response = await ingestRepo(url);
+      const token = await getToken();
+      if (!token) {
+        throw new Error("You must be logged in to index repositories.");
+      }
+      const response = await ingestRepo(url, undefined, token);
       
       // Poll for status
       const repoId = response.repo_id;
@@ -107,19 +113,14 @@ export default function HomePage() {
             <span className="text-lg font-semibold">CodeLens</span>
           </div>
           <div className="flex items-center gap-4">
-            <a
-              href="/docs"
-              className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] transition-colors"
-            >
-              Docs
-            </a>
-            <a
-              href="http://localhost:8000/docs"
-              target="_blank"
-              className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] transition-colors"
-            >
-              API
-            </a>
+            <SignedOut>
+              <div className="btn-glow text-white px-4 py-1.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
+                <SignInButton />
+              </div>
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
           </div>
         </div>
       </nav>

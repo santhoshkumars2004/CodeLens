@@ -2,6 +2,7 @@
 
 import React, { use, useRef } from "react";
 import { useRouter } from "next/navigation";
+import { UserButton } from "@clerk/nextjs";
 import ChatWindow from "@/components/ChatWindow";
 
 interface ChatPageProps {
@@ -75,6 +76,10 @@ export default function ChatPage({ params }: ChatPageProps) {
           <div className="glass rounded-full px-3 py-1 text-[10px] text-[var(--color-success)] flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 bg-[var(--color-success)] rounded-full animate-pulse" />
             Indexed
+          </div>
+
+          <div className="pl-2 border-l border-[var(--color-border)] ml-1">
+            <UserButton />
           </div>
         </div>
       </header>

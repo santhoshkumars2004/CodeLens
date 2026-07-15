@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import { useAuth } from "@clerk/nextjs";
 import MessageBubble from "./MessageBubble";
 import type { Message } from "@/lib/types";
-import { queryRepo } from "@/lib/api";
+import { queryRepo, getChatHistory } from "@/lib/api";
 
 interface ChatWindowProps {
   repoId: string;
@@ -38,7 +39,9 @@ function loadHistory(repoId: string): Message[] {
 }
 
 export default function ChatWindow({ repoId, repoUrl, onClearRef }: ChatWindowProps) {
-  const [messages, setMessages] = useState<Message[]>(() => loadHistory(repoId));
+  const { getToken } = useAuth();
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [hasLoaded, setHasLoaded] = useState(false);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [languageFilter, setLanguageFilter] = useState("");
@@ -47,15 +50,23 @@ export default function ChatWindow({ repoId, repoUrl, onClearRef }: ChatWindowPr
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
-  // Persist messages to localStorage whenever they change
+  // Fetch messages from Supabase on mount
   useEffect(() => {
-    if (messages.length > 0) {
-      localStorage.setItem(HISTORY_KEY(repoId), JSON.stringify(messages));
+    async function fetchHistory() {
+      if (hasLoaded) return;
+      const token = await getToken();
+      if (token) {
+        const history = await getChatHistory(repoId, token);
+        setMessages(history);
+      }
+      setHasLoaded(true);
     }
-  }, [messages, repoId]);
+    fetchHistory();
+  }, [repoId, getToken, hasLoaded]);
 
   const clearHistory = () => {
-    localStorage.removeItem(HISTORY_KEY(repoId));
+    // In a full implementation, we'd delete from Supabase here.
+    // For now, just clear the local state.
     setMessages([]);
   };
 
@@ -88,12 +99,14 @@ export default function ChatWindow({ repoId, repoUrl, onClearRef }: ChatWindowPr
     setIsLoading(true);
 
     try {
+      const token = await getToken();
       const response = await queryRepo(
         repoId,
         question,
         5,
         languageFilter || undefined,
         pathFilter || undefined,
+        token
       );
 
       const aiMessage: Message = {
