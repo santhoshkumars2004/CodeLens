@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { SignInButton, SignedIn, SignedOut, UserButton, useAuth } from '@clerk/nextjs'
+import { SignInButton, UserButton, useAuth } from '@clerk/nextjs'
 import RepoInput from "@/components/RepoInput";
 import IndexingProgress from "@/components/IndexingProgress";
 import { ingestRepo, listRepos, getIngestStatus, deleteRepo } from "@/lib/api";
@@ -10,7 +10,7 @@ import type { RepoInfo, IngestResponse, IngestStatus } from "@/lib/types";
 
 export default function HomePage() {
   const router = useRouter();
-  const { getToken } = useAuth();
+  const { getToken, userId, isLoaded } = useAuth();
   const [isIngesting, setIsIngesting] = useState(false);
   const [progress, setProgress] = useState(0);
   const [statusMessage, setStatusMessage] = useState("");
@@ -113,14 +113,14 @@ export default function HomePage() {
             <span className="text-lg font-semibold">CodeLens</span>
           </div>
           <div className="flex items-center gap-4">
-            <SignedOut>
+            {isLoaded && !userId && (
               <div className="btn-glow text-white px-4 py-1.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
                 <SignInButton />
               </div>
-            </SignedOut>
-            <SignedIn>
+            )}
+            {isLoaded && userId && (
               <UserButton />
-            </SignedIn>
+            )}
           </div>
         </div>
       </nav>
