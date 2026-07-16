@@ -161,7 +161,7 @@ def clone_repository(
         Repo.clone_from(
             clone_url,
             str(clone_dir),
-            env={"GIT_CLONE_PROTECTION_ACTIVE": "false"},
+            env={"GIT_CLONE_PROTECTION_ACTIVE": "false", "GIT_TERMINAL_PROMPT": "0"},
             **clone_kwargs,
         )
 
