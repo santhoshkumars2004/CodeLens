@@ -1,8 +1,14 @@
 /**
  * CodeLens — API Client
+ *
+ * IMPORTANT: NEXT_PUBLIC_API_URL must be set in Vercel environment variables
+ * AND the project must be redeployed after setting it for the variable to
+ * be baked into the production JS bundle.
+ *
+ * Set it to: https://codelens-production-c946.up.railway.app
  */
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "https://codelens-production-c946.up.railway.app";
 
 import type {
   QueryResponse,

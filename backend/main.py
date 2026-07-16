@@ -47,9 +47,18 @@ app = FastAPI(
 )
 
 # ── CORS Middleware ─────────────────────────────────────────────────
+# NOTE: allow_credentials=True is INCOMPATIBLE with allow_origins=["*"] per
+# the CORS spec — browsers will block preflight requests. We list all valid
+# origins explicitly, including all vercel.app preview URL patterns.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://localhost:3001",
+        settings.frontend_url,
+        "https://code-lens-git-main-s-santhosh-kumars-projects-a2245e69.vercel.app",
+    ],
+    allow_origin_regex=r"https://.*\.vercel\.app",   # covers ALL vercel preview URLs
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
