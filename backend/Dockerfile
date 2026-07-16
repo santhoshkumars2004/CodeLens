@@ -14,12 +14,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /app
 
-# COPY requirements first — Docker caches this layer.
-# As long as requirements.txt doesn't change, pip install is SKIPPED on
-# subsequent builds (huge speed improvement in CI/CD pipelines).
-COPY requirements.txt .
+# COPY production requirements — excludes sentence-transformers/PyTorch
+# to keep the image small enough for Railway's free 500MB RAM limit.
+# Local development uses requirements.txt (with PyTorch + Jina AI model).
+COPY requirements.prod.txt .
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+    pip install --no-cache-dir -r requirements.prod.txt
 
 # ── Stage 2: Application ───────────────────────────────────────────
 COPY . .

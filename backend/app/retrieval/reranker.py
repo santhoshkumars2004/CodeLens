@@ -18,18 +18,29 @@ logger = get_logger(__name__)
 settings = get_settings()
 
 _reranker = None
+_reranker_available: bool | None = None
 
 
 def get_reranker():
-    """Get or initialize the cross-encoder reranker model (singleton)."""
-    global _reranker
+    """Get or initialize the cross-encoder reranker model (singleton).
+    
+    Returns None if sentence-transformers is not installed (e.g. Railway free tier).
+    In that case rerank_chunks() will skip reranking and return chunks as-is.
+    """
+    global _reranker, _reranker_available
+    if _reranker_available is False:
+        return None
     if _reranker is None:
-        from sentence_transformers import CrossEncoder
-
-        logger.info("rerank_model_loading", source="huggingface", model=settings.reranker_model)
-        _reranker = CrossEncoder(settings.reranker_model)
-        
-        logger.info("rerank_model_ready")
+        try:
+            from sentence_transformers import CrossEncoder
+            logger.info("rerank_model_loading", source="huggingface", model=settings.reranker_model)
+            _reranker = CrossEncoder(settings.reranker_model)
+            _reranker_available = True
+            logger.info("rerank_model_ready")
+        except ImportError:
+            _reranker_available = False
+            logger.warning("rerank_model_skipped", reason="sentence-transformers not installed (production mode)")
+            return None
     return _reranker
 
 
@@ -60,6 +71,13 @@ def rerank_chunks(
     if not chunks:
         return []
 
+    reranker = get_reranker()
+    
+    # If reranker is unavailable (production/no sentence-transformers), skip reranking
+    if reranker is None:
+        logger.info("rerank_skipped_unavailable", returning=min(top_k, len(chunks)))
+        return chunks[:top_k]
+
     logger.info(
         "rerank_start",
         input_chunks=len(chunks),
@@ -67,7 +85,6 @@ def rerank_chunks(
         question=question[:80],
     )
 
-    reranker = get_reranker()
     pairs = [(question, chunk["content"]) for chunk in chunks]
     raw_scores = reranker.predict(pairs)
 

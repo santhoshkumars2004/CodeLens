@@ -1,0 +1,53 @@
+# ============================================
+# CodeLens Backend — PRODUCTION (Railway) Dependencies
+# ============================================
+# This file intentionally EXCLUDES sentence-transformers and PyTorch.
+# Railway free tier has 500MB RAM limit — PyTorch alone exceeds this.
+# The embedding_service.py uses fastembed (ONNX, no PyTorch, ~100MB RAM)
+# when EMBEDDING_MODEL starts with "fastembed/" (set in Railway env vars).
+
+# Web Framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+
+# RAG Framework (uses Groq API for LLM, no local model weights)
+langchain
+langchain-groq
+langchain-text-splitters
+
+# Vector Database
+chromadb==0.6.3
+
+# Embeddings — Lightweight ONNX-based (NO PyTorch, ~100MB RAM)
+fastembed>=0.3.0
+
+# GitHub operations
+gitpython==3.1.43
+
+# LLM Provider
+groq>=0.30.0
+
+# Monitoring
+prometheus-client==0.21.1
+prometheus-fastapi-instrumentator==7.0.2
+
+# Configuration
+python-dotenv==1.0.1
+pydantic>=2.10.0
+pydantic-settings>=2.7.0
+
+# Logging
+structlog>=24.4.0
+
+# HTTP
+httpx>=0.28.0
+
+# Database
+supabase
+
+# BM25 retrieval
+rank-bm25==0.2.2
+
+# Auth
+pyjwt>=2.8.0
