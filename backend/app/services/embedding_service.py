@@ -30,7 +30,10 @@ logger = get_logger(__name__)
 settings = get_settings()
 
 # ── Constants ─────────────────────────────────────────────────────────
-MODEL_NAME = "all-MiniLM-L6-v2"
+# Override by setting EMBEDDING_MODEL env var:
+#   - Local (high quality): jinaai/jina-embeddings-v2-base-code (~800MB RAM)
+#   - Railway free tier:    all-MiniLM-L6-v2                    (~80MB RAM)
+DEFAULT_MODEL = "all-MiniLM-L6-v2"
 BATCH_SIZE = 16     # Memory-efficient batch size for local inference
 
 
@@ -63,7 +66,7 @@ class EmbeddingService:
         if self._model is not None:
             return self._model
 
-        model_name = getattr(settings, "embedding_model", MODEL_NAME)
+        model_name = getattr(settings, "embedding_model", None) or DEFAULT_MODEL
 
         logger.info(
             "embed_model_loading",

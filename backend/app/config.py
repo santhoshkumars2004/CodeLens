@@ -38,8 +38,11 @@ class Settings(BaseSettings):
     chroma_persist_dir: str = "./data/chromadb"
 
     # ── HuggingFace Embeddings (Local, Free) ────────────────────
-    embedding_model: str = "BAAI/bge-base-en-v1.5"
-    embedding_batch_size: int = 32
+    # Options:
+    #   jinaai/jina-embeddings-v2-base-code  → Best for code (~800MB RAM) — use locally
+    #   all-MiniLM-L6-v2                     → Lightweight (~80MB RAM) — use on Railway
+    embedding_model: str = "all-MiniLM-L6-v2"
+    embedding_batch_size: int = 16
 
     # ── Reranker Model ──────────────────────────────────────────
     reranker_model: str = "cross-encoder/ms-marco-MiniLM-L-12-v2"
