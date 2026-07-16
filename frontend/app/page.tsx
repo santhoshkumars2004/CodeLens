@@ -191,7 +191,14 @@ function AppDashboard() {
             setError(statusData.message || "Ingestion failed");
             setIsIngesting(false);
           }
-        } catch { /* keep polling */ }
+        } catch (pollErr: any) { 
+          if (pollErr.message && (pollErr.message.includes("404") || pollErr.message.includes("Failed to get status"))) {
+            clearInterval(pollInterval);
+            setProgress(0);
+            setError("Ingestion failed: Backend restarted. Please try again in a few seconds.");
+            setIsIngesting(false);
+          }
+        }
       }, 2000);
     } catch (err) {
       setProgress(0);
