@@ -30,8 +30,8 @@ logger = get_logger(__name__)
 settings = get_settings()
 
 # ── Constants ─────────────────────────────────────────────────────────
-MODEL_NAME = "jinaai/jina-embeddings-v2-base-code"
-BATCH_SIZE = 32     # Memory-efficient batch size for local inference
+MODEL_NAME = "all-MiniLM-L6-v2"
+BATCH_SIZE = 16     # Memory-efficient batch size for local inference
 
 
 class EmbeddingService:
