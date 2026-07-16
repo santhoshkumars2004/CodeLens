@@ -21,6 +21,7 @@ from app.chunking.chunker import chunk_file
 from app.embeddings.embedder import embed_texts
 from app.vectordb.vector_store import store_chunks, delete_collection
 from app.services.s3_service import save_repo_metadata
+from app.db.supabase import update_ingestion_status, get_ingestion_status_db
 from app.utils.metrics import (
     ingestion_duration_seconds,
     files_indexed_total,
@@ -35,9 +36,23 @@ settings = get_settings()
 _ingestion_status: Dict[str, Dict[str, Any]] = {}
 
 
+def _set_status(repo_id: str, status: str, progress: int, message: str):
+    """Write ingestion status to both in-memory dict and Supabase (persistent)."""
+    _ingestion_status[repo_id] = {
+        "status": status,
+        "progress": progress,
+        "message": message,
+    }
+    # Also persist to Supabase so status survives server restarts
+    update_ingestion_status(repo_id, status, progress, message)
+
+
 def get_ingestion_status(repo_id: str) -> Dict[str, Any] | None:
-    """Get the current ingestion status for a repo."""
-    return _ingestion_status.get(repo_id)
+    """Get the current ingestion status — checks memory first, then Supabase."""
+    if repo_id in _ingestion_status:
+        return _ingestion_status[repo_id]
+    # Fall back to Supabase if this server instance doesn't have it in memory
+    return get_ingestion_status_db(repo_id)
 
 
 def ingest_repository(
@@ -83,22 +98,15 @@ def ingest_repository(
         log_file=str(run_log),
     )
 
-    _ingestion_status[repo_id] = {
-        "status": "cloning",
-        "progress": 0,
-        "message": "Cloning repository...",
-    }
+    _set_status(repo_id, "cloning", 0, "Cloning repository...")
 
     try:
         # ── Step 2: Clone ─────────────────────────────────────────────────────
         repo_path = clone_repository(repo_url, branch)
 
         # ── Step 3: Discover files ────────────────────────────────────
-        _ingestion_status[repo_id] = {
-            "status": "discovering",
-            "progress": 15,
-            "message": "Discovering code files...",
-        }
+        _set_status(repo_id, "discovering", 15, "Discovering code files...")
+
         # Build manifest path alongside ChromaDB data
         safe_id = repo_id.replace("/", "_")
         manifest_path = Path(settings.chroma_persist_dir) / f"skip_manifest_{safe_id}.json"
@@ -120,11 +128,8 @@ def ingest_repository(
             }
 
         # ── Step 4: Chunk all files ───────────────────────────────────
-        _ingestion_status[repo_id] = {
-            "status": "chunking",
-            "progress": 30,
-            "message": f"Chunking {len(code_files)} files...",
-        }
+        _set_status(repo_id, "chunking", 30, f"Chunking {len(code_files)} files...")
+
 
         all_chunks: List[Dict[str, Any]] = []
         languages_seen: set = set()
@@ -183,11 +188,8 @@ def ingest_repository(
                 # Progress update every 10 files
                 if files_processed % 10 == 0:
                     pct = 30 + int((files_processed / len(code_files)) * 30)
-                    _ingestion_status[repo_id] = {
-                        "status": "chunking",
-                        "progress": pct,
-                        "message": f"Chunked {files_processed}/{len(code_files)} files → {len(all_chunks)} chunks so far",
-                    }
+                    _set_status(repo_id, "chunking", pct,
+                                f"Chunked {files_processed}/{len(code_files)} files → {len(all_chunks)} chunks so far")
 
             except Exception as e:
                 logger.warning(
@@ -214,44 +216,14 @@ def ingest_repository(
             files_processed=files_processed,
         )
 
-        # ── [NEW] Dump chunks to disk for inspection ──────────────────
-        safe_id = repo_id.replace("/", "_")
-        dump_dir = Path(settings.chroma_persist_dir) / "chunk_dumps" / safe_id
-        dump_dir.mkdir(parents=True, exist_ok=True)
-        dump_file_json = dump_dir / "chunks.json"
-        dump_file_txt = dump_dir / "chunks.txt"
-
-        with open(dump_file_json, "w", encoding="utf-8") as f:
-            json.dump(all_chunks, f, indent=2)
-            
-        with open(dump_file_txt, "w", encoding="utf-8") as f:
-            for i, chunk in enumerate(all_chunks, 1):
-                f.write(f"=== CHUNK {i} | FILE: {chunk.get('file_path')} | LINES: {chunk.get('start_line')}-{chunk.get('end_line')} ===\n")
-                f.write(chunk.get("content", ""))
-                f.write("\n\n" + "="*80 + "\n\n")
-            
-        logger.info(
-            "chunks_dumped",
-            path=str(dump_dir),
-            chunk_count=len(all_chunks),
-        )
-
         # ── Step 5: Embed ─────────────────────────────────────────────
-        _ingestion_status[repo_id] = {
-            "status": "embedding",
-            "progress": 60,
-            "message": f"Embedding {len(all_chunks)} chunks...",
-        }
+        _set_status(repo_id, "embedding", 60, f"Embedding {len(all_chunks)} chunks...")
 
         chunk_texts = [c["content"] for c in all_chunks]
         embeddings = embed_texts(chunk_texts)
 
         # ── Step 6: Store in ChromaDB ─────────────────────────────────
-        _ingestion_status[repo_id] = {
-            "status": "storing",
-            "progress": 85,
-            "message": f"Storing {len(all_chunks)} vectors in ChromaDB...",
-        }
+        _set_status(repo_id, "storing", 85, f"Storing {len(all_chunks)} vectors in ChromaDB...")
 
         delete_collection(repo_id)
         stored_count = store_chunks(repo_id, all_chunks, embeddings)
@@ -273,11 +245,7 @@ def ingest_repository(
         }
         save_repo_metadata(repo_id, metadata)
 
-        _ingestion_status[repo_id] = {
-            "status": "completed",
-            "progress": 100,
-            "message": "Repository indexed successfully!",
-        }
+        _set_status(repo_id, "completed", 100, "Repository indexed successfully!")
 
         result = {
             "repo_id": repo_id,
@@ -304,11 +272,7 @@ def ingest_repository(
         return result
 
     except Exception as e:
-        _ingestion_status[repo_id] = {
-            "status": "error",
-            "progress": 0,
-            "message": str(e),
-        }
+        _set_status(repo_id, "error", 0, str(e))
         logger.error("ingestion_failed", repo_id=repo_id, error=str(e))
         raise
 

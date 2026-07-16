@@ -75,3 +75,43 @@ def get_chat_history(user_id: str, repo_id: str) -> list:
     except Exception as e:
         logger.error("supabase_error", error=str(e), action="get_chat_history")
         return []
+
+
+def update_ingestion_status(repo_id: str, status: str, progress: int, message: str):
+    """Upserts the ingestion status into Supabase so it survives server restarts."""
+    client = get_supabase_client()
+    if not client:
+        return  # Fall back to in-memory only
+    try:
+        client.table("ingestion_status").upsert({
+            "repo_id": repo_id,
+            "status": status,
+            "progress": progress,
+            "message": message,
+        }, on_conflict="repo_id").execute()
+    except Exception as e:
+        logger.error("supabase_error", error=str(e), action="update_ingestion_status")
+
+
+def get_ingestion_status_db(repo_id: str) -> dict | None:
+    """Reads ingestion status from Supabase. Returns None if not found."""
+    client = get_supabase_client()
+    if not client:
+        return None
+    try:
+        response = client.table("ingestion_status")\
+            .select("*")\
+            .eq("repo_id", repo_id)\
+            .maybe_single()\
+            .execute()
+        if response.data:
+            return {
+                "status": response.data["status"],
+                "progress": response.data["progress"],
+                "message": response.data["message"],
+            }
+        return None
+    except Exception as e:
+        logger.error("supabase_error", error=str(e), action="get_ingestion_status_db")
+        return None
+
