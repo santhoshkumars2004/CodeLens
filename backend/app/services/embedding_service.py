@@ -19,9 +19,7 @@ Usage:
 
 import math
 import time
-from typing import List
-
-from sentence_transformers import SentenceTransformer
+from typing import List, Any
 
 from app.config import get_settings
 from app.utils.logger import get_logger
@@ -31,141 +29,103 @@ settings = get_settings()
 
 # ── Constants ─────────────────────────────────────────────────────────
 # Override by setting EMBEDDING_MODEL env var:
-#   - Local (high quality): jinaai/jina-embeddings-v2-base-code (~800MB RAM)
-#   - Railway free tier:    all-MiniLM-L6-v2                    (~80MB RAM)
-DEFAULT_MODEL = "all-MiniLM-L6-v2"
-BATCH_SIZE = 16     # Memory-efficient batch size for local inference
+#   - Local (high quality): jinaai/jina-embeddings-v2-base-code (~800MB RAM, uses PyTorch)
+#   - Railway free tier:    fastembed/BAAI/bge-small-en-v1.5    (~100MB RAM, no PyTorch)
+DEFAULT_MODEL = "fastembed/BAAI/bge-small-en-v1.5"
+BATCH_SIZE = 16
 
 
 class EmbeddingService:
-    """
-    Code-aware embedding service using Jina AI's code embedding model.
-
-    The model is loaded once and reused across all calls (singleton pattern).
-    On the very first call it will download the model weights (~350 MB)
-    from HuggingFace Hub — this takes 2–3 minutes on a typical connection.
-    Subsequent startups load from the local cache in seconds.
-    """
-
     _instance: "EmbeddingService | None" = None
-    _model: SentenceTransformer | None = None
+    _model: Any = None
+    _is_fastembed: bool = False
 
     def __new__(cls) -> "EmbeddingService":
-        """Singleton — only one model is ever loaded into memory."""
         if cls._instance is None:
             cls._instance = super().__new__(cls)
         return cls._instance
 
-    def _load_model(self) -> SentenceTransformer:
-        """
-        Load the embedding model if not already loaded.
-
-        Logs a clear message on first run so the user knows a download
-        may be happening.
-        """
+    def _load_model(self) -> Any:
         if self._model is not None:
             return self._model
 
         model_name = getattr(settings, "embedding_model", None) or DEFAULT_MODEL
-
-        logger.info(
-            "embed_model_loading",
-            model=model_name,
-        )
-        logger.info(
-            "Loading code embedding model — first run may take 2-3 minutes to download...",
-        )
-
+        
+        logger.info("embed_model_loading", model=model_name)
         start = time.time()
-        self._model = SentenceTransformer(model_name)
-        duration = round(time.time() - start, 1)
 
-        try:
-            dim = self._model.get_embedding_dimension()
-        except AttributeError:
-            dim = self._model.get_sentence_embedding_dimension()
+        if model_name.startswith("fastembed/"):
+            # Use ultra-lightweight fastembed (ONNX, No PyTorch)
+            self._is_fastembed = True
+            real_name = model_name.replace("fastembed/", "")
+            from fastembed import TextEmbedding
+            self._model = TextEmbedding(real_name)
+            dim = 384 # BGE small is 384, adjust if needed
+        else:
+            # Use SentenceTransformers (Requires PyTorch, ~800MB+ RAM)
+            self._is_fastembed = False
+            from sentence_transformers import SentenceTransformer
+            self._model = SentenceTransformer(model_name)
+            try:
+                dim = self._model.get_embedding_dimension()
+            except AttributeError:
+                dim = self._model.get_sentence_embedding_dimension()
+
+        duration = round(time.time() - start, 1)
         logger.info(
             "embed_model_ready",
             model=model_name,
             dimensions=dim,
             load_time_seconds=duration,
+            is_fastembed=self._is_fastembed
         )
 
         return self._model
 
     def embed(self, texts: List[str]) -> List[List[float]]:
-        """
-        Generate embeddings for a list of code or text strings.
-
-        Processes in batches of 32 to keep memory usage manageable.
-        All vectors are L2-normalized (unit length) for cosine similarity.
-
-        Args:
-            texts: List of code snippets or text strings to embed.
-
-        Returns:
-            List of embedding vectors (each a list of 768 floats).
-        """
         if not texts:
             return []
 
         model = self._load_model()
-        total = len(texts)
-        total_batches = math.ceil(total / BATCH_SIZE)
-
-        logger.info(
-            "embed_start",
-            total_chunks=total,
-            batch_size=BATCH_SIZE,
-            total_batches=total_batches,
-        )
-
         start = time.time()
 
-        embeddings = model.encode(
-            texts,
-            batch_size=BATCH_SIZE,
-            show_progress_bar=True,      # Shows tqdm bar during long ingestion runs
-            normalize_embeddings=True,   # L2-normalize → cosine similarity = dot product
-            convert_to_numpy=True,
-        )
+        if self._is_fastembed:
+            # fastembed returns a generator of numpy arrays
+            import numpy as np
+            embeddings_gen = model.embed(texts, batch_size=BATCH_SIZE)
+            embeddings = [emb.tolist() for emb in embeddings_gen]
+            
+            # fastembed already normalizes vectors
+        else:
+            embeddings_arr = model.encode(
+                texts,
+                batch_size=BATCH_SIZE,
+                show_progress_bar=False,
+                normalize_embeddings=True,
+                convert_to_numpy=True,
+            )
+            embeddings = embeddings_arr.tolist()
 
         duration = round(time.time() - start, 2)
-        logger.info(
-            "embed_complete",
-            total_embeddings=len(embeddings),
-            dimensions=len(embeddings[0]) if len(embeddings) > 0 else 0,
-            duration_seconds=duration,
-            chunks_per_second=round(total / duration, 1) if duration > 0 else 0,
-        )
-
-        return embeddings.tolist()
+        logger.info("embed_complete", total=len(texts), duration_seconds=duration)
+        return embeddings
 
     def embed_query(self, query: str) -> List[float]:
-        """
-        Generate a single embedding for a natural-language search query.
-
-        Uses the same model and normalization as embed() so the query vector
-        is directly comparable to stored chunk vectors via cosine similarity.
-
-        Args:
-            query: Natural-language question or search term.
-
-        Returns:
-            Embedding vector (768 floats, L2-normalized).
-        """
         model = self._load_model()
-        logger.info("embed_query", query_preview=query[:80])
+        if self._is_fastembed:
+            # fastembed query takes string or list
+            embeddings_gen = model.query_embed(query)
+            return next(embeddings_gen).tolist()
+        else:
+            embedding = model.encode(
+                query,
+                normalize_embeddings=True,
+                convert_to_numpy=True,
+            )
+            return embedding.tolist()
 
-        embedding = model.encode(
-            query,
-            normalize_embeddings=True,
-            convert_to_numpy=True,
-        )
-        return embedding.tolist()
 
-
-# ── Module-level helpers (keeps backward compatibility with old callers) ──
+# ── Module-level helpers ──
 
 _service: EmbeddingService | None = None
 

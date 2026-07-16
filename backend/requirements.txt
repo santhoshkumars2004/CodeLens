@@ -18,6 +18,7 @@ chromadb==0.6.3
 
 # Embeddings & Reranking
 sentence-transformers>=3.0.0
+fastembed>=0.3.0
 
 # GitHub operations
 gitpython==3.1.43
