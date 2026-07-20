@@ -1,0 +1,203 @@
+[
+  {
+    "_comment": "=== VECTOR STORE ===",
+    "id": "vs-01",
+    "question": "Where is the ChromaDB client initialized and what settings does it use?",
+    "expected_file": "backend/app/vectordb/vector_store.py",
+    "expected_lines": [29, 42],
+    "expected_function": "get_chroma_client",
+    "expected_keywords": ["PersistentClient", "chroma_persist_dir", "singleton"]
+  },
+  {
+    "id": "vs-02",
+    "question": "How are chunk IDs generated when storing in ChromaDB?",
+    "expected_file": "backend/app/vectordb/vector_store.py",
+    "expected_lines": [100, 105],
+    "expected_function": "store_chunks",
+    "expected_keywords": ["md5", "hashlib", "file_path", "start_line", "end_line"]
+  },
+  {
+    "id": "vs-03",
+    "question": "What is the ChromaDB collection name format for a repository?",
+    "expected_file": "backend/app/vectordb/vector_store.py",
+    "expected_lines": [45, 52],
+    "expected_function": "_safe_collection_name",
+    "expected_keywords": ["replace", "lower", "63"]
+  },
+  {
+    "id": "vs-04",
+    "question": "How does ChromaDB similarity search work and what does it return?",
+    "expected_file": "backend/app/vectordb/vector_store.py",
+    "expected_lines": [167, 232],
+    "expected_function": "search_chunks",
+    "expected_keywords": ["query_embeddings", "cosine", "relevance_score", "distance"]
+  },
+  {
+    "id": "vs-05",
+    "question": "What happens to old data when a repository is re-indexed?",
+    "expected_file": "backend/app/vectordb/vector_store.py",
+    "expected_lines": [235, 249],
+    "expected_function": "delete_collection",
+    "expected_keywords": ["delete_collection", "bm25"]
+  },
+
+  {
+    "_comment": "=== EMBEDDING SERVICE ===",
+    "id": "emb-01",
+    "question": "Which embedding model is used by default and how is it loaded?",
+    "expected_file": "backend/app/services/embedding_service.py",
+    "expected_lines": [34, 83],
+    "expected_function": "_load_model",
+    "expected_keywords": ["fastembed", "BAAI/bge-small-en-v1.5", "DEFAULT_MODEL"]
+  },
+  {
+    "id": "emb-02",
+    "question": "How does the embedding service handle the difference between fastembed and sentence-transformers?",
+    "expected_file": "backend/app/services/embedding_service.py",
+    "expected_lines": [57, 83],
+    "expected_function": "_load_model",
+    "expected_keywords": ["fastembed/", "startswith", "SentenceTransformer", "is_fastembed"]
+  },
+  {
+    "id": "emb-03",
+    "question": "How is the EmbeddingService implemented as a singleton?",
+    "expected_file": "backend/app/services/embedding_service.py",
+    "expected_lines": [38, 47],
+    "expected_function": "__new__",
+    "expected_keywords": ["_instance", "__new__", "singleton"]
+  },
+  {
+    "id": "emb-04",
+    "question": "What batch size is used when embedding text chunks?",
+    "expected_file": "backend/app/services/embedding_service.py",
+    "expected_lines": [35, 35],
+    "expected_function": "embed",
+    "expected_keywords": ["BATCH_SIZE", "16"]
+  },
+
+  {
+    "_comment": "=== FILE FILTER ===",
+    "id": "ff-01",
+    "question": "What file extensions are skipped during repository indexing?",
+    "expected_file": "backend/app/ingestion/file_filter.py",
+    "expected_lines": [63, 124],
+    "expected_function": "should_skip_file",
+    "expected_keywords": ["SKIP_EXTENSIONS", ".txt", ".bin", ".log", ".env"]
+  },
+  {
+    "id": "ff-02",
+    "question": "What is the maximum file size that gets indexed?",
+    "expected_file": "backend/app/ingestion/file_filter.py",
+    "expected_lines": [144, 146],
+    "expected_function": "should_skip_file",
+    "expected_keywords": ["MAX_FILE_SIZE_BYTES", "500"]
+  },
+  {
+    "id": "ff-03",
+    "question": "Which directories are excluded when walking a repository?",
+    "expected_file": "backend/app/ingestion/file_filter.py",
+    "expected_lines": [20, 60],
+    "expected_function": "should_skip_directory",
+    "expected_keywords": ["SKIP_DIRECTORIES", "node_modules", "__pycache__", ".git"]
+  },
+  {
+    "id": "ff-04",
+    "question": "How does CodeLens detect the programming language of a file?",
+    "expected_file": "backend/app/ingestion/file_filter.py",
+    "expected_lines": [234, 255],
+    "expected_function": "detect_language",
+    "expected_keywords": ["SUPPORTED_EXTENSIONS", "suffix", "dockerfile", "makefile"]
+  },
+  {
+    "id": "ff-05",
+    "question": "What is the skip manifest and how is it used?",
+    "expected_file": "backend/app/ingestion/file_filter.py",
+    "expected_lines": [258, 353],
+    "expected_function": "get_code_files",
+    "expected_keywords": ["skip_manifest", "manifest_path", "json.dump"]
+  },
+
+  {
+    "_comment": "=== INGESTION PIPELINE ===",
+    "id": "ing-01",
+    "question": "How is ingestion status persisted so it survives server restarts?",
+    "expected_file": "backend/app/ingestion/pipeline.py",
+    "expected_lines": [34, 55],
+    "expected_function": "_set_status",
+    "expected_keywords": ["_set_status", "update_ingestion_status", "Supabase", "in-memory"]
+  },
+  {
+    "id": "ing-02",
+    "question": "What are the steps in the ingestion pipeline and their progress percentages?",
+    "expected_file": "backend/app/ingestion/pipeline.py",
+    "expected_lines": [60, 295],
+    "expected_function": "ingest_repository",
+    "expected_keywords": ["cloning", "discovering", "chunking", "embedding", "storing", "completed"]
+  },
+
+  {
+    "_comment": "=== CLONER ===",
+    "id": "cl-01",
+    "question": "How does CodeLens parse and validate a GitHub URL?",
+    "expected_file": "backend/app/ingestion/cloner.py",
+    "expected_lines": [33, 58],
+    "expected_function": "parse_repo_url",
+    "expected_keywords": ["regex", "owner", "repo_id", "git@github", "https://github.com"]
+  },
+
+  {
+    "_comment": "=== QUERY PIPELINE ===",
+    "id": "qp-01",
+    "question": "What are the steps in the RAG query pipeline?",
+    "expected_file": "backend/app/query/pipeline.py",
+    "expected_lines": [25, 148],
+    "expected_function": "query_pipeline",
+    "expected_keywords": ["retrieve", "rerank", "generate", "citations", "confidence_score"]
+  },
+  {
+    "id": "qp-02",
+    "question": "How is confidence score calculated for a query result?",
+    "expected_file": "backend/app/query/pipeline.py",
+    "expected_lines": [118, 123],
+    "expected_function": "query_pipeline",
+    "expected_keywords": ["rerank_score", "average", "confidence"]
+  },
+  {
+    "id": "qp-03",
+    "question": "How does path filtering work in the query pipeline?",
+    "expected_file": "backend/app/query/pipeline.py",
+    "expected_lines": [68, 82],
+    "expected_function": "query_pipeline",
+    "expected_keywords": ["path_filter", "file_path", "lower"]
+  },
+
+  {
+    "_comment": "=== RERANKER ===",
+    "id": "rr-01",
+    "question": "What happens when the reranker model is not available in production?",
+    "expected_file": "backend/app/retrieval/reranker.py",
+    "expected_lines": [23, 45],
+    "expected_function": "get_reranker",
+    "expected_keywords": ["ImportError", "sentence-transformers", "None", "production"]
+  },
+
+  {
+    "_comment": "=== INGEST API ===",
+    "id": "api-01",
+    "question": "How does the ingest API endpoint handle background tasks?",
+    "expected_file": "backend/app/api/ingest.py",
+    "expected_lines": [23, 66],
+    "expected_function": "ingest_repo",
+    "expected_keywords": ["BackgroundTasks", "202", "add_task", "ingest_repository_background"]
+  },
+
+  {
+    "_comment": "=== CONFIG ===",
+    "id": "cfg-01",
+    "question": "How is the embedding model configured and what is the default?",
+    "expected_file": "backend/app/config.py",
+    "expected_lines": [1, 80],
+    "expected_function": "Settings",
+    "expected_keywords": ["EMBEDDING_MODEL", "embedding_model", "fastembed"]
+  }
+]
