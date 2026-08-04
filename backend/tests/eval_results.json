@@ -1,9 +1,9 @@
 {
   "repo_id": "santhoshkumars2004/CodeLens",
   "total": 23,
-  "citation_accuracy_pct": 91.3,
-  "answer_quality_pct": 87.0,
-  "avg_latency_ms": 23403.0,
+  "citation_accuracy_pct": 95.7,
+  "answer_quality_pct": 91.3,
+  "avg_latency_ms": 22737.0,
   "results": [
     {
       "id": "vs-01",
@@ -12,7 +12,7 @@
       "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\vectordb\\vector_store.py:29)",
       "answer_reason": "\u2705 2/3 keywords found: ['PersistentClient', 'chroma_persist_dir']",
-      "latency_ms": 60032.06,
+      "latency_ms": 13291.1,
       "answer_snippet": "## \ud83d\udcdd Explanation\nThe ChromaDB client is initialized in two separate functions, `get_chroma_client`, in the `vector_store.py` and `chromadb_service.py` files. The client is initialized with a persisten"
     },
     {
@@ -22,8 +22,8 @@
       "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\vectordb\\vector_store.py:74)",
       "answer_reason": "\u2705 5/5 keywords found: ['md5', 'hashlib', 'file_path']",
-      "latency_ms": 3781.28,
-      "answer_snippet": "## \ud83d\udcdd Explanation\nChunk IDs are generated based on a combination of the repository ID, file path, and start line number of the chunk. This ensures that the IDs are stable and unique, even if the same c"
+      "latency_ms": 4100.22,
+      "answer_snippet": "## \ud83d\udcdd Explanation\nThe chunk IDs are generated based on a unique combination of the repository ID, file path, start line, and end line of the code chunk. This ensures that each chunk has a stable and un"
     },
     {
       "id": "vs-03",
@@ -32,17 +32,17 @@
       "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\vectordb\\vector_store.py:55)",
       "answer_reason": "\u2705 3/3 keywords found: ['replace', 'lower', '63']",
-      "latency_ms": 8814.41,
-      "answer_snippet": "## \ud83d\udcdd Explanation\nThe ChromaDB collection name format for a repository is a string that uses underscores instead of slashes and hyphens, and is between 3 and 63 characters long.\n\n## \ud83d\udcbb Code\n```python\nco"
+      "latency_ms": 8513.83,
+      "answer_snippet": "## \ud83d\udcdd Explanation\nThe ChromaDB collection name for a repository is derived from the repository ID, replacing '/' and '-' with '_', and then making it lowercase. If the resulting name is longer than 63 "
     },
     {
       "id": "vs-04",
       "question": "How does ChromaDB similarity search work and what does it return?",
-      "citation_pass": false,
+      "citation_pass": true,
       "answer_pass": true,
-      "citation_reason": "\u274c Wrong file (got backend\\app\\services\\chromadb_service.py, expected backend/app/vectordb/vector_store.py)",
-      "answer_reason": "\u2705 2/4 keywords found: ['query_embeddings', 'distance']",
-      "latency_ms": 23549.99,
+      "citation_reason": "\u2705 Correct file (backend\\app\\services\\chromadb_service.py:128)",
+      "answer_reason": "\u2705 2/3 keywords found: ['query_embeddings', 'distance']",
+      "latency_ms": 23547.47,
       "answer_snippet": "## \ud83d\udcdd Explanation\nChromaDB similarity search is a function that takes a repository ID, a query embedding vector, and optional parameters, and returns a list of up to top_k matching chunks with metadata"
     },
     {
@@ -50,10 +50,10 @@
       "question": "What happens to old data when a repository is re-indexed?",
       "citation_pass": false,
       "answer_pass": true,
-      "citation_reason": "\u274c Wrong file (got backend\\scripts\\reset_and_reindex.py, expected backend/app/vectordb/vector_store.py)",
-      "answer_reason": "\u2705 2/2 keywords found: ['delete_collection', 'bm25']",
-      "latency_ms": 28333.1,
-      "answer_snippet": "## \ud83d\udcdd Explanation\nWhen a repository is re-indexed, old data is deleted from the ChromaDB collections. This is because the `reset_and_reindex.py` script, which is used to re-index a repository, first de"
+      "citation_reason": "\u274c Wrong file (got backend\\scripts\\embed_and_store.py, expected backend/app/vectordb/vector_store.py)",
+      "answer_reason": "\u2705 1/2 keywords found: ['delete_collection']",
+      "latency_ms": 22323.38,
+      "answer_snippet": "## \ud83d\udcdd Explanation\nWhen a repository is re-indexed, the old collection in the Chroma database is deleted. This ensures that the new index is built from scratch, without any existing data interfering wit"
     },
     {
       "id": "emb-01",
@@ -62,8 +62,8 @@
       "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\services\\embedding_service.py:38)",
       "answer_reason": "\u2705 3/3 keywords found: ['fastembed', 'BAAI/bge-small-en-v1.5', 'DEFAULT_MODEL']",
-      "latency_ms": 3796.8,
-      "answer_snippet": "## \ud83d\udcdd Explanation\nThe default embedding model is loaded from the environment variable EMBEDDING_MODEL, but if it's not set, it defaults to a model named \"fastembed/BAAI/bge-small-en-v1.5\". This model i"
+      "latency_ms": 24720.54,
+      "answer_snippet": "## \ud83d\udcdd Explanation\nThe default embedding model is loaded from the environment variable `EMBEDDING_MODEL` or a default model named `fastembed/BAAI/bge-small-en-v1.5`. This model is an ultra-lightweight f"
     },
     {
       "id": "emb-02",
@@ -72,7 +72,7 @@
       "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\services\\embedding_service.py:1)",
       "answer_reason": "\u2705 4/4 keywords found: ['fastembed/', 'startswith', 'SentenceTransformer']",
-      "latency_ms": 14839.28,
+      "latency_ms": 21488.34,
       "answer_snippet": "## \ud83d\udcdd Explanation\nThe embedding service handles the difference between fastembed and sentence-transformers by loading the appropriate model based on the model name specified in the settings or a defaul"
     },
     {
@@ -82,7 +82,7 @@
       "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\services\\embedding_service.py:38)",
       "answer_reason": "\u2705 3/3 keywords found: ['_instance', '__new__', 'singleton']",
-      "latency_ms": 23860.17,
+      "latency_ms": 24586.66,
       "answer_snippet": "## \ud83d\udcdd Explanation\nThe EmbeddingService is implemented as a singleton class, meaning only one instance of the class can exist at any given time. This is achieved through the use of a class-level variabl"
     },
     {
@@ -91,29 +91,29 @@
       "citation_pass": true,
       "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\services\\embedding_service.py:1)",
-      "answer_reason": "\u2705 1/2 keywords found: ['BATCH_SIZE']",
-      "latency_ms": 24984.27,
-      "answer_snippet": "## \ud83d\udcdd Explanation\nThe batch size used when embedding text chunks is a parameter that determines how many chunks are processed together at a time. In this case, the batch size is set to 32.\n\n## \ud83d\udcbb Code\n`"
+      "answer_reason": "\u2705 2/2 keywords found: ['BATCH_SIZE', '16']",
+      "latency_ms": 24651.7,
+      "answer_snippet": "## \ud83d\udcdd Explanation\nThe batch size used when embedding text chunks is a constant value that determines how many chunks are processed together to generate their embeddings.\n\n## \ud83d\udcbb Code\n```python\nBATCH_SIZE"
     },
     {
       "id": "ff-01",
       "question": "What file extensions are skipped during repository indexing?",
       "citation_pass": true,
-      "answer_pass": true,
+      "answer_pass": false,
       "citation_reason": "\u2705 Correct file (backend\\app\\utils\\file_filter.py:1)",
-      "answer_reason": "\u2705 4/5 keywords found: ['SKIP_EXTENSIONS', '.txt', '.log']",
-      "latency_ms": 24150.44,
-      "answer_snippet": "## \ud83d\udcdd Explanation\nThe code filters out certain file extensions during repository indexing to exclude non-source code files.\n\n## \ud83d\udcbb Code\n```python\nSKIP_EXTENSIONS: Set[str] = {\n    \".txt\",\n    \".lock\",\n "
+      "answer_reason": "\u274c Only 1/5 keywords. Missing: ['.txt', '.bin', '.log']",
+      "latency_ms": 26821.24,
+      "answer_snippet": "## \ud83d\udcdd Explanation\nThe code filters out certain file extensions during repository indexing to determine which files should be included or skipped.\n\n## \ud83d\udcbb Code\n```python\nSKIP_EXTENSIONS: Set[str] = {\n    "
     },
     {
       "id": "ff-02",
       "question": "What is the maximum file size that gets indexed?",
       "citation_pass": true,
-      "answer_pass": false,
+      "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\ingestion\\file_filter.py:258)",
-      "answer_reason": "\u274c Only 0/2 keywords. Missing: ['MAX_FILE_SIZE_BYTES', '500']",
-      "latency_ms": 23949.46,
-      "answer_snippet": "## \ud83d\udcdd Explanation\nThe maximum file size that gets indexed is determined by the `_skip_reason` function in the `file_filter.py` file. This function checks if the file size is less than a certain minimum"
+      "answer_reason": "\u2705 1/2 keywords found: ['file_size']",
+      "latency_ms": 23438.28,
+      "answer_snippet": "## \ud83d\udcdd Explanation\nThe maximum file size that gets indexed is determined by a constant `MIN_FILE_SIZE_BYTES` in the `_skip_reason` function. This constant is used to filter out files that are smaller th"
     },
     {
       "id": "ff-03",
@@ -122,8 +122,8 @@
       "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\ingestion\\file_filter.py:201)",
       "answer_reason": "\u2705 4/4 keywords found: ['SKIP_DIRECTORIES', 'node_modules', '__pycache__']",
-      "latency_ms": 27556.3,
-      "answer_snippet": "## \ud83d\udcdd Explanation\nThe `should_skip_directory` function in the `file_filter.py` module is used to determine which directories should be excluded when walking a repository. The function checks if the dir"
+      "latency_ms": 26838.31,
+      "answer_snippet": "## \ud83d\udcdd Explanation\nThe code excludes certain directories when walking a repository, based on predefined skip directories and directories starting with a dot.\n\n## \ud83d\udcbb Code\n```python\nSKIP_DIRECTORIES: Set[s"
     },
     {
       "id": "ff-04",
@@ -132,8 +132,8 @@
       "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\utils\\file_filter.py:77)",
       "answer_reason": "\u2705 3/4 keywords found: ['SUPPORTED_EXTENSIONS', 'dockerfile', 'makefile']",
-      "latency_ms": 25081.85,
-      "answer_snippet": "## \ud83d\udcdd Explanation\nCodeLens detects the programming language of a file based on its extension or name. It uses a combination of if-else statements and a dictionary lookup to determine the language.\n\n## "
+      "latency_ms": 26594.98,
+      "answer_snippet": "## \ud83d\udcdd Explanation\nCodeLens detects the programming language of a file based on its extension or name. It uses a combination of rules and a dictionary to determine the language.\n\n## \ud83d\udcbb Code\n```python\nif "
     },
     {
       "id": "ff-05",
@@ -142,8 +142,8 @@
       "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\ingestion\\file_filter.py:258)",
       "answer_reason": "\u2705 2/3 keywords found: ['skip_manifest', 'manifest_path']",
-      "latency_ms": 25183.75,
-      "answer_snippet": "## \ud83d\udcdd Explanation\nThe skip manifest is a JSON file that maps relative paths to skip reasons, used to explain why a file was not indexed in a codebase. It is loaded by the `_load_skip_manifest` function"
+      "latency_ms": 25789.68,
+      "answer_snippet": "## \ud83d\udcdd Explanation\nThe skip manifest is a JSON file that contains a dictionary mapping relative paths to skip reasons. It is used to explain why a file was not indexed when a user asks about it. The ski"
     },
     {
       "id": "ing-01",
@@ -152,8 +152,8 @@
       "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\ingestion\\pipeline.py:39)",
       "answer_reason": "\u2705 4/4 keywords found: ['_set_status', 'update_ingestion_status', 'Supabase']",
-      "latency_ms": 25299.76,
-      "answer_snippet": "## \ud83d\udcdd Explanation\nThe ingestion status is persisted so it survives server restarts by being stored in both an in-memory dictionary and a Supabase database. When the ingestion status is updated, it is w"
+      "latency_ms": 25229.3,
+      "answer_snippet": "## \ud83d\udcdd Explanation\nThe ingestion status is persisted so it survives server restarts by being written to both an in-memory dictionary and a Supabase database. This ensures that the status is not lost eve"
     },
     {
       "id": "ing-02",
@@ -162,8 +162,8 @@
       "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\ingestion\\pipeline.py:58)",
       "answer_reason": "\u2705 5/6 keywords found: ['cloning', 'discovering', 'chunking']",
-      "latency_ms": 25997.64,
-      "answer_snippet": "## \ud83d\udcdd Explanation\nThe ingestion pipeline is a series of steps that are executed to ingest a GitHub repository. The steps include parsing and validating the repository URL, cloning the repository, disco"
+      "latency_ms": 26622.71,
+      "answer_snippet": "## \ud83d\udcdd Explanation\nThe ingestion pipeline is a series of steps that are executed to ingest a GitHub repository. The steps include cloning the repository, discovering code files, parsing and chunking eac"
     },
     {
       "id": "cl-01",
@@ -172,8 +172,8 @@
       "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\ingestion\\cloner.py:33)",
       "answer_reason": "\u2705 4/5 keywords found: ['owner', 'repo_id', 'git@github']",
-      "latency_ms": 26227.95,
-      "answer_snippet": "## \ud83d\udcdd Explanation\nCodeLens uses a function called `parse_repo_url` to parse and validate a GitHub URL. This function takes a GitHub URL as input, checks if it matches a specific pattern, and returns a "
+      "latency_ms": 28090.75,
+      "answer_snippet": "## \ud83d\udcdd Explanation\nCodeLens uses a function called `parse_repo_url` to parse and validate a GitHub URL. This function takes a GitHub URL as input, checks if it matches a valid format, and returns a dict"
     },
     {
       "id": "qp-01",
@@ -182,8 +182,8 @@
       "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\query\\pipeline.py:25)",
       "answer_reason": "\u2705 3/5 keywords found: ['retrieve', 'rerank', 'generate']",
-      "latency_ms": 23954.56,
-      "answer_snippet": "## \ud83d\udcdd Explanation\nThe RAG query pipeline is a series of steps that execute a Retrieval-Augmented Generator (RAG) pipeline for a codebase question. The pipeline consists of four main steps: Retrieve, Re"
+      "latency_ms": 25150.63,
+      "answer_snippet": "## \ud83d\udcdd Explanation\nThe RAG query pipeline is a series of steps that execute the Retrieval-Augmented Generator (RAG) pipeline for a codebase question. The pipeline consists of four main steps: Retrieve, "
     },
     {
       "id": "qp-02",
@@ -191,18 +191,18 @@
       "citation_pass": true,
       "answer_pass": false,
       "citation_reason": "\u2705 Correct file (backend\\app\\query\\pipeline.py:25)",
-      "answer_reason": "\u274c Only 1/3 keywords. Missing: ['rerank_score', 'average']",
-      "latency_ms": 25077.84,
-      "answer_snippet": "## \ud83d\udcdd Explanation\nThe confidence score for a query result is calculated using Reciprocal Rank Fusion (RRF) across multiple result lists, favoring chunks appearing in multiple lists. This score is used "
+      "answer_reason": "\u274c Only 1/3 keywords. Missing: ['rerank_score', 'avg']",
+      "latency_ms": 24429.64,
+      "answer_snippet": "## \ud83d\udcdd Explanation\nThe confidence score for a query result is calculated using Reciprocal Rank Fusion (RRF) across multiple result lists, favoring chunks appearing in multiple lists. This is done in the"
     },
     {
       "id": "qp-03",
       "question": "How does path filtering work in the query pipeline?",
       "citation_pass": true,
-      "answer_pass": false,
+      "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\query\\pipeline.py:25)",
-      "answer_reason": "\u274c Only 1/3 keywords. Missing: ['file_path', 'lower']",
-      "latency_ms": 27029.21,
+      "answer_reason": "\u2705 1/2 keywords found: ['path_filter']",
+      "latency_ms": 29634.44,
       "answer_snippet": "## \ud83d\udcdd Explanation\nThe query pipeline has an optional path filtering feature that allows users to specify a path filter when asking a question about a codebase. This feature is used to narrow down the s"
     },
     {
@@ -212,7 +212,7 @@
       "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\retrieval\\reranker.py:24)",
       "answer_reason": "\u2705 2/4 keywords found: ['None', 'production']",
-      "latency_ms": 17202.83,
+      "latency_ms": 18753.34,
       "answer_snippet": "## \ud83d\udcdd Explanation\nWhen the reranker model is not available in production, the `rerank_chunks` function skips reranking and returns the original chunks as-is. This is because the `get_reranker` function"
     },
     {
@@ -222,8 +222,8 @@
       "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\api\\ingest.py:24)",
       "answer_reason": "\u2705 4/4 keywords found: ['BackgroundTasks', '202', 'add_task']",
-      "latency_ms": 26447.22,
-      "answer_snippet": "## \ud83d\udcdd Explanation\nThe ingest API endpoint uses FastAPI's BackgroundTasks feature to handle background tasks. When a user starts the ingestion process, the endpoint kicks off a background task to asynch"
+      "latency_ms": 24675.29,
+      "answer_snippet": "## \ud83d\udcdd Explanation\nThe ingest API endpoint uses FastAPI's BackgroundTasks feature to handle background tasks, allowing the API to return a 202 Accepted response immediately while running the ingestion p"
     },
     {
       "id": "cfg-01",
@@ -232,7 +232,7 @@
       "answer_pass": true,
       "citation_reason": "\u2705 Correct file (backend\\app\\services\\embedding_service.py:38)",
       "answer_reason": "\u2705 3/3 keywords found: ['EMBEDDING_MODEL', 'embedding_model', 'fastembed']",
-      "latency_ms": 23117.02,
+      "latency_ms": 23654.51,
       "answer_snippet": "## \ud83d\udcdd Explanation\nThe embedding model is configured based on the `embedding_model` setting in the application settings. If this setting is not provided, a default model is used. The default model is sp"
     }
   ]
