@@ -31,7 +31,7 @@ if hasattr(sys.stderr, "buffer"):
 # ── Log directory (relative to backend/) ─────────────────────────────
 _BACKEND_DIR = Path(__file__).resolve().parent.parent.parent
 LOGS_DIR = _BACKEND_DIR / "logs"
-RUNS_DIR = LOGS_DIR / "runs"
+RUNS_DIR = _BACKEND_DIR / "newlogs"
 
 # ── ANSI Color Codes ──────────────────────────────────────────────────
 RESET          = "\033[0m"
@@ -135,23 +135,24 @@ def _console_renderer(logger, method, event_dict: dict) -> str:
 # ── File renderer (plain text, no ANSI codes) ─────────────────────────
 
 def _file_renderer(logger, method, event_dict: dict) -> str:
-    """Plain-text file output — no colors, readable in any text editor."""
-    ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
-    level = event_dict.pop("level", "info").upper()
+    """Human-readable markdown-style output for the log files."""
+    ts = datetime.now(timezone.utc).strftime("%H:%M:%S")
+    level = event_dict.get("level", "info").upper()
     event = event_dict.pop("event", "")
     stage = _detect_stage(event)
 
-    # Remove internal structlog keys
-    extras = "  ".join(
-        f"{k}={v}"
-        for k, v in event_dict.items()
-        if k not in ("_record", "stack_info", "exc_info")
-    )
+    # Make the event name human-readable (e.g. "chunk_phase_complete" -> "Chunk Phase Complete")
+    readable_event = event.replace("_", " ").title()
 
-    line = f"{ts}  {level:<7}  [{stage:<8}]  {event}"
-    if extras:
-        line += f"  |  {extras}"
-    return line
+    # Create a clear heading for every single step
+    lines = [f"\n### [{stage}] {readable_event}  (Time: {ts}, Level: {level})"]
+
+    # List all the details clearly underneath
+    for k, v in event_dict.items():
+        if k not in ("_record", "stack_info", "exc_info", "level"):
+            lines.append(f"  - {k}: {v}")
+            
+    return "\n".join(lines)
 
 
 # ── Dual-output handler setup ─────────────────────────────────────────
@@ -191,15 +192,26 @@ class _DualHandler(logging.Handler):
         self._run_handler = h
 
     def emit(self, record: logging.LogRecord):
-        msg = self.format(record)
+        try:
+            formatted_msg = self.format(record)
+        except Exception:
+            formatted_msg = record.getMessage()
+
+        # Create a clean record that forces the sub-handlers to just print the exact message
+        clean_record = logging.makeLogRecord(record.__dict__)
+        clean_record.msg = formatted_msg
+        clean_record.args = None
+        clean_record.message = formatted_msg
+
         if self._daily_handler:
             try:
-                self._daily_handler.emit(record)
+                self._daily_handler.emit(clean_record)
             except Exception:
                 pass
+                
         if self._run_handler:
             try:
-                self._run_handler.emit(record)
+                self._run_handler.emit(clean_record)
             except Exception:
                 pass
 
@@ -219,8 +231,10 @@ def set_run_log_file(repo_id: str) -> Path:
         Path to the run log file that was created.
     """
     safe_repo = repo_id.replace("/", "_").replace(" ", "_")
-    ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H-%M-%S")
-    run_log_path = RUNS_DIR / f"ingestion_{safe_repo}_{ts}.log"
+    ts = datetime.now(timezone.utc).strftime("%Y-%m-%d_%H-%M")
+    
+    # Save with a clear readable name in the newlogs folder
+    run_log_path = RUNS_DIR / f"{safe_repo}_ingestion_report_{ts}.log"
     _dual_handler.set_run_log(run_log_path)
     return run_log_path
 

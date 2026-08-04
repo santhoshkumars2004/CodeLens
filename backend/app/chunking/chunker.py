@@ -117,6 +117,7 @@ def _make_document(
         f"File: {file_path}\n"
         f"Language: {language}\n"
         f"Function: {name}\n"
+        f"Source: {file_path}\n"   # repeated so embedding strongly associates this chunk with the file
         f"{desc_line}\n"
         f"{code_content}"
     )

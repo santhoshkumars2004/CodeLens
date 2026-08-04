@@ -30,7 +30,7 @@ class Settings(BaseSettings):
     groq_api_key: str = ""
     groq_model: str = "llama3-8b-8192"
     groq_temperature: float = 0.1
-    groq_max_tokens: int = 2048
+    groq_max_tokens: int = 1024  # reduced from 2048 — Groq free tier is 6000 TPM total
 
     # ── ChromaDB (Local Vector DB) ──────────────────────────────
     chroma_host: str = "localhost"
@@ -70,7 +70,7 @@ class Settings(BaseSettings):
     # ── Limits ──────────────────────────────────────────────────
     max_repo_size_mb: int = 500
     max_files_per_repo: int = 10000
-    retriever_top_k: int = 20
+    retriever_top_k: int = 30       # increased from 20 — fetch more candidates before reranking
     chunk_lines: int = 60        # sliding-window chunk size in lines
     chunk_overlap_lines: int = 10  # overlap between consecutive sliding-window chunks
 

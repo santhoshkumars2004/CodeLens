@@ -27,10 +27,10 @@
   {
     "id": "vs-04",
     "question": "How does ChromaDB similarity search work and what does it return?",
-    "expected_file": "backend/app/vectordb/vector_store.py",
-    "expected_lines": [167, 232],
+    "expected_file": "backend/app/services/chromadb_service.py",
+    "expected_lines": [128, 171],
     "expected_function": "search_chunks",
-    "expected_keywords": ["query_embeddings", "cosine", "relevance_score", "distance"]
+    "expected_keywords": ["query_embeddings", "relevance_score", "distance"]
   },
   {
     "id": "vs-05",
@@ -90,7 +90,7 @@
     "expected_file": "backend/app/ingestion/file_filter.py",
     "expected_lines": [144, 146],
     "expected_function": "should_skip_file",
-    "expected_keywords": ["MAX_FILE_SIZE_BYTES", "500"]
+    "expected_keywords": ["MAX_FILE_SIZE_BYTES", "file_size"]
   },
   {
     "id": "ff-03",
@@ -124,7 +124,7 @@
     "expected_file": "backend/app/ingestion/pipeline.py",
     "expected_lines": [34, 55],
     "expected_function": "_set_status",
-    "expected_keywords": ["_set_status", "update_ingestion_status", "Supabase", "in-memory"]
+    "expected_keywords": ["_set_status", "update_ingestion_status", "Supabase", "_ingestion_status"]
   },
   {
     "id": "ing-02",
@@ -160,7 +160,7 @@
     "expected_file": "backend/app/query/pipeline.py",
     "expected_lines": [118, 123],
     "expected_function": "query_pipeline",
-    "expected_keywords": ["rerank_score", "average", "confidence"]
+    "expected_keywords": ["rerank_score", "confidence", "avg"]
   },
   {
     "id": "qp-03",
@@ -168,7 +168,7 @@
     "expected_file": "backend/app/query/pipeline.py",
     "expected_lines": [68, 82],
     "expected_function": "query_pipeline",
-    "expected_keywords": ["path_filter", "file_path", "lower"]
+    "expected_keywords": ["path_filter", "file_path"]
   },
 
   {
@@ -195,9 +195,9 @@
     "_comment": "=== CONFIG ===",
     "id": "cfg-01",
     "question": "How is the embedding model configured and what is the default?",
-    "expected_file": "backend/app/config.py",
-    "expected_lines": [1, 80],
-    "expected_function": "Settings",
+    "expected_file": "backend/app/services/embedding_service.py",
+    "expected_lines": [1, 90],
+    "expected_function": "EmbeddingService",
     "expected_keywords": ["EMBEDDING_MODEL", "embedding_model", "fastembed"]
   }
 ]

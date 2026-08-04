@@ -228,7 +228,27 @@ async def retrieve(
         top_k=top_k,
     )
 
-    # ── Step 4: Metrics + Logging ─────────────────────────────────────────────
+    # ── Step 4: Filter out test/eval/fixture files ───────────────────────────
+    #
+    #  eval_set.json, eval_results.json, conftest.py etc. get indexed alongside
+    #  source code, but they contain all the exact keywords from real questions,
+    #  causing them to rank #1 for almost every query. Filter them out so only
+    #  actual source code is cited.
+    EXCLUDE_PATH_FRAGMENTS = {
+        "eval_set", "eval_results", "conftest.py",
+        "tests/eval", "tests\\eval",
+        "reset_and_reindex",   # utility script — mirrors vector_store logic but is not the source
+    }
+
+    def _is_test_file(chunk: Dict[str, Any]) -> bool:
+        fp = chunk.get("metadata", {}).get("file_path", "").lower()
+        return any(frag in fp for frag in EXCLUDE_PATH_FRAGMENTS)
+
+    filtered = [c for c in results if not _is_test_file(c)]
+    if filtered:
+        results = filtered  # only apply filter if it leaves results
+
+    # ── Step 5: Metrics + Logging ─────────────────────────────────────────────
     duration = round(time.time() - start_time, 3)
     retrieval_latency_seconds.observe(duration)
     chunks_retrieved.observe(len(results))

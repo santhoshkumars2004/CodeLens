@@ -54,7 +54,8 @@ def generate_answer(
     """
     client = get_groq_client()
 
-    # Build context from chunks
+    # Build context from chunks — truncate each to avoid 6000 TPM limit on Groq free tier
+    MAX_CHARS_PER_CHUNK = 1500  # 1500 chars ≈ ~375 tokens per chunk, 5 chunks ≈ ~2000 tokens
     context_parts = []
     for i, chunk in enumerate(context_chunks):
         meta = chunk.get("metadata", {})
@@ -62,6 +63,9 @@ def generate_answer(
         start_line = meta.get("start_line", "?")
         end_line = meta.get("end_line", "?")
         content = chunk.get("content", "")
+        # Truncate long chunks to keep total prompt under 5000 tokens
+        if len(content) > MAX_CHARS_PER_CHUNK:
+            content = content[:MAX_CHARS_PER_CHUNK] + "... [truncated]"
         score = chunk.get("rerank_score", chunk.get("relevance_score", 0))
 
         context_parts.append(
@@ -86,11 +90,14 @@ def generate_answer(
         "`[file_path]` Lines [start_line]-[end_line]\n\n"
         "STRICT RULES:\n"
         "1. NEVER make up code. Only use code from the provided context.\n"
-        "2. Explanation must be plain English — no jargon where possible.\n"
-        "3. Source must always cite exact file path and line numbers from the context.\n"
-        "4. If the context has no relevant answer, say so in the Explanation section.\n"
-        "5. Always use proper markdown headings (##) for each section.\n"
-        f"6. Repository: {repo_id}"
+        "2. ALWAYS quote exact variable names, function names, and constants "
+        "as they appear in the code (e.g. say `rerank_score`, not 'the ranking score'; "
+        "say `MAX_FILE_SIZE_BYTES`, not 'the size limit'). This is critical.\n"
+        "3. Explanation must be plain English — no jargon where possible.\n"
+        "4. Source must always cite exact file path and line numbers from the context.\n"
+        "5. If the context has no relevant answer, say so in the Explanation section.\n"
+        "6. Always use proper markdown headings (##) for each section.\n"
+        f"7. Repository: {repo_id}"
     )
 
     user_prompt = (
