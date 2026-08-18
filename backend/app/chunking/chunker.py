@@ -78,7 +78,13 @@ def _generate_description(code: str, func_name: str, file_path: str) -> str:
         f"One sentence description:"
     )
 
+    import time
+    
     try:
+        # Prevent 429 Too Many Requests on Groq free tier (~30 requests per minute)
+        # by sleeping 2.1 seconds before each API call during ingestion.
+        time.sleep(2.1)
+        
         response = client.chat.completions.create(
             model=settings.groq_model,
             messages=[{"role": "user", "content": prompt}],
@@ -94,6 +100,7 @@ def _generate_description(code: str, func_name: str, file_path: str) -> str:
     except Exception as exc:
         logger.warning(f"chunk_desc_failed  func={func_name}  error={exc}")
         return ""
+
 
 
 # ── Context header builder ─────────────────────────────────────────────
