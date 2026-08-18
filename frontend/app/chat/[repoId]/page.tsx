@@ -1,9 +1,10 @@
 "use client";
 
-import React, { use, useRef } from "react";
+import React, { use, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { UserButton } from "@clerk/nextjs";
 import ChatWindow from "@/components/ChatWindow";
+import FileExplorer from "@/components/FileExplorer";
 
 interface ChatPageProps {
   params: Promise<{ repoId: string }>;
@@ -16,6 +17,9 @@ export default function ChatPage({ params }: ChatPageProps) {
   const repoUrl = `https://github.com/${repoId}`;
   const clearRef = useRef<(() => void) | null>(null);
 
+  // File explorer state — which file the user clicked (used as path_filter)
+  const [selectedFile, setSelectedFile] = useState<string | null>(null);
+
   return (
     <div className="h-screen flex flex-col">
       {/* Top bar */}
@@ -26,14 +30,7 @@ export default function ChatPage({ params }: ChatPageProps) {
             onClick={() => router.push("/")}
             className="glass rounded-lg p-2 hover:border-[var(--color-border-active)] transition-all"
           >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <polyline points="15 18 9 12 15 6" />
             </svg>
           </button>
@@ -57,6 +54,24 @@ export default function ChatPage({ params }: ChatPageProps) {
         </div>
 
         <div className="flex items-center gap-3">
+          {/* Active file filter indicator in header */}
+          {selectedFile && (
+            <div className="flex items-center gap-1.5 glass rounded-lg px-2 py-1">
+              <span className="text-[10px] text-[var(--color-accent)]">🔍</span>
+              <span className="text-[10px] text-[var(--color-accent)] max-w-[120px] truncate">
+                {selectedFile.split("/").pop()}
+              </span>
+              <button
+                onClick={() => setSelectedFile(null)}
+                className="text-[var(--color-accent)] hover:text-[var(--color-text)] transition-colors"
+              >
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+              </button>
+            </div>
+          )}
+
           {/* Clear history button */}
           <button
             id="clear-history-btn"
@@ -84,11 +99,27 @@ export default function ChatPage({ params }: ChatPageProps) {
         </div>
       </header>
 
-      {/* Chat area */}
-      <div className="flex-1 overflow-hidden">
-        <ChatWindow repoId={repoId} repoUrl={repoUrl} onClearRef={clearRef} />
+      {/* Main area: sidebar + chat */}
+      <div className="flex flex-1 overflow-hidden">
+        {/* File explorer sidebar */}
+        <FileExplorer
+          repoId={repoId}
+          selectedFile={selectedFile}
+          onFileSelect={setSelectedFile}
+        />
+
+        {/* Chat area */}
+        <div className="flex-1 overflow-hidden">
+          <ChatWindow
+            repoId={repoId}
+            repoUrl={repoUrl}
+            onClearRef={clearRef}
+            pathFilter={selectedFile}
+          />
+        </div>
       </div>
     </div>
   );
 }
+
 

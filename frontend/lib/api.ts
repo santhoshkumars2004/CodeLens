@@ -135,3 +135,27 @@ export async function getChatHistory(repoId: string, token: string): Promise<Mes
   const data = await res.json();
   return data.messages;
 }
+
+export interface RepoFile {
+  file_path: string;
+  language: string;
+  chunk_count: number;
+}
+
+export interface RepoFilesResponse {
+  files: RepoFile[];
+  total_files: number;
+  languages: string[];
+  total_chunks: number;
+}
+
+export async function getRepoFiles(repoId: string): Promise<RepoFilesResponse> {
+  const [owner, repo] = repoId.split("/");
+  const res = await fetch(`${API_URL}/api/repos/${owner}/${repo}/files`);
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch file tree");
+  }
+
+  return res.json();
+}

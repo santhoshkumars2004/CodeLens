@@ -273,3 +273,62 @@ def is_connected() -> bool:
         return True
     except Exception:
         return False
+
+
+def get_repo_files(repo_id: str) -> Dict[str, Any]:
+    """
+    Get all unique indexed files for a repository, organized by language.
+
+    Fetches all chunk metadata from ChromaDB, deduplicates by file_path,
+    and returns a structured list grouped by language for the file explorer UI.
+
+    Returns:
+        Dict with:
+          - files: list of {file_path, language, chunk_count} dicts
+          - total_files: int
+          - languages: list of distinct languages
+          - total_chunks: int
+    """
+    collection = get_or_create_collection(repo_id)
+    total_chunks = collection.count()
+
+    if total_chunks == 0:
+        return {"files": [], "total_files": 0, "languages": [], "total_chunks": 0}
+
+    # Fetch ALL metadata (no embeddings needed, just metadata)
+    all_data = collection.get(include=["metadatas"])
+    metadatas = all_data.get("metadatas", [])
+
+    # Deduplicate by file_path, count chunks per file
+    file_map: Dict[str, Dict[str, Any]] = {}
+    for meta in metadatas:
+        if not meta:
+            continue
+        fp = meta.get("file_path", "")
+        if not fp:
+            continue
+        if fp not in file_map:
+            file_map[fp] = {
+                "file_path": fp,
+                "language": meta.get("language", "unknown"),
+                "chunk_count": 0,
+            }
+        file_map[fp]["chunk_count"] += 1
+
+    files = sorted(file_map.values(), key=lambda x: x["file_path"])
+    languages = sorted({f["language"] for f in files})
+
+    logger.info(
+        "store_files_listed",
+        repo_id=repo_id,
+        total_files=len(files),
+        languages=languages,
+    )
+
+    return {
+        "files": files,
+        "total_files": len(files),
+        "languages": languages,
+        "total_chunks": total_chunks,
+    }
+

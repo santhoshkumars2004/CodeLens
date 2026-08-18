@@ -10,6 +10,7 @@ interface ChatWindowProps {
   repoId: string;
   repoUrl: string;
   onClearRef?: React.MutableRefObject<(() => void) | null>;
+  pathFilter?: string | null;  // from file explorer sidebar
 }
 
 const LANGUAGES = [
@@ -38,7 +39,7 @@ function loadHistory(repoId: string): Message[] {
   }
 }
 
-export default function ChatWindow({ repoId, repoUrl, onClearRef }: ChatWindowProps) {
+export default function ChatWindow({ repoId, repoUrl, onClearRef, pathFilter: sidebarPathFilter }: ChatWindowProps) {
   const { getToken } = useAuth();
   const [messages, setMessages] = useState<Message[]>([]);
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -81,7 +82,10 @@ export default function ChatWindow({ repoId, repoUrl, onClearRef }: ChatWindowPr
 
   useEffect(scrollToBottom, [messages]);
 
-  const hasActiveFilter = languageFilter || pathFilter;
+  // Merge sidebar file filter (from file explorer) with manual path filter input.
+  // Sidebar selection always wins when set.
+  const activePathFilter = sidebarPathFilter || pathFilter || undefined;
+  const hasActiveFilter = languageFilter || pathFilter || sidebarPathFilter;
 
   const handleSend = async () => {
     const question = input.trim();
@@ -105,7 +109,7 @@ export default function ChatWindow({ repoId, repoUrl, onClearRef }: ChatWindowPr
         question,
         5,
         languageFilter || undefined,
-        pathFilter || undefined,
+        activePathFilter,
         token
       );
 
