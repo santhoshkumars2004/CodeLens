@@ -33,9 +33,12 @@ COPY . .
 # Disable telemetry
 ENV NEXT_TELEMETRY_DISABLED=1
 
-# Inject Clerk public key at build time
+# Inject Clerk public key and API URL at build time
 ARG NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
 ENV NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=$NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+
+ARG NEXT_PUBLIC_API_URL
+ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 
 # Build Next.js — produces .next/standalone because of output: "standalone" in next.config.ts
 # The standalone folder contains everything needed to run the app without node_modules
