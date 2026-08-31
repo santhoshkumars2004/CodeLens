@@ -10,6 +10,7 @@ import type { Message } from "@/lib/types";
 interface MessageBubbleProps {
   message: Message;
   repoUrl?: string;
+  isStreaming?: boolean;
 }
 
 // Parse the raw LLM text into structured sections
@@ -117,9 +118,11 @@ function StructuredAnswer({
 export default function MessageBubble({
   message,
   repoUrl,
+  isStreaming = false,
 }: MessageBubbleProps) {
   const isUser = message.role === "user";
-  const parsed = !isUser ? parseResponse(message.content) : null;
+  // While streaming, don't try to parse sections — the answer is still being built
+  const parsed = !isUser && !isStreaming ? parseResponse(message.content) : null;
 
   return (
     <div
@@ -154,7 +157,40 @@ export default function MessageBubble({
           }`}
         >
           <div className="text-sm leading-relaxed">
-            {isUser || !parsed ? (
+            {isStreaming ? (
+              /* During streaming — render raw markdown + blinking cursor */
+              <>
+                <ReactMarkdown
+                  components={{
+                    code(props) {
+                      const { children, className, node, ref, ...rest } = props;
+                      const match = /language-(\w+)/.exec(className || "");
+                      return match ? (
+                        <SyntaxHighlighter
+                          {...rest}
+                          PreTag="div"
+                          language={match[1]}
+                          style={vscDarkPlus}
+                          className="rounded-lg !my-2 text-xs"
+                        >
+                          {String(children).replace(/\n$/, "")}
+                        </SyntaxHighlighter>
+                      ) : (
+                        <code
+                          {...rest}
+                          className="bg-[var(--color-bg-primary)] px-1.5 py-0.5 rounded text-[var(--color-accent)] font-mono text-xs"
+                        >
+                          {children}
+                        </code>
+                      );
+                    },
+                  }}
+                >
+                  {message.content}
+                </ReactMarkdown>
+                <span className="inline-block w-[2px] h-[1em] bg-[var(--color-accent)] ml-0.5 animate-pulse align-middle" />
+              </>
+            ) : isUser || !parsed ? (
               /* Plain markdown for user messages or unstructured AI responses */
               <ReactMarkdown
                 components={{

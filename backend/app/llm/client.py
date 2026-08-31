@@ -8,7 +8,7 @@ Replaces: app/services/llm_service.py
 """
 
 import time
-from typing import Dict, Any
+from typing import Dict, Any, Generator
 
 from groq import Groq
 
@@ -153,3 +153,98 @@ def generate_answer(
         "completion_tokens": usage.completion_tokens if usage else 0,
         "duration_seconds": duration,
     }
+
+
+def _build_prompts(
+    question: str,
+    context_chunks: list[Dict[str, Any]],
+    repo_id: str,
+) -> tuple[str, str]:
+    """Shared prompt-building logic used by both streaming and non-streaming paths."""
+    MAX_CHARS_PER_CHUNK = 1500
+    context_parts = []
+    for i, chunk in enumerate(context_chunks):
+        meta = chunk.get("metadata", {})
+        file_path = meta.get("file_path", "unknown")
+        start_line = meta.get("start_line", "?")
+        end_line = meta.get("end_line", "?")
+        content = chunk.get("content", "")
+        if len(content) > MAX_CHARS_PER_CHUNK:
+            content = content[:MAX_CHARS_PER_CHUNK] + "... [truncated]"
+        score = chunk.get("rerank_score", chunk.get("relevance_score", 0))
+        context_parts.append(
+            f"[Source {i+1}] File: {file_path} (Lines {start_line}-{end_line}) "
+            f"| Relevance: {round(score, 3)}\n"
+            f"```\n{content}\n```"
+        )
+
+    context_text = "\n\n".join(context_parts)
+
+    system_prompt = (
+        "You are CodeLens, an expert code analyst. You answer questions about "
+        "codebases based ONLY on the provided source code context.\n\n"
+        "ALWAYS respond in EXACTLY this format — no exceptions:\n\n"
+        "## 📝 Explanation\n"
+        "[2-3 sentences explaining what the code does in plain English]\n\n"
+        "## 💻 Code\n"
+        "```language\n"
+        "[exact relevant code snippet from the retrieved context]\n"
+        "```\n\n"
+        "## 📄 Source\n"
+        "`[file_path]` Lines [start_line]-[end_line]\n\n"
+        "STRICT RULES:\n"
+        "1. NEVER make up code. Only use code from the provided context.\n"
+        "2. ALWAYS quote exact variable names, function names, and constants "
+        "as they appear in the code.\n"
+        "3. Explanation must be plain English — no jargon where possible.\n"
+        "4. Source must always cite exact file path and line numbers from the context.\n"
+        "5. If the context has no relevant answer, say so in the Explanation section.\n"
+        "6. Always use proper markdown headings (##) for each section.\n"
+        f"7. Repository: {repo_id}"
+    )
+
+    user_prompt = (
+        f"CODE CONTEXT:\n{context_text}\n\n"
+        f"QUESTION: {question}\n\n"
+        "Provide a clear answer strictly following the required format."
+    )
+
+    return system_prompt, user_prompt
+
+
+def generate_answer_stream(
+    question: str,
+    context_chunks: list[Dict[str, Any]],
+    repo_id: str,
+) -> Generator[str, None, None]:
+    """
+    Stream token deltas from Groq LLaMA3 using the same RAG context as generate_answer().
+
+    Yields each text delta string as it arrives from the API.
+    The caller is responsible for assembling the full answer.
+    """
+    client = get_groq_client()
+    system_prompt, user_prompt = _build_prompts(question, context_chunks, repo_id)
+
+    logger.info(
+        "llm_stream_start",
+        model=settings.groq_model,
+        context_chunks=len(context_chunks),
+    )
+
+    stream = client.chat.completions.create(
+        model=settings.groq_model,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ],
+        temperature=settings.groq_temperature,
+        max_tokens=settings.groq_max_tokens,
+        stream=True,
+    )
+
+    for chunk in stream:
+        delta = chunk.choices[0].delta.content
+        if delta:
+            yield delta
+

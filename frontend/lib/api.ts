@@ -159,3 +159,84 @@ export async function getRepoFiles(repoId: string): Promise<RepoFilesResponse> {
 
   return res.json();
 }
+
+// ── Streaming Query ────────────────────────────────────────────────────────
+
+export interface StreamCallbacks {
+  /** Called immediately when citations arrive (< 1s after sending) */
+  onCitations: (citations: QueryResponse["citations"], confidence: number) => void;
+  /** Called for each LLM output token */
+  onToken: (token: string) => void;
+  /** Called when the full stream is complete */
+  onDone: (latencyMs: number, fullAnswer: string) => void;
+  /** Called if an error occurs */
+  onError: (message: string) => void;
+}
+
+/**
+ * Stream an AI answer word-by-word using Server-Sent Events.
+ * Uses fetch + ReadableStream so we can pass auth headers (EventSource can't).
+ */
+export async function streamQuery(
+  repoId: string,
+  question: string,
+  topK: number = 5,
+  languageFilter: string | undefined,
+  pathFilter: string | undefined,
+  token: string | null | undefined,
+  callbacks: StreamCallbacks,
+): Promise<void> {
+  const headers: Record<string, string> = { "Content-Type": "application/json" };
+  if (token) headers["Authorization"] = `Bearer ${token}`;
+
+  const body: Record<string, unknown> = { repo_id: repoId, question, top_k: topK };
+  if (languageFilter) body.language_filter = languageFilter;
+  if (pathFilter)     body.path_filter     = pathFilter;
+
+  const res = await fetch(`${API_URL}/api/query/stream`, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+  });
+
+  if (!res.ok) {
+    const error = await res.json().catch(() => ({ detail: res.statusText }));
+    throw new Error(error.detail || "Stream request failed");
+  }
+
+  if (!res.body) throw new Error("Response body is null");
+
+  const reader  = res.body.getReader();
+  const decoder = new TextDecoder();
+  let   buffer  = "";
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+
+    buffer += decoder.decode(value, { stream: true });
+
+    // SSE events are separated by double newlines
+    const parts = buffer.split("\n\n");
+    buffer = parts.pop() ?? "";   // keep incomplete last chunk
+
+    for (const part of parts) {
+      const line = part.trim();
+      if (!line.startsWith("data: ")) continue;
+      try {
+        const payload = JSON.parse(line.slice(6));
+        if (payload.type === "citations") {
+          callbacks.onCitations(payload.citations, payload.confidence ?? 0);
+        } else if (payload.type === "token") {
+          callbacks.onToken(payload.t);
+        } else if (payload.type === "done") {
+          callbacks.onDone(payload.latency_ms, payload.answer);
+        } else if (payload.type === "error") {
+          callbacks.onError(payload.message);
+        }
+      } catch {
+        // Skip malformed SSE lines
+      }
+    }
+  }
+}

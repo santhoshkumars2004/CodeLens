@@ -4,7 +4,8 @@ import React, { useState, useRef, useEffect } from "react";
 import { useAuth } from "@clerk/nextjs";
 import MessageBubble from "./MessageBubble";
 import type { Message } from "@/lib/types";
-import { queryRepo, getChatHistory } from "@/lib/api";
+import { streamQuery, getChatHistory } from "@/lib/api";
+import type { QueryResponse } from "@/lib/types";
 
 interface ChatWindowProps {
   repoId: string;
@@ -45,11 +46,13 @@ export default function ChatWindow({ repoId, repoUrl, onClearRef, pathFilter: si
   const [hasLoaded, setHasLoaded] = useState(false);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isStreaming, setIsStreaming] = useState(false);
   const [languageFilter, setLanguageFilter] = useState("");
   const [pathFilter, setPathFilter] = useState("");
   const [showFilters, setShowFilters] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const streamingMsgId = useRef<string | null>(null);
 
   // Fetch messages from Supabase on mount
   useEffect(() => {
@@ -89,7 +92,7 @@ export default function ChatWindow({ repoId, repoUrl, onClearRef, pathFilter: si
 
   const handleSend = async () => {
     const question = input.trim();
-    if (!question || isLoading) return;
+    if (!question || isLoading || isStreaming) return;
 
     const userMessage: Message = {
       id: crypto.randomUUID(),
@@ -102,38 +105,88 @@ export default function ChatWindow({ repoId, repoUrl, onClearRef, pathFilter: si
     setInput("");
     setIsLoading(true);
 
+    // Create a placeholder AI message that we will fill in token-by-token
+    const aiMsgId = crypto.randomUUID();
+    streamingMsgId.current = aiMsgId;
+
+    const placeholderMessage: Message = {
+      id: aiMsgId,
+      role: "assistant",
+      content: "",          // starts empty — tokens appended in real-time
+      timestamp: new Date(),
+    };
+    setMessages((prev) => [...prev, placeholderMessage]);
+
     try {
       const token = await getToken();
-      const response = await queryRepo(
+
+      await streamQuery(
         repoId,
         question,
         5,
         languageFilter || undefined,
         activePathFilter,
-        token
+        token,
+        {
+          onCitations(citations, confidence) {
+            // Citations arrive first — update the bubble before any tokens
+            setIsLoading(false);
+            setIsStreaming(true);
+            setMessages((prev) =>
+              prev.map((m) =>
+                m.id === aiMsgId
+                  ? { ...m, citations, confidence_score: confidence }
+                  : m
+              )
+            );
+          },
+          onToken(t) {
+            // Append each token to the streaming bubble
+            setMessages((prev) =>
+              prev.map((m) =>
+                m.id === aiMsgId ? { ...m, content: m.content + t } : m
+              )
+            );
+          },
+          onDone(latencyMs, _fullAnswer) {
+            setIsStreaming(false);
+            setMessages((prev) =>
+              prev.map((m) =>
+                m.id === aiMsgId ? { ...m, latency_ms: latencyMs } : m
+              )
+            );
+            streamingMsgId.current = null;
+          },
+          onError(message) {
+            setIsStreaming(false);
+            setIsLoading(false);
+            setMessages((prev) =>
+              prev.map((m) =>
+                m.id === aiMsgId
+                  ? { ...m, content: `Sorry, I encountered an error: ${message}. Please try again.` }
+                  : m
+              )
+            );
+            streamingMsgId.current = null;
+          },
+        }
       );
-
-      const aiMessage: Message = {
-        id: crypto.randomUUID(),
-        role: "assistant",
-        content: response.answer,
-        citations: response.citations,
-        confidence_score: response.confidence_score,
-        latency_ms: response.latency_ms,
-        timestamp: new Date(),
-      };
-
-      setMessages((prev) => [...prev, aiMessage]);
     } catch (error) {
-      const errorMessage: Message = {
-        id: crypto.randomUUID(),
-        role: "assistant",
-        content: `Sorry, I encountered an error: ${
-          error instanceof Error ? error.message : "Unknown error"
-        }. Please try again.`,
-        timestamp: new Date(),
-      };
-      setMessages((prev) => [...prev, errorMessage]);
+      setIsStreaming(false);
+      setIsLoading(false);
+      setMessages((prev) =>
+        prev.map((m) =>
+          m.id === aiMsgId
+            ? {
+                ...m,
+                content: `Sorry, I encountered an error: ${
+                  error instanceof Error ? error.message : "Unknown error"
+                }. Please try again.`,
+              }
+            : m
+        )
+      );
+      streamingMsgId.current = null;
     } finally {
       setIsLoading(false);
       inputRef.current?.focus();
@@ -183,10 +236,15 @@ export default function ChatWindow({ repoId, repoUrl, onClearRef, pathFilter: si
         )}
 
         {messages.map((msg) => (
-          <MessageBubble key={msg.id} message={msg} repoUrl={repoUrl} />
+          <MessageBubble
+            key={msg.id}
+            message={msg}
+            repoUrl={repoUrl}
+            isStreaming={isStreaming && msg.id === streamingMsgId.current}
+          />
         ))}
 
-        {isLoading && (
+        {isLoading && !isStreaming && (
           <div className="flex items-start gap-3 animate-fade-in-up">
             <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[#6366f1] to-[#a855f7] flex items-center justify-center text-[10px] font-bold shrink-0 mt-1">
               S
@@ -288,7 +346,7 @@ export default function ChatWindow({ repoId, repoUrl, onClearRef, pathFilter: si
             <button
               id="send-btn"
               onClick={handleSend}
-              disabled={!input.trim() || isLoading}
+              disabled={!input.trim() || isLoading || isStreaming}
               className="btn-glow text-white p-2.5 rounded-lg disabled:opacity-30 disabled:cursor-not-allowed shrink-0"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
