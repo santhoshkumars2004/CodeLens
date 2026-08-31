@@ -160,6 +160,18 @@ export async function getRepoFiles(repoId: string): Promise<RepoFilesResponse> {
   return res.json();
 }
 
+export async function getRepoSuggestions(repoId: string): Promise<string[]> {
+  const [owner, repo] = repoId.split("/");
+  try {
+    const res = await fetch(`${API_URL}/api/repos/${owner}/${repo}/suggestions`);
+    if (!res.ok) return [];
+    const data = await res.json();
+    return data.suggestions ?? [];
+  } catch {
+    return [];
+  }
+}
+
 // ── Streaming Query ────────────────────────────────────────────────────────
 
 export interface StreamCallbacks {

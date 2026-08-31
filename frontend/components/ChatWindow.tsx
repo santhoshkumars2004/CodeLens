@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useAuth } from "@clerk/nextjs";
 import MessageBubble from "./MessageBubble";
 import type { Message } from "@/lib/types";
-import { streamQuery, getChatHistory } from "@/lib/api";
+import { streamQuery, getChatHistory, getRepoSuggestions } from "@/lib/api";
 import type { QueryResponse } from "@/lib/types";
 
 interface ChatWindowProps {
@@ -50,6 +50,8 @@ export default function ChatWindow({ repoId, repoUrl, onClearRef, pathFilter: si
   const [languageFilter, setLanguageFilter] = useState("");
   const [pathFilter, setPathFilter] = useState("");
   const [showFilters, setShowFilters] = useState(false);
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [loadingSuggestions, setLoadingSuggestions] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const streamingMsgId = useRef<string | null>(null);
@@ -67,6 +69,14 @@ export default function ChatWindow({ repoId, repoUrl, onClearRef, pathFilter: si
     }
     fetchHistory();
   }, [repoId, getToken, hasLoaded]);
+
+  // Fetch AI-generated suggested questions for this repo
+  useEffect(() => {
+    setLoadingSuggestions(true);
+    getRepoSuggestions(repoId)
+      .then((qs) => setSuggestions(qs))
+      .finally(() => setLoadingSuggestions(false));
+  }, [repoId]);
 
   const clearHistory = () => {
     // In a full implementation, we'd delete from Supabase here.
@@ -216,21 +226,41 @@ export default function ChatWindow({ repoId, repoUrl, onClearRef, pathFilter: si
               I can explain how features work, find specific implementations,
               trace data flows, and more — all with exact file:line citations.
             </p>
-            <div className="flex flex-wrap gap-2 mt-6 max-w-lg justify-center">
-              {[
-                "How does authentication work?",
-                "Where is the main entry point?",
-                "Explain the database schema",
-                "Find error handling patterns",
-              ].map((q) => (
-                <button
-                  key={q}
-                  onClick={() => { setInput(q); inputRef.current?.focus(); }}
-                  className="glass glass-hover rounded-lg px-3 py-1.5 text-xs text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-all"
-                >
-                  {q}
-                </button>
-              ))}
+
+            {/* AI-generated suggested questions */}
+            <div className="flex flex-col gap-2 mt-6 w-full max-w-lg">
+              <p className="text-xs text-[var(--color-text-muted)] uppercase tracking-widest mb-1">
+                ✨ Suggested questions
+              </p>
+              {loadingSuggestions ? (
+                // Skeleton loader while LLM generates suggestions
+                <div className="flex flex-col gap-2">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <div
+                      key={i}
+                      className="h-9 rounded-xl bg-[var(--color-bg-secondary)] animate-pulse"
+                      style={{ width: `${70 + i * 4}%`, margin: "0 auto" }}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-col gap-2">
+                  {(suggestions.length > 0 ? suggestions : [
+                    "How does authentication work?",
+                    "Where is the main entry point?",
+                    "Explain the database schema",
+                    "Find error handling patterns",
+                  ]).map((q) => (
+                    <button
+                      key={q}
+                      onClick={() => { setInput(q); inputRef.current?.focus(); }}
+                      className="glass glass-hover rounded-xl px-4 py-2.5 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-all text-left border border-transparent hover:border-[var(--color-accent)] hover:border-opacity-40"
+                    >
+                      <span className="mr-2 opacity-50">→</span>{q}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         )}
