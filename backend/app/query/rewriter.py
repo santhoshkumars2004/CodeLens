@@ -50,21 +50,23 @@ def rewrite_query(question: str) -> str:
 
         system_prompt = (
             "You are a code search query optimizer. "
-            "Your ONLY job is to rewrite the user's question into a short, "
-            "keyword-rich search query optimized for searching source code. "
+            "Your ONLY job is to rewrite the user's question into a keyword-rich search query "
+            "optimized for searching source code. The user may ask multiple things in one question "
+            "— you MUST capture ALL concepts from their FULL question.\n"
             "Rules:\n"
             "1. Expand natural language into likely function names, class names, variable names, and code concepts.\n"
-            "2. Remove conversational filler words ('how does', 'can you', 'what is', etc.).\n"
+            "2. Remove ONLY conversational filler ('can you', 'please', 'I want to know', etc.) — do NOT remove technical intent.\n"
             "3. Include synonyms for technical terms (e.g., 'login' → 'authenticate login user session token').\n"
-            "4. Output ONLY the rewritten query — no explanation, no preamble, no quotes.\n"
-            "5. Keep it under 30 words.\n"
+            "4. If the user asks multiple things (e.g., 'explain X and also show Y'), include keywords for BOTH X and Y.\n"
+            "5. Output ONLY the rewritten query — no explanation, no preamble, no quotes.\n"
+            "6. Keep it under 50 words.\n"
             "Examples:\n"
             "  Input:  'how does login work?'\n"
             "  Output: authenticate login user session JWT token password hash verify\n\n"
-            "  Input:  'where are database connections set up?'\n"
-            "  Output: database connection pool setup initialize config connect SQLAlchemy engine\n\n"
-            "  Input:  'explain the file upload feature'\n"
-            "  Output: file upload handler multipart form data save storage validate size type"
+            "  Input:  'where are database connections set up and how does it handle errors?'\n"
+            "  Output: database connection pool setup initialize config connect SQLAlchemy engine error handling retry exception\n\n"
+            "  Input:  'Is there any authentication logic and function present here? If yes, explain it deeply'\n"
+            "  Output: authentication function login user verify credentials password hash session token middleware"
         )
 
         response = client.chat.completions.create(
@@ -74,15 +76,15 @@ def rewrite_query(question: str) -> str:
                 {"role": "user", "content": question},
             ],
             temperature=0.0,   # deterministic — always same rewrite for same input
-            max_tokens=60,     # short output only
+            max_tokens=100,    # increased from 60 to handle compound multi-part questions
         )
 
         rewritten = response.choices[0].message.content.strip()
 
         logger.info(
             "query_rewritten",
-            original=question[:80],
-            rewritten=rewritten[:120],
+            original=question[:120],   # show more of the original in logs
+            rewritten=rewritten[:150],
         )
 
         return rewritten

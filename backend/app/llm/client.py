@@ -77,14 +77,19 @@ def generate_answer(
     context_text = "\n\n".join(context_parts)
 
     system_prompt = (
-        "You are CodeLens, an expert code analyst. You answer questions about "
-        "codebases based ONLY on the provided source code context.\n\n"
+        "You are CodeLens, an expert senior software engineer and code analyst. "
+        "You answer developer questions about a codebase based ONLY on the provided source code context.\n\n"
         "ALWAYS respond in EXACTLY this format — no exceptions:\n\n"
         "## 📝 Explanation\n"
-        "[2-3 sentences explaining what the code does in plain English]\n\n"
+        "[Write a thorough, developer-friendly explanation. Cover:\n"
+        " - What this code does at a high level (1-2 sentences)\n"
+        " - HOW it works step by step (walk through key logic, conditions, loops)\n"
+        " - WHY it is designed this way (intent, trade-offs, patterns used)\n"
+        " - Any important edge cases, error handling, or things to watch out for\n"
+        "Minimum 4-6 sentences. Be thorough — a junior developer should fully understand after reading this.]\n\n"
         "## 💻 Code\n"
         "```language\n"
-        "[exact relevant code snippet from the retrieved context]\n"
+        "[The most relevant code snippet from the context — paste it clean, no metadata headers]\n"
         "```\n\n"
         "## 📄 Source\n"
         "`[file_path]` Lines [start_line]-[end_line]\n\n"
@@ -93,11 +98,12 @@ def generate_answer(
         "2. ALWAYS quote exact variable names, function names, and constants "
         "as they appear in the code (e.g. say `rerank_score`, not 'the ranking score'; "
         "say `MAX_FILE_SIZE_BYTES`, not 'the size limit'). This is critical.\n"
-        "3. Explanation must be plain English — no jargon where possible.\n"
+        "3. Explanation must be plain English — no jargon where possible. Write as if explaining to a junior developer.\n"
         "4. Source must always cite exact file path and line numbers from the context.\n"
-        "5. If the context has no relevant answer, say so in the Explanation section.\n"
+        "5. If the context has no relevant answer, say so in the Explanation section and explain what you DID find.\n"
         "6. Always use proper markdown headings (##) for each section.\n"
-        f"7. Repository: {repo_id}"
+        "7. In the Code section, paste ONLY the raw code — never include metadata lines like 'File:', 'Language:', 'Function:', 'Source:'.\n"
+        f"8. Repository: {repo_id}"
     )
 
     user_prompt = (
@@ -125,7 +131,7 @@ def generate_answer(
             {"role": "user", "content": user_prompt},
         ],
         temperature=settings.groq_temperature,
-        max_tokens=settings.groq_max_tokens,
+        max_tokens=2048,  # increased for richer explanations
     )
 
     duration = round(time.time() - start_time, 2)
@@ -181,14 +187,19 @@ def _build_prompts(
     context_text = "\n\n".join(context_parts)
 
     system_prompt = (
-        "You are CodeLens, an expert code analyst. You answer questions about "
-        "codebases based ONLY on the provided source code context.\n\n"
+        "You are CodeLens, an expert senior software engineer and code analyst. "
+        "You answer developer questions about a codebase based ONLY on the provided source code context.\n\n"
         "ALWAYS respond in EXACTLY this format — no exceptions:\n\n"
         "## 📝 Explanation\n"
-        "[2-3 sentences explaining what the code does in plain English]\n\n"
+        "[Write a thorough, developer-friendly explanation. Cover:\n"
+        " - What this code does at a high level (1-2 sentences)\n"
+        " - HOW it works step by step (walk through key logic, conditions, loops)\n"
+        " - WHY it is designed this way (intent, trade-offs, patterns used)\n"
+        " - Any important edge cases, error handling, or things to watch out for\n"
+        "Minimum 4-6 sentences. Be thorough — a junior developer should fully understand after reading this.]\n\n"
         "## 💻 Code\n"
         "```language\n"
-        "[exact relevant code snippet from the retrieved context]\n"
+        "[The most relevant code snippet from the context — paste it clean, no metadata headers]\n"
         "```\n\n"
         "## 📄 Source\n"
         "`[file_path]` Lines [start_line]-[end_line]\n\n"
@@ -196,11 +207,12 @@ def _build_prompts(
         "1. NEVER make up code. Only use code from the provided context.\n"
         "2. ALWAYS quote exact variable names, function names, and constants "
         "as they appear in the code.\n"
-        "3. Explanation must be plain English — no jargon where possible.\n"
+        "3. Explanation must be plain English — no jargon where possible. Write as if explaining to a junior developer.\n"
         "4. Source must always cite exact file path and line numbers from the context.\n"
-        "5. If the context has no relevant answer, say so in the Explanation section.\n"
+        "5. If the context has no relevant answer, say so in the Explanation section and explain what you DID find.\n"
         "6. Always use proper markdown headings (##) for each section.\n"
-        f"7. Repository: {repo_id}"
+        "7. In the Code section, paste ONLY the raw code — never include metadata lines like 'File:', 'Language:', 'Function:', 'Source:'.\n"
+        f"8. Repository: {repo_id}"
     )
 
     user_prompt = (
@@ -239,7 +251,7 @@ def generate_answer_stream(
             {"role": "user", "content": user_prompt},
         ],
         temperature=settings.groq_temperature,
-        max_tokens=settings.groq_max_tokens,
+        max_tokens=2048,  # increased for richer explanations
         stream=True,
     )
 

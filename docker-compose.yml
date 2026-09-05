@@ -30,7 +30,7 @@ services:
     environment:
       # Secrets — loaded from .env file in project root (never commit .env!)
       - GROQ_API_KEY=${GROQ_API_KEY}
-      - GROQ_MODEL=${GROQ_MODEL:-llama3-8b-8192}
+      - GROQ_MODEL=${GROQ_MODEL:-groq/compound-mini}
 
       # ChromaDB is accessed via service name (not localhost!) inside Docker
       # Because containers talk to each other through the Docker network
@@ -53,6 +53,9 @@ services:
       - repos_data:/tmp/codelens_repos
       # HuggingFace model cache — download once, reuse forever
       - hf_cache:/root/.cache/huggingface
+      # Bind mounts: map container log folders to host machine so they are visible in VSCode
+      - ./backend/logs:/app/logs
+      - ./backend/newlogs:/app/newlogs
 
     networks:
       - codelens-network

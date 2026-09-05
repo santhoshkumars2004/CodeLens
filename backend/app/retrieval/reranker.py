@@ -74,9 +74,15 @@ def rerank_chunks(
     reranker = get_reranker()
     
     # If reranker is unavailable (production/no sentence-transformers), skip reranking
+    # but still tag chunks with their vector relevance_score so confidence is non-zero
     if reranker is None:
         logger.info("rerank_skipped_unavailable", returning=min(top_k, len(chunks)))
-        return chunks[:top_k]
+        top = chunks[:top_k]
+        for chunk in top:
+            # Use vector similarity score as fallback so confidence display is meaningful
+            if "rerank_score" not in chunk:
+                chunk["rerank_score"] = round(float(chunk.get("relevance_score", 0.5)), 4)
+        return top
 
     logger.info(
         "rerank_start",

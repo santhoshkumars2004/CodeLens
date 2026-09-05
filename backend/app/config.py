@@ -26,9 +26,9 @@ class Settings(BaseSettings):
     backend_port: int = 8000
     frontend_url: str = "http://localhost:3000"
 
-    # ── Groq LLM (Free Tier) ────────────────────────────────────
+    # ── Groq LLM (Free Tier) ────────────────────────────────────    # LLM Settings
     groq_api_key: str = ""
-    groq_model: str = "llama3-8b-8192"
+    groq_model: str = "groq/compound-mini"
     groq_temperature: float = 0.1
     groq_max_tokens: int = 1024  # reduced from 2048 — Groq free tier is 6000 TPM total
 

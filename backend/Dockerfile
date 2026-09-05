@@ -14,12 +14,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /app
 
-# COPY production requirements — excludes sentence-transformers/PyTorch
-# to keep the image small enough for Railway's free 500MB RAM limit.
-# Local development uses requirements.txt (with PyTorch + Jina AI model).
-COPY requirements.prod.txt .
+# Which requirements file to install.
+# Local Docker (default): requirements.prod.txt — includes sentence-transformers + PyTorch for reranker
+# Railway cloud:          requirements.railway.txt — lightweight, no PyTorch (500MB RAM limit)
+# Override in Railway: set Build Arg  REQUIREMENTS_FILE=requirements.railway.txt
+ARG REQUIREMENTS_FILE=requirements.prod.txt
+
+# COPY both requirements files so the ARG can select either one
+COPY requirements.prod.txt requirements.railway.txt ./
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.prod.txt
+    pip install --no-cache-dir -r ${REQUIREMENTS_FILE}
 
 # ── Stage 2: Application ───────────────────────────────────────────
 COPY . .

@@ -1,10 +1,10 @@
 # ============================================
-# CodeLens Backend — PRODUCTION (Railway) Dependencies
+# CodeLens Backend — RAILWAY (Cloud) Dependencies
 # ============================================
-# This file intentionally EXCLUDES sentence-transformers and PyTorch.
-# Railway free tier has 500MB RAM limit — PyTorch alone exceeds this.
-# The embedding_service.py uses fastembed (ONNX, no PyTorch, ~100MB RAM)
-# when EMBEDDING_MODEL starts with "fastembed/" (set in Railway env vars).
+# This file is used when deploying to Railway free tier (500MB RAM limit).
+# It intentionally EXCLUDES sentence-transformers and PyTorch (~2GB).
+# The reranker will gracefully fall back to vector similarity scores.
+# Set build arg: REQUIREMENTS_FILE=requirements.railway.txt in Railway settings.
 
 # Web Framework
 fastapi==0.115.6
@@ -22,10 +22,9 @@ chromadb==0.6.3
 # Embeddings — Lightweight ONNX-based (NO PyTorch, ~100MB RAM)
 fastembed>=0.3.0
 
-# Reranking — Cross-encoder model for precision relevance scoring
-# Note: sentence-transformers pulls in PyTorch (~500MB). Fine for local Docker.
-# If deploying to Railway free tier (500MB RAM limit), remove this line.
-sentence-transformers>=3.0.0
+# NOTE: sentence-transformers is intentionally EXCLUDED here.
+# Railway free tier = 500MB RAM. PyTorch alone needs ~500MB.
+# The reranker in reranker.py gracefully skips if not installed.
 
 # GitHub operations
 gitpython==3.1.43

@@ -30,6 +30,11 @@ out/
 # Data
 data/
 /tmp/repos/
+temp_repo/
+
+# Logs
+backend/logs/
+backend/newlogs/
 
 # Docker
 *.log
