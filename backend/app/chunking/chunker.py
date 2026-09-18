@@ -42,6 +42,7 @@ settings = get_settings()
 # ── Groq description client (lazy singleton) ──────────────────────────
 
 _groq_client: Optional[Groq] = None
+_ingest_quota_exhausted: bool = False
 
 def _get_groq_client() -> Optional[Groq]:
     """Return a lazy Groq client for description generation, or None if key missing."""
@@ -52,7 +53,8 @@ def _get_groq_client() -> Optional[Groq]:
     if not key:
         logger.warning("chunk_desc_skip  reason=no_groq_api_key")
         return None
-    _groq_client = Groq(api_key=key)
+    # Disable automatic retries so we can handle 429s instantly and smartly
+    _groq_client = Groq(api_key=key, max_retries=0)
     return _groq_client
 
 
@@ -67,6 +69,11 @@ def _generate_description(code: str, func_name: str, file_path: str) -> str:
     Falls back to an empty string if API is unavailable, rate-limited, or the chunk is tiny.
     """
     import re, time
+    global _ingest_quota_exhausted
+
+    # Short-circuit if we already know the daily limit is busted
+    if _ingest_quota_exhausted:
+        return ""
 
     # Skip tiny stubs — not worth an API call
     if len(code.strip()) < 40:
@@ -122,14 +129,16 @@ def _generate_description(code: str, func_name: str, file_path: str) -> str:
                     continue  # retry once after the wait
                 else:
                     # Second attempt also 429 — daily limit likely hit, skip all further descriptions
+                    _ingest_quota_exhausted = True
                     logger.warning(
                         "chunk_desc_daily_limit_hit",
                         func=func_name,
                         model=ingest_model,
-                        reason="Skipping chunk descriptions for remainder of ingestion",
+                        reason="Quota exhausted. Skipping chunk descriptions for remainder of ingestion run.",
                     )
                     return ""
             else:
+                # If we get a different error (e.g. 503, etc), just skip this one chunk
                 logger.warning(f"chunk_desc_failed  func={func_name}  error={exc}")
                 return ""
 
