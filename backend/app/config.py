@@ -29,11 +29,11 @@ class Settings(BaseSettings):
     # ── Groq LLM (Free Tier) ─────────────────────────────────────────
     groq_api_key: str = ""
     # Chat model — used for answering user questions (streaming Q&A)
-    groq_model: str = "groq/compound-mini"
+    # openai/gpt-oss-20b: 1000 RPD free tier, best available on Groq as of Sep 2025
+    groq_model: str = "openai/gpt-oss-20b"
     # Ingest model — used during indexing only, for chunk descriptions.
-    # MUST be a high-RPD model: llama-3.1-8b-instant = 14,400 req/day vs compound-mini = 250 req/day.
-    # These two roles use separate models so ingestion never exhausts the chat quota.
-    groq_ingest_model: str = "llama-3.1-8b-instant"
+    # Using same model as chat since it has the highest free-tier RPD available.
+    groq_ingest_model: str = "openai/gpt-oss-20b"
     groq_temperature: float = 0.1
     groq_max_tokens: int = 2048
 

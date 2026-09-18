@@ -30,9 +30,9 @@ services:
     environment:
       # Secrets — loaded from .env file in project root (never commit .env!)
       - GROQ_API_KEY=${GROQ_API_KEY}
-      - GROQ_MODEL=${GROQ_MODEL:-groq/compound-mini}
-      # High-RPD model for ingestion chunk descriptions (14,400 RPD vs 250 RPD for compound-mini)
-      - GROQ_INGEST_MODEL=${GROQ_INGEST_MODEL:-llama-3.1-8b-instant}
+      - GROQ_MODEL=${GROQ_MODEL:-openai/gpt-oss-20b}
+      # High-RPD model for ingestion chunk descriptions (1000 RPD free tier)
+      - GROQ_INGEST_MODEL=${GROQ_INGEST_MODEL:-openai/gpt-oss-20b}
 
       # ChromaDB is accessed via service name (not localhost!) inside Docker
       # Because containers talk to each other through the Docker network
