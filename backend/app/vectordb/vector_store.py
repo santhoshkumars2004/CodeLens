@@ -96,12 +96,29 @@ def store_chunks(
     documents: List[str] = []
     metadatas: List[Dict[str, Any]] = []
 
-    for chunk in chunks:
-        # Stable, unique ID based on content location — safe to re-ingest
-        chunk_id = hashlib.md5(
-            f"{repo_id}|{chunk['file_path']}|{chunk['start_line']}|{chunk['end_line']}"
+    seen_ids: Dict[str, int] = {}
+    for i, chunk in enumerate(chunks):
+        file_path = chunk.get("file_path", "")
+        start_line = chunk.get("start_line", 0)
+        end_line = chunk.get("end_line", 0)
+        name = chunk.get("name", "")
+        content = chunk.get("content", "")
+        content_hash = hashlib.md5(content.encode()).hexdigest()[:8]
+
+        # Base stable ID on repo, file, name, lines, and content hash
+        base_id = hashlib.md5(
+            f"{repo_id}|{file_path}|{name}|{start_line}|{end_line}|{content_hash}"
             .encode()
         ).hexdigest()
+
+        # Guarantee absolute uniqueness in the batch even if location & content match
+        if base_id in seen_ids:
+            seen_ids[base_id] += 1
+            chunk_id = hashlib.md5(f"{base_id}_{seen_ids[base_id]}_{i}".encode()).hexdigest()
+        else:
+            seen_ids[base_id] = 0
+            chunk_id = base_id
+
         ids.append(chunk_id)
 
         # chunk["content"] already contains the context header from chunker.py:
@@ -144,7 +161,7 @@ def store_chunks(
             batch=f"{b + 1}/{total_batches}",
             chunks=f"{s + 1}-{e}",
         )
-        collection.add(
+        collection.upsert(
             ids=ids[s:e],
             documents=documents[s:e],
             embeddings=embeddings[s:e],
