@@ -32,7 +32,7 @@ settings = get_settings()
 #   - Local (high quality): jinaai/jina-embeddings-v2-base-code (~800MB RAM, uses PyTorch)
 #   - Railway free tier:    fastembed/BAAI/bge-small-en-v1.5    (~100MB RAM, no PyTorch)
 DEFAULT_MODEL = "fastembed/BAAI/bge-small-en-v1.5"
-BATCH_SIZE = 16
+BATCH_SIZE = 8
 
 
 class EmbeddingService:
@@ -59,7 +59,8 @@ class EmbeddingService:
             self._is_fastembed = True
             real_name = model_name.replace("fastembed/", "")
             from fastembed import TextEmbedding
-            self._model = TextEmbedding(real_name)
+            # Limit threads to 2 to prevent OOM kills in Docker
+            self._model = TextEmbedding(real_name, threads=2)
             dim = 384 # BGE small is 384, adjust if needed
         else:
             # Use SentenceTransformers (Requires PyTorch, ~800MB+ RAM)
