@@ -58,9 +58,16 @@ def _get_groq_client() -> Optional[Groq]:
 
 def _generate_description(code: str, func_name: str, file_path: str) -> str:
     """
-    Call Groq LLaMA3 to produce a one-line plain-English description of a code chunk.
-    Falls back to an empty string silently if the API is unavailable or the chunk is too small.
+    Call Groq to produce a one-line plain-English description of a code chunk.
+
+    Uses settings.groq_ingest_model (llama-3.1-8b-instant, 14,400 RPD) — NOT the
+    chat model (compound-mini, 250 RPD) — so ingesting large repos never exhausts
+    the daily quota for user-facing chat responses.
+
+    Falls back to an empty string if API is unavailable, rate-limited, or the chunk is tiny.
     """
+    import re, time
+
     # Skip tiny stubs — not worth an API call
     if len(code.strip()) < 40:
         return ""
@@ -68,6 +75,9 @@ def _generate_description(code: str, func_name: str, file_path: str) -> str:
     client = _get_groq_client()
     if client is None:
         return ""
+
+    # Use the dedicated ingest model (high RPD) — NOT the chat model
+    ingest_model = getattr(settings, "groq_ingest_model", "llama-3.1-8b-instant")
 
     prompt = (
         f"In ONE concise sentence, describe what this code does. "
@@ -78,28 +88,52 @@ def _generate_description(code: str, func_name: str, file_path: str) -> str:
         f"One sentence description:"
     )
 
-    import time
-    
-    try:
-        # Prevent 429 Too Many Requests on Groq free tier (~30 requests per minute)
-        # by sleeping 2.1 seconds before each API call during ingestion.
-        time.sleep(2.1)
-        
-        response = client.chat.completions.create(
-            model=settings.groq_model,
-            messages=[{"role": "user", "content": prompt}],
-            max_tokens=60,
-            temperature=0.0,
-        )
-        desc = response.choices[0].message.content.strip()
-        # Strip any leading label the model might add ("Description: ...")
-        for prefix in ("Description:", "One sentence description:", "Answer:"):
-            if desc.lower().startswith(prefix.lower()):
-                desc = desc[len(prefix):].strip()
-        return desc
-    except Exception as exc:
-        logger.warning(f"chunk_desc_failed  func={func_name}  error={exc}")
-        return ""
+    for attempt in range(2):  # try twice: once normally, once after waiting on 429
+        try:
+            response = client.chat.completions.create(
+                model=ingest_model,
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=60,
+                temperature=0.0,
+            )
+            desc = response.choices[0].message.content.strip()
+            # Strip any leading label the model might add
+            for prefix in ("Description:", "One sentence description:", "Answer:"):
+                if desc.lower().startswith(prefix.lower()):
+                    desc = desc[len(prefix):].strip()
+            return desc
+
+        except Exception as exc:
+            exc_str = str(exc)
+            # On 429, extract the retry-after seconds from the error message and wait
+            if "429" in exc_str or "rate_limit_exceeded" in exc_str:
+                # Try to extract "Please try again in Xs" from the message
+                match = re.search(r"try again in (\d+(?:\.\d+)?)s", exc_str)
+                wait_s = float(match.group(1)) if match else 30.0
+                wait_s = min(wait_s, 60.0)  # cap at 60s — don't block ingestion for too long
+                if attempt == 0:
+                    logger.warning(
+                        "chunk_desc_rate_limited",
+                        func=func_name,
+                        model=ingest_model,
+                        waiting_seconds=wait_s,
+                    )
+                    time.sleep(wait_s)
+                    continue  # retry once after the wait
+                else:
+                    # Second attempt also 429 — daily limit likely hit, skip all further descriptions
+                    logger.warning(
+                        "chunk_desc_daily_limit_hit",
+                        func=func_name,
+                        model=ingest_model,
+                        reason="Skipping chunk descriptions for remainder of ingestion",
+                    )
+                    return ""
+            else:
+                logger.warning(f"chunk_desc_failed  func={func_name}  error={exc}")
+                return ""
+
+    return ""
 
 
 

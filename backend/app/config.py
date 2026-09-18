@@ -26,11 +26,16 @@ class Settings(BaseSettings):
     backend_port: int = 8000
     frontend_url: str = "http://localhost:3000"
 
-    # ── Groq LLM (Free Tier) ────────────────────────────────────    # LLM Settings
+    # ── Groq LLM (Free Tier) ─────────────────────────────────────────
     groq_api_key: str = ""
+    # Chat model — used for answering user questions (streaming Q&A)
     groq_model: str = "groq/compound-mini"
+    # Ingest model — used during indexing only, for chunk descriptions.
+    # MUST be a high-RPD model: llama-3.1-8b-instant = 14,400 req/day vs compound-mini = 250 req/day.
+    # These two roles use separate models so ingestion never exhausts the chat quota.
+    groq_ingest_model: str = "llama-3.1-8b-instant"
     groq_temperature: float = 0.1
-    groq_max_tokens: int = 1024  # reduced from 2048 — Groq free tier is 6000 TPM total
+    groq_max_tokens: int = 2048
 
     # ── ChromaDB (Local Vector DB) ──────────────────────────────
     chroma_host: str = "localhost"
