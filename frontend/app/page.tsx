@@ -171,9 +171,13 @@ function AppDashboard() {
       const response = await ingestRepo(url, undefined, token);
       const repoId = response.repo_id;
 
+      let pollFailCount = 0;
+      const MAX_POLL_FAILS = 4; // retry up to 4 consecutive errors before giving up
+
       const pollInterval = setInterval(async () => {
         try {
           const statusData = await getIngestStatus(repoId);
+          pollFailCount = 0; // reset on success
           setProgress(statusData.progress);
           setStatusMessage(statusData.message);
 
@@ -192,12 +196,15 @@ function AppDashboard() {
             setIsIngesting(false);
           }
         } catch (pollErr: any) { 
-          if (pollErr.message && (pollErr.message.includes("404") || pollErr.message.includes("Failed to get status"))) {
+          pollFailCount++;
+          // Only give up after several consecutive failures — transient errors are common
+          if (pollFailCount >= MAX_POLL_FAILS) {
             clearInterval(pollInterval);
             setProgress(0);
             setError("Ingestion failed: Backend restarted. Please try again in a few seconds.");
             setIsIngesting(false);
           }
+          // Otherwise: silently retry next poll cycle
         }
       }, 2000);
     } catch (err) {

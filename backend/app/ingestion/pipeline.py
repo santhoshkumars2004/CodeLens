@@ -48,11 +48,43 @@ def _set_status(repo_id: str, status: str, progress: int, message: str):
 
 
 def get_ingestion_status(repo_id: str) -> Dict[str, Any] | None:
-    """Get the current ingestion status — checks memory first, then Supabase."""
+    """Get the current ingestion status — checks memory first, then Supabase, then ChromaDB.
+
+    The ChromaDB fallback ensures that repos which were successfully indexed
+    always show 'completed' even after a backend restart (when in-memory
+    state and Supabase are both unavailable).
+    """
+    # 1. Check in-memory (always authoritative for in-progress runs)
     if repo_id in _ingestion_status:
         return _ingestion_status[repo_id]
-    # Fall back to Supabase if this server instance doesn't have it in memory
-    return get_ingestion_status_db(repo_id)
+
+    # 2. Try Supabase persistent store
+    db_status = get_ingestion_status_db(repo_id)
+    if db_status is not None:
+        # Cache it in memory so subsequent polls are fast
+        _ingestion_status[repo_id] = db_status
+        return db_status
+
+    # 3. Last resort: ask ChromaDB directly — if the collection exists and
+    #    has chunks, the ingestion definitely completed successfully.
+    try:
+        from app.vectordb.vector_store import get_chroma_client, _safe_collection_name
+        client = get_chroma_client()
+        col_name = _safe_collection_name(repo_id)
+        col = client.get_collection(col_name)
+        count = col.count()
+        if count > 0:
+            completed = {
+                "status": "completed",
+                "progress": 100,
+                "message": f"Repository indexed successfully! ({count} chunks)",
+            }
+            _ingestion_status[repo_id] = completed
+            return completed
+    except Exception:
+        pass  # Collection doesn't exist — no completed ingestion found
+
+    return None
 
 
 def ingest_repository(

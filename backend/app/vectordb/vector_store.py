@@ -267,18 +267,43 @@ def delete_collection(repo_id: str) -> bool:
 
 
 def list_collections() -> List[Dict[str, Any]]:
-    """List all indexed repository collections."""
+    """List all indexed repository collections.
+
+    Handles both old ChromaDB (<0.4) that returned string names and
+    new ChromaDB (>=0.4) that returns Collection objects directly.
+    """
     client = get_chroma_client()
-    collection_names = client.list_collections()
+    raw_list = client.list_collections()
     result = []
-    for col_name in collection_names:
-        collection = client.get_collection(col_name)
-        metadata = collection.metadata or {}
-        result.append({
-            "name": col_name,
-            "repo_id": metadata.get("repo_id", col_name),
-            "count": collection.count(),
-        })
+    for item in raw_list:
+        try:
+            # New ChromaDB (>=0.4): item IS already a Collection object
+            if hasattr(item, "name"):
+                col = item
+                col_name = col.name
+                metadata = col.metadata or {}
+            else:
+                # Old ChromaDB: item is a string name
+                col_name = str(item)
+                col = client.get_collection(col_name)
+                metadata = col.metadata or {}
+
+            repo_id = metadata.get("repo_id", col_name)
+            count = col.count()
+            result.append({
+                "name": col_name,
+                "repo_id": repo_id,
+                "count": count,
+            })
+            logger.debug(
+                "list_collections_item",
+                col_name=col_name,
+                repo_id=repo_id,
+                count=count,
+            )
+        except Exception as e:
+            logger.warning("list_collections_item_failed", item=str(item), error=str(e))
+            continue
     return result
 
 
