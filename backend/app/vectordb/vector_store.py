@@ -277,13 +277,14 @@ def list_collections() -> List[Dict[str, Any]]:
     result = []
     for item in raw_list:
         try:
-            # New ChromaDB (>=0.4): item IS already a Collection object
-            if hasattr(item, "name"):
+            # New ChromaDB (>=0.4, <0.6): item IS a Collection object
+            # In v0.6, it's a CollectionName object that throws an exception if .name is accessed.
+            if type(item).__name__ == "Collection":
                 col = item
                 col_name = col.name
                 metadata = col.metadata or {}
             else:
-                # Old ChromaDB: item is a string name
+                # Old ChromaDB or v0.6+: item is a string or CollectionName
                 col_name = str(item)
                 col = client.get_collection(col_name)
                 metadata = col.metadata or {}
