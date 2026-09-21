@@ -117,8 +117,8 @@ async def query_pipeline(
 
         # Confidence = average rerank score
         if reranked_chunks:
-            avg_score = sum(c.get("rerank_score", 0) for c in reranked_chunks) / len(reranked_chunks)
-            confidence = round(min(max(avg_score, 0.0), 1.0), 4)
+            max_score = max(c.get("rerank_score", 0) for c in reranked_chunks)
+            confidence = round(min(max(max_score, 0.0), 1.0), 4)
         else:
             confidence = 0.0
 

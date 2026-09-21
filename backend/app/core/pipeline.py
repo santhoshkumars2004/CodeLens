@@ -161,12 +161,10 @@ def query_pipeline(
         query_latency_seconds.observe(latency_ms / 1000)
         queries_total.labels(repo_id=repo_id, status="success").inc()
 
-        # Calculate confidence from rerank scores
+        # Calculate confidence from rerank scores (using max score)
         if reranked_chunks:
-            avg_score = sum(
-                c.get("rerank_score", 0) for c in reranked_chunks
-            ) / len(reranked_chunks)
-            confidence = min(max(avg_score, 0), 1)
+            max_score = max(c.get("rerank_score", 0) for c in reranked_chunks)
+            confidence = min(max(max_score, 0), 1)
         else:
             confidence = 0.0
 

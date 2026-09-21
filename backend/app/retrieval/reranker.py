@@ -45,11 +45,17 @@ def get_reranker():
 
 
 def _sigmoid(x: float) -> float:
-    """Convert raw cross-encoder logit to [0, 1] probability."""
+    """Convert raw cross-encoder logit to [0, 1] probability.
+    
+    MS MARCO models often output negative logits (e.g., -3 to 3) even for 
+    relevant chunks. We shift and scale the logit so the resulting score 
+    feels like an intuitive 'confidence' percentage (e.g. 70-95% for good hits).
+    """
+    shifted_x = (x + 3.0) / 2.0
     try:
-        return 1.0 / (1.0 + math.exp(-x))
+        return 1.0 / (1.0 + math.exp(-shifted_x))
     except OverflowError:
-        return 0.0 if x < 0 else 1.0
+        return 0.0 if shifted_x < 0 else 1.0
 
 
 def rerank_chunks(
